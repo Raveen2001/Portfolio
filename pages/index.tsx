@@ -22,7 +22,7 @@ const Home: NextPage = () => {
                 value: "#252934",
               },
             },
-            fpsLimit: 120,
+            fpsLimit: 360,
             interactivity: {
               events: {
                 onHover: {
@@ -32,12 +32,6 @@ const Home: NextPage = () => {
                 resize: true,
               },
               modes: {
-                bubble: {
-                  distance: 400,
-                  duration: 0.1,
-                  opacity: 0.8,
-                  size: 40,
-                },
                 repulse: {
                   distance: 100,
                   duration: 0.1,
@@ -71,7 +65,7 @@ const Home: NextPage = () => {
                   enable: true,
                   area: 800,
                 },
-                value: 80,
+                value: 50,
               },
               opacity: {
                 value: 0.4,
