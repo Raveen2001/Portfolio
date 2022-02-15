@@ -1,4 +1,4 @@
-import ParticlesBg from "./particle";
+import ParticlesBg from "./particle.component";
 
 export default function HomeComponent() {
   return (

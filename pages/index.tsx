@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import ContactComponent from "../components/contact/contact.component";
+import FooterComponent from "../components/footer/footer.component";
 import HomeComponent from "../components/home/home.component";
 import ProjectComponent from "../components/projects/projects.components";
 
@@ -15,6 +17,8 @@ const Home: NextPage = () => {
       <main>
         <HomeComponent />
         <ProjectComponent />
+        <ContactComponent />
+        <FooterComponent />
       </main>
     </div>
   );
