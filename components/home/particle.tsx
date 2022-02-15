@@ -5,8 +5,6 @@ export default function ParticlesBg() {
   return (
     <Particles
       className="relative -z-10"
-      id="tsparticles"
-      style={{}}
       options={{
         background: {
           color: {
