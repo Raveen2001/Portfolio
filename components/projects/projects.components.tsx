@@ -1,6 +1,6 @@
 export default function ProjectComponent() {
   return (
-    <section className="bg-primary" style={{ height: "105vh" }}>
+    <section className="bg-primary" style={{}}>
       <div className="flex flex-col items-center pt-10">
         <div className="flex items-center justify-center text-5xl text-secondary">
           Projects
@@ -12,7 +12,7 @@ export default function ProjectComponent() {
 
         <div
           className="grid grid-cols-3 grid-rows-3 gap-0 h-screen mt-10"
-          style={{ height: "80vh", width: "80vw" }}
+          style={{ height: "100vh", width: "70vw" }}
         >
           <div className="bg-secondary">1</div>
           <div className="bg-accent">2</div>
