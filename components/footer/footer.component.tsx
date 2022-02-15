@@ -2,7 +2,7 @@ import ContactIcon from "./contact_icon.component";
 
 export default function FooterComponent() {
   return (
-    <footer className="bg-primaryDark" style={{ height: "40vh" }}>
+    <footer className="bg-primaryDark" style={{}}>
       <div className="flex flex-col items-center justify-center p-5">
         <div className="flex justify-center items-center">
           <ContactIcon />
@@ -13,7 +13,7 @@ export default function FooterComponent() {
           Built by <span className="text-accent">Raveen</span>
         </div>
         <div className="text-secondary text-sm">2022</div>
-        <div className="flex justify-end">
+        <div className="flex justify-end w-full">
           <div className="text-secondary text-xs">
             Design inspired from{"  "}
             <a
