@@ -7,7 +7,7 @@ export default function HomeComponent() {
 
       <div className="flex flex-col justify-center items-center  h-screen">
         <div className="flex flex-row">
-          <div className="text-5xl text-secondary">Hello, I'm</div>
+          <div className="text-5xl text-secondary mr-3">Hello, I'm</div>
           <div className="text-accent text-5xl">Raveen</div>
         </div>
         <div className="text-white text-5xl mt-3">
