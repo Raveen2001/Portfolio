@@ -1,3 +1,7 @@
 export default function ProjectComponent() {
-  return <></>;
+  return (
+    <>
+      <div className="bg-secondary">1</div>
+    </>
+  );
 }

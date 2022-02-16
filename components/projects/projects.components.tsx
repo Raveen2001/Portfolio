@@ -14,7 +14,7 @@ export default function ProjectComponent() {
           className="grid grid-cols-3 grid-rows-3 gap-0 h-screen mt-10"
           style={{ height: "100vh", width: "70vw" }}
         >
-          <div className="bg-secondary">1</div>
+          <ProjectComponent />
           <div className="bg-accent">2</div>
           <div className="bg-secondary">3</div>
           <div className="bg-accent">4</div>
