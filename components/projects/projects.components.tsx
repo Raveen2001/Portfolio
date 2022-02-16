@@ -17,14 +17,14 @@ export default function ProjectsComponent() {
           style={{ height: "100vh", width: "70vw" }}
         >
           <ProjectComponent />
-          <div className="bg-accent">2</div>
-          <div className="bg-secondary">3</div>
-          <div className="bg-accent">4</div>
-          <div className="bg-secondary">5</div>
-          <div className="bg-accent">6</div>
-          <div className="bg-secondary">7</div>
-          <div className="bg-accent">8</div>
-          <div className="bg-secondary">9</div>
+          <ProjectComponent />
+          <ProjectComponent />
+          <ProjectComponent />
+          <ProjectComponent />
+          <ProjectComponent />
+          <ProjectComponent />
+          <ProjectComponent />
+          <ProjectComponent />
         </div>
       </div>
     </section>

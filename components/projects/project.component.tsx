@@ -1,7 +1,7 @@
 export default function ProjectComponent() {
   return (
     <div
-      className="group bg-green-900 flex flex-col w-full overflow-hidden"
+      className="group flex flex-col w-full overflow-hidden bg-white hover:bg-none duration-500"
       style={{
         backgroundImage:
           "url('https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
