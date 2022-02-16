@@ -21,7 +21,7 @@ export default function FooterComponent() {
               href="www.findMatthew.com"
               target={"_blank"}
             >
-              findMattthew.com
+              findMatthew.com
             </a>
           </div>
         </div>

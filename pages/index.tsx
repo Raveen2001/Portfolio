@@ -3,7 +3,7 @@ import Head from "next/head";
 import ContactComponent from "../components/contact/contact.component";
 import FooterComponent from "../components/footer/footer.component";
 import HomeComponent from "../components/home/home.component";
-import ProjectComponent from "../components/projects/projects.components";
+import ProjectsComponent from "../components/projects/projects.components";
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
       <main>
         <HomeComponent />
-        <ProjectComponent />
+        <ProjectsComponent />
         <ContactComponent />
         <FooterComponent />
       </main>

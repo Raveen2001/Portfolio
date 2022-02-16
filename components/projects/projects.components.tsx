@@ -1,4 +1,6 @@
-export default function ProjectComponent() {
+import ProjectComponent from "./project.component";
+
+export default function ProjectsComponent() {
   return (
     <section className="bg-primary" style={{}}>
       <div className="flex flex-col items-center pt-10">
