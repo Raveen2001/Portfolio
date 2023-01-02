@@ -1,0 +1,60 @@
+.Topbar {
+  height: var(--topbar-height);
+  background-color: var(--topbar-color);
+  display: flex;
+  width: 100vw;
+  padding: var(--page-padding);
+  align-items: center;
+
+  justify-content: space-between;
+  position: fixed;
+
+  .menu {
+    display: flex;
+
+    gap: 3rem;
+    height: 100%;
+
+    .menu-item {
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--text-color);
+    }
+
+    .menu-item::after,
+    .menu-item::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: auto;
+      bottom: 20px;
+      width: 0%;
+      height: 2.5px;
+      background-color: var(--animation-color-after);
+      transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+    }
+
+    .menu-item::before {
+      transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
+      background-color: var(--animation-color-before);
+    }
+
+    .menu-item:hover {
+      &::after,
+      &::before {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+
+    .clickable {
+      cursor: pointer;
+    }
+  }
+}

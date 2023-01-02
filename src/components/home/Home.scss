@@ -1,0 +1,29 @@
+.Home {
+  height: 100vh;
+  padding: var(--page-padding);
+  padding-top: var(--topbar-height);
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("./color_logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--icon-color);
+    }
+  }
+}
