@@ -34,113 +34,113 @@ export const PARTICLES = [
   },
   {
     icon: <AngularIcon />,
-    name: "Android Studio",
+    name: "Angular",
   },
 
   {
     icon: <GitIcon />,
-    name: "Android Studio",
+    name: "Git",
   },
   {
     icon: <GithubIcon />,
-    name: "Android Studio",
+    name: "Github",
   },
   {
     icon: <HtmlIcon />,
-    name: "Android Studio",
+    name: "HTML",
   },
   {
     icon: <JavaIcon />,
-    name: "Android Studio",
+    name: "JAVA",
   },
   {
     icon: <JSIcon />,
-    name: "Android Studio",
+    name: "JavaScript",
   },
   {
     icon: <KubernetesIcon />,
-    name: "Android Studio",
+    name: "Kubernetes",
   },
   {
     icon: <FlutterIcon />,
-    name: "Android Studio",
+    name: "Flutter",
   },
   {
     icon: <FirebaseIcon />,
-    name: "Android Studio",
+    name: "Firebase",
   },
   {
     icon: <DockerIcon />,
-    name: "Android Studio",
+    name: "Docker",
   },
   {
     icon: <DjangoIcon />,
-    name: "Android Studio",
+    name: "Django",
   },
   {
     icon: <DartIcon />,
-    name: "Android Studio",
+    name: "Dart",
   },
   {
     icon: <CIcon />,
-    name: "Android Studio",
+    name: "C",
   },
   {
     icon: <CSSIcon />,
-    name: "Android Studio",
+    name: "CSS",
   },
   {
     icon: <AzureIcon />,
-    name: "Android Studio",
+    name: "Azure",
   },
   {
     icon: <AWSIcon />,
-    name: "Android Studio",
+    name: "AWS",
   },
 
   {
     icon: <MongoDbIcon />,
-    name: "Android Studio",
+    name: "MongoDB",
   },
   {
     icon: <MySQLIcon />,
-    name: "Android Studio",
+    name: "MySQL",
   },
   {
     icon: <NextIcon />,
-    name: "Android Studio",
+    name: "NextJS",
   },
   {
     icon: <NodeIcon />,
-    name: "Android Studio",
+    name: "NodeJS",
   },
   {
     icon: <PostgresIcon />,
-    name: "Android Studio",
+    name: "PostgreSQL",
   },
 
   {
     icon: <TSIcon />,
-    name: "Android Studio",
+    name: "TypeScript",
   },
   {
     icon: <ReduxIcon />,
-    name: "Android Studio",
+    name: "Redux",
   },
   {
     icon: <RedisIcon />,
-    name: "Android Studio",
+    name: "Redis",
   },
   {
     icon: <ReactIcon />,
-    name: "Android Studio",
+    name: "ReactJS",
   },
   {
     icon: <PythonIcon />,
-    name: "Android Studio",
+    name: "Python",
   },
   {
     icon: <VSCodeIcon />,
-    name: "Android Studio",
+    name: "VS Code",
   },
 ];
