@@ -15,17 +15,14 @@ import { ReactComponent as ReduxIcon } from "../../assets/particles/redux.svg";
 import { ReactComponent as KubernetesIcon } from "../../assets/particles/kubernetes.svg";
 
 const Particles = () => {
-  const particles = useMemo(
-    () => document.querySelectorAll<HTMLElement>(".particle"),
-    []
-  );
+  const rightMovement = useMemo(() => [0, 3, 5, 6, 8], []);
   const onMouseMove = useCallback(
     throttle((ev: MouseEvent) => {
+      const particles = document.querySelectorAll<HTMLElement>(".particle");
       const xOffset = ev.clientX * 0.06;
       const yOffset = ev.clientY * 0.08;
-      // console.log("1");
-      particles.forEach((particle, idx) => {
-        if (idx % 2 === 0) {
+      particles?.forEach((particle, idx) => {
+        if (rightMovement.includes(idx)) {
           particle.style.transform = `translate3d(${xOffset}px, ${-yOffset}px, 0)`;
         } else {
           particle.style.transform = `translate3d(${-xOffset}px, ${yOffset}px, 0)`;
