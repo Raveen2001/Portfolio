@@ -3,11 +3,12 @@ import { ReactComponent as ArrowRightIcon } from "../../assets/arrow_right.svg";
 import "./Button.scss";
 interface IButtonProps {
   text: string;
+  className?: string;
   onClick: () => void;
 }
-const Button: React.FC<IButtonProps> = ({ text, onClick }) => {
+const Button: React.FC<IButtonProps> = ({ text, className = "", onClick }) => {
   return (
-    <button className="Button">
+    <button className={`Button ${className}`}>
       <div className="button-div" onClick={onClick}>
         {text}
       </div>

@@ -1,7 +1,6 @@
-import React, { useCallback, useEffect, useLayoutEffect, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 import { ReactComponent as Logo } from "../../assets/color_logo.svg";
-import { PARTICLES } from "../../PARTICLES";
-import { debounce, random, throttle } from "lodash";
+import { throttle } from "lodash";
 import "./Particles.scss";
 import { ReactComponent as TSIcon } from "../../assets/particles/typescript.svg";
 import { ReactComponent as ReactIcon } from "../../assets/particles/react.svg";

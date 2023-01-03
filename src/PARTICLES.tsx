@@ -28,34 +28,119 @@ import { ReactComponent as TSIcon } from "./assets/particles/typescript.svg";
 import { ReactComponent as VSCodeIcon } from "./assets/particles/vscode.svg";
 
 export const PARTICLES = [
-  <AndroidIcon />,
-  <AngularIcon />,
-  <AWSIcon />,
-  <AzureIcon />,
-  <CIcon />,
-  <CSSIcon />,
-  <DartIcon />,
-  <DjangoIcon />,
-  <DockerIcon />,
-  <FirebaseIcon />,
-  <FlutterIcon />,
-  <GitIcon />,
-  <div />,
-  <GithubIcon />,
-  <HtmlIcon />,
-  <JavaIcon />,
-  <JSIcon />,
-  <div />,
-  <KubernetesIcon />,
-  <MongoDbIcon />,
-  <MySQLIcon />,
-  <NextIcon />,
-  <NodeIcon />,
-  <PostgresIcon />,
-  <PythonIcon />,
-  <ReactIcon />,
-  <RedisIcon />,
-  <div />,
-  <ReduxIcon />,
-  <TSIcon />,
+  {
+    icon: <AndroidIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <AngularIcon />,
+    name: "Android Studio",
+  },
+
+  {
+    icon: <GitIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <GithubIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <HtmlIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <JavaIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <JSIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <KubernetesIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <FlutterIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <FirebaseIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <DockerIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <DjangoIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <DartIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <CIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <CSSIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <AzureIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <AWSIcon />,
+    name: "Android Studio",
+  },
+
+  {
+    icon: <MongoDbIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <MySQLIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <NextIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <NodeIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <PostgresIcon />,
+    name: "Android Studio",
+  },
+
+  {
+    icon: <TSIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <ReduxIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <RedisIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <ReactIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <PythonIcon />,
+    name: "Android Studio",
+  },
+  {
+    icon: <VSCodeIcon />,
+    name: "Android Studio",
+  },
 ];
