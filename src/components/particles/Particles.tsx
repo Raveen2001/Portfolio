@@ -1,7 +1,7 @@
-import React, { useLayoutEffect } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useMemo } from "react";
 import { ReactComponent as Logo } from "../../assets/color_logo.svg";
 import { PARTICLES } from "../../PARTICLES";
-import { random } from "lodash";
+import { debounce, random, throttle } from "lodash";
 import "./Particles.scss";
 import { ReactComponent as TSIcon } from "../../assets/particles/typescript.svg";
 import { ReactComponent as ReactIcon } from "../../assets/particles/react.svg";
@@ -15,6 +15,33 @@ import { ReactComponent as ReduxIcon } from "../../assets/particles/redux.svg";
 import { ReactComponent as KubernetesIcon } from "../../assets/particles/kubernetes.svg";
 
 const Particles = () => {
+  const particles = useMemo(
+    () => document.querySelectorAll<HTMLElement>(".particle"),
+    []
+  );
+  const onMouseMove = useCallback(
+    throttle((ev: MouseEvent) => {
+      const xOffset = ev.clientX * 0.06;
+      const yOffset = ev.clientY * 0.08;
+      // console.log("1");
+      particles.forEach((particle, idx) => {
+        if (idx % 2 === 0) {
+          particle.style.transform = `translate3d(${xOffset}px, ${-yOffset}px, 0)`;
+        } else {
+          particle.style.transform = `translate3d(${-xOffset}px, ${yOffset}px, 0)`;
+        }
+      });
+    }, 100),
+    []
+  );
+
+  useEffect(() => {
+    document.addEventListener("mousemove", onMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", onMouseMove);
+    };
+  }, []);
   return (
     <div className="Particles">
       <div className="background">
