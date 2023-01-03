@@ -15,10 +15,11 @@ const Contact = () => {
     <div className="Contact">
       <div className="container">
         <div className="left">
+          <h1 className="bg">About</h1>
           <div className="about">
             <h3>About Me.</h3>
             <p>Interactive Front-end developer</p>
-            <span>
+            <div>
               I'm Riccardo Zanutta, a 22-year-old Italian{" "}
               <strong>Freelance Front-end developer</strong>. I'm a weird guy
               who likes making weird things with web technologies. I like to
@@ -26,7 +27,7 @@ const Contact = () => {
               useful interaction, developing rich web experiences & web
               applications. When not working or futzing around with code, I
               study how to escape from University. Actually for hire
-            </span>
+            </div>
 
             <div>
               <Splide
@@ -39,9 +40,7 @@ const Contact = () => {
                   perPage: 4,
                   direction: "ltr",
                   autoScroll: {
-                    pauseOnHover: false,
-                    pauseOnFocus: false,
-                    rewind: false,
+                    pauseOnHover: true,
                     speed: 1,
                   },
                 }}

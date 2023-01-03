@@ -33,10 +33,22 @@
       position: relative;
       z-index: 1;
 
+      .bg {
+        position: absolute;
+        color: #4a4a4a;
+        font-size: 12em;
+        margin: 0;
+        z-index: -1;
+        top: 10%;
+        left: 20%;
+        font-weight: 900;
+        opacity: 0.07;
+      }
+
       .about {
         width: 70%;
-
-        span {
+        div {
+          margin: 20px 0px;
           font-size: 1em;
           text-align: justify;
 
@@ -61,7 +73,6 @@
             text-align: center;
             opacity: 0;
             transition: all 0.6s;
-
             transform: translateY(100%);
           }
 
@@ -221,12 +232,14 @@
 
       .bg {
         position: absolute;
+        color: white;
         font-size: 12em;
         margin: 0;
         z-index: -1;
         bottom: 10%;
-        right: -20%;
+        right: -30%;
         opacity: 0.03;
+        font-weight: 900;
       }
     }
   }
