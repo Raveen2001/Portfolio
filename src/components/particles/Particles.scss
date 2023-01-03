@@ -1,0 +1,97 @@
+.Particles {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  .background {
+    position: absolute;
+    z-index: -99;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      opacity: 0.5;
+    }
+  }
+
+  .particles {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    .particle {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .icon {
+        position: absolute;
+        // left: 10;
+        svg {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  .canvas {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    // overflow: hidden;
+    .particle {
+      position: absolute;
+
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    #p1 {
+      left: 2%;
+      top: 20%;
+    }
+
+    #p2 {
+      left: 30%;
+      top: 15%;
+    }
+    #p3 {
+      top: 60%;
+      left: 1%;
+    }
+    #p4 {
+      top: 15%;
+      left: 70%;
+    }
+    #p5 {
+      bottom: 5%;
+      left: 70%;
+    }
+    #p6 {
+      bottom: 3%;
+      left: 40%;
+    }
+    #p7 {
+      bottom: 20%;
+      right: 10%;
+    }
+    #p8 {
+      bottom: 8%;
+      left: 12%;
+    }
+    #p9 {
+      bottom: 50%;
+      right: 15%;
+    }
+    #p10 {
+      top: 7%;
+      right: 3%;
+    }
+  }
+}
