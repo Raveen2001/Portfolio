@@ -6,14 +6,16 @@ import Topbar from "./components/topbar/Topbar";
 import "./Theme.scss";
 import "./App.scss";
 import { useGlobalContext } from "./components/context/GlobalContext";
+import CaseStudy from "./components/casestudy/CaseStudy";
 function App() {
   const { isContactModalOpen } = useGlobalContext();
   return (
     <div className="App">
-      <Topbar />
-      <Particles />
-      <Home />
-      <Contact />
+      {/* <Topbar /> */}
+      {/* <Particles /> */}
+      <CaseStudy />
+      {/* <Home /> */}
+      {/* <Contact /> */}
     </div>
   );
 }
