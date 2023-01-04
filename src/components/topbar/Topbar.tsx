@@ -1,9 +1,10 @@
-import React from "react";
 import "./Topbar.scss";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import ThemeSwitcher from "../theme-switcher/ThemeSwitcher";
+import { useGlobalContext } from "../context/GlobalContext";
 
 const Topbar = () => {
+  const { toggleContackModal } = useGlobalContext();
   return (
     <div className="Topbar">
       <div>
@@ -16,7 +17,7 @@ const Topbar = () => {
         <a className="menu-item" href="#">
           Experiments
         </a>
-        <a className="menu-item" href="#">
+        <a className="menu-item clickable" onClick={toggleContackModal}>
           Contact
         </a>
 

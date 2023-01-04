@@ -16,6 +16,7 @@
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@types/three": "^0.146.0",
+    "gsap": "^3.11.4",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -23,6 +24,7 @@
     "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
+    "@types/gsap": "^3.0.0",
     "@types/lodash": "^4.14.191",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",

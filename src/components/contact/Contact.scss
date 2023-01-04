@@ -1,15 +1,19 @@
 .Contact {
   display: flex;
   align-items: center;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  display: none;
 
   .container {
     width: 78vw;
     height: 90vh;
-    box-shadow: 0px 0px 20px rgb(0 0 0 / 55%);
+
     display: flex;
     h3 {
       margin: 0;
@@ -23,6 +27,7 @@
     }
 
     .left {
+      transform: translateY(200%);
       overflow: hidden;
       flex: 1;
       background-color: #f2f2f2f7;
@@ -32,6 +37,7 @@
       color: #1c1d25;
       position: relative;
       z-index: 1;
+      box-shadow: 0px 0px 20px #0000008c;
 
       .bg {
         position: absolute;
@@ -91,6 +97,7 @@
     }
 
     .right {
+      transform: translateY(-200%);
       overflow: hidden;
       flex: 1;
       background-color: #1c1d25fb;
@@ -100,6 +107,7 @@
       color: #dadada;
       position: relative;
       z-index: 1;
+      box-shadow: 0px 0px 20px #0000008c;
       .form {
         display: flex;
         width: 70%;

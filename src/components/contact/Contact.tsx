@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import Button from "../button/Button";
-import { ReactComponent as TSIcon } from "../../assets/particles/typescript.svg";
-import { ReactComponent as ReactIcon } from "../../assets/particles/react.svg";
-import { ReactComponent as KubernetesIcon } from "../../assets/particles/kubernetes.svg";
-import { ReactComponent as NodeIcon } from "./assets/particles/node.svg";
 import "./Contact.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { PARTICLES } from "../../PARTICLES";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { useGlobalContext } from "../context/GlobalContext";
+import gsap from "gsap";
 
 const Contact = () => {
+  const { toggleContackModal } = useGlobalContext();
+
   return (
     <div className="Contact">
       <div className="container">
@@ -46,9 +46,9 @@ const Contact = () => {
                 }}
                 extensions={{ AutoScroll }}
               >
-                {PARTICLES.map((particle) => {
+                {PARTICLES.map((particle, idx) => {
                   return (
-                    <SplideSlide>
+                    <SplideSlide key={`slide-${idx}`}>
                       <div className="skill">
                         {particle.icon}
                         <h4>{particle.name}</h4>
@@ -61,7 +61,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="right">
-          <div className="close">
+          <div className="close" onClick={toggleContackModal}>
             <span className="line l1"></span>
             <span className="line l2"></span>
           </div>
