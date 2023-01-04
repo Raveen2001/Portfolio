@@ -80,8 +80,8 @@
       flex-direction: column;
       gap: 2rem;
       svg {
-        width: 6vh;
-        height: 6vh;
+        width: 34px;
+        height: 34px;
         fill: var(--icon-color);
         transition: all 0.3s;
 
@@ -101,6 +101,7 @@
     justify-content: space-between;
     gap: 25px;
     padding-bottom: 10px;
+
     span {
       font-size: 1em;
       font-weight: 400;
@@ -112,7 +113,6 @@
       position: relative;
       top: 0px;
       fill: var(--icon-color);
-
       transform: rotate(90deg);
       animation: updown 1s infinite;
     }

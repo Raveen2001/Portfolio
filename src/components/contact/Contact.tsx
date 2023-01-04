@@ -38,13 +38,11 @@ const Contact = () => {
                     );
                   }, 2000);
 
-                  setTimeout(
-                    () =>
-                      (
-                        component.slide.firstChild as HTMLElement
-                      ).classList.remove("focus"),
-                    5500
-                  );
+                  setTimeout(() => {
+                    (
+                      component.slide.firstChild as HTMLElement
+                    ).classList.remove("focus");
+                  }, 5500);
                 }}
                 options={{
                   type: "loop",

@@ -18,6 +18,20 @@
       opacity: 0.65;
       width: 60%;
       height: 60%;
+      path {
+        stroke-dasharray: 500;
+        stroke-dashoffset: 0;
+        animation: dash 0.6s linear;
+      }
+
+      @keyframes dash {
+        from {
+          stroke-dashoffset: 500;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
     }
   }
 

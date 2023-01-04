@@ -24,7 +24,7 @@ const ThemeSwitcher = ({ ...props }) => {
       }}
       {...props}
     >
-      <ThemeIcon fill="var(--icon-color)" width={"20"} height={"20"} />
+      <ThemeIcon fill="var(--icon-color)" width={"24"} height={"24"} />
     </div>
   );
 };
