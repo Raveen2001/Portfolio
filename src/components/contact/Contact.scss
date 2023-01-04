@@ -93,6 +93,16 @@
             }
           }
         }
+        .focus {
+          svg {
+            filter: grayscale(0);
+          }
+
+          h4 {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
       }
     }
 

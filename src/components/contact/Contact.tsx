@@ -31,6 +31,21 @@ const Contact = () => {
 
             <div>
               <Splide
+                onActive={(splide, component) => {
+                  setTimeout(() => {
+                    (component.slide.firstChild as HTMLElement).classList.add(
+                      "focus"
+                    );
+                  }, 2000);
+
+                  setTimeout(
+                    () =>
+                      (
+                        component.slide.firstChild as HTMLElement
+                      ).classList.remove("focus"),
+                    5500
+                  );
+                }}
                 options={{
                   type: "loop",
                   gap: "10px",
@@ -40,16 +55,17 @@ const Contact = () => {
                   perPage: 4,
                   direction: "ltr",
                   autoScroll: {
-                    pauseOnHover: true,
+                    pauseOnHover: false,
                     speed: 1,
                   },
+                  focus: 3,
                 }}
                 extensions={{ AutoScroll }}
               >
                 {PARTICLES.map((particle, idx) => {
                   return (
                     <SplideSlide key={`slide-${idx}`}>
-                      <div className="skill">
+                      <div className="skill ">
                         {particle.icon}
                         <h4>{particle.name}</h4>
                       </div>
