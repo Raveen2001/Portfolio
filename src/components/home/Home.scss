@@ -83,6 +83,11 @@
         width: 6vh;
         height: 6vh;
         fill: var(--icon-color);
+        transition: all 0.3s;
+
+        &:hover {
+          fill: #1c1d25;
+        }
       }
     }
   }

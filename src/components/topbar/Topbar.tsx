@@ -4,7 +4,7 @@ import ThemeSwitcher from "../theme-switcher/ThemeSwitcher";
 import { useGlobalContext } from "../context/GlobalContext";
 
 const Topbar = () => {
-  const { toggleContackModal } = useGlobalContext();
+  const { toggleContactModal: toggleContackModal } = useGlobalContext();
   return (
     <div className="Topbar">
       <div>

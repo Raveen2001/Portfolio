@@ -2,11 +2,11 @@ import { createContext, useCallback, useContext, useState } from "react";
 import { gsapCloseContactModal, gsapOpenContactModal } from "../../utils/gsap";
 export type GlobalContext = {
   isContactModalOpen: boolean;
-  toggleContackModal: () => void;
+  toggleContactModal: () => void;
 };
 export const MyGlobalContext = createContext<GlobalContext>({
   isContactModalOpen: false,
-  toggleContackModal: () => {},
+  toggleContactModal: () => {},
 });
 export const useGlobalContext = () => useContext(MyGlobalContext);
 
@@ -16,7 +16,7 @@ interface IGlobalProvider {
 const GlobalContextProvider: React.FC<IGlobalProvider> = ({ children }) => {
   const [isContactModalOpen, setIsContactModalOpen] = useState<boolean>(false);
 
-  const toggleContackModal = useCallback(() => {
+  const toggleContactModal = useCallback(() => {
     setIsContactModalOpen((value) => {
       if (value) {
         gsapCloseContactModal();
@@ -29,7 +29,7 @@ const GlobalContextProvider: React.FC<IGlobalProvider> = ({ children }) => {
 
   return (
     <MyGlobalContext.Provider
-      value={{ isContactModalOpen, toggleContackModal }}
+      value={{ isContactModalOpen, toggleContactModal: toggleContactModal }}
     >
       {children}
     </MyGlobalContext.Provider>

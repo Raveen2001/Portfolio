@@ -5,22 +5,12 @@ import { ReactComponent as MouseIcon } from "../../assets/arrow_right.svg";
 
 import "./Home.scss";
 import Button from "../button/Button";
-import gsap from "gsap";
+import { useGlobalContext } from "../context/GlobalContext";
 
 const Home = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const gsapContext = useRef<gsap.core.Timeline>();
-  useLayoutEffect(() => {
-    gsap.context(() => {
-      gsapContext.current = gsap
-        .timeline()
-        .fromTo(".mask", { opacity: 1 }, { opacity: 0 }, "0")
-        .fromTo(".right", { opacity: 1 }, { opacity: 0 }, "0")
-        .pause();
-    }, ref);
-  }, []);
+  const { toggleContactModal: toggleContackModal } = useGlobalContext();
   return (
-    <div className="Home" ref={ref}>
+    <div className="Home">
       <div className="main-content">
         <div className="left">
           <h1 className="name mask">Raveen</h1>
@@ -30,14 +20,7 @@ const Home = () => {
           <Button
             className="mask"
             text="About Me"
-            onClick={() => {
-              console.log(gsapContext.current);
-              gsapContext.current?.play();
-
-              setTimeout(() => {
-                gsapContext.current?.reverse();
-              }, 1000);
-            }}
+            onClick={toggleContackModal}
           />
         </div>
         <div className="right">

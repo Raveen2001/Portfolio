@@ -9,7 +9,7 @@ import { useGlobalContext } from "../context/GlobalContext";
 import gsap from "gsap";
 
 const Contact = () => {
-  const { toggleContackModal } = useGlobalContext();
+  const { toggleContactModal: toggleContackModal } = useGlobalContext();
 
   return (
     <div className="Contact">
