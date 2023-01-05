@@ -21,6 +21,17 @@ const Topbar = () => {
         <div className="menu-item clickable" onClick={scrollToExperiments}>
           Experiments
         </div>
+        <div
+          className="menu-item clickable"
+          onClick={() => {
+            window.open(
+              "https://drive.google.com/file/d/1XMllqOhUNryzXcSd21X7mlA7nXxvnqcR/view?usp=sharing",
+              "_blank"
+            );
+          }}
+        >
+          Resume
+        </div>
         <div className="menu-item clickable" onClick={gsapOpenContactModal}>
           Contact
         </div>
