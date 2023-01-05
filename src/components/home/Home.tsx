@@ -5,10 +5,10 @@ import { ReactComponent as MouseIcon } from "../../assets/arrow_right.svg";
 
 import "./Home.scss";
 import Button from "../button/Button";
-import { useGlobalContext } from "../context/GlobalContext";
+import { gsapOpenContactModal } from "../../utils/gsap";
+import Particles from "../particles/Particles";
 
 const Home = () => {
-  const { toggleContactModal: toggleContackModal } = useGlobalContext();
   return (
     <div className="Home">
       <div className="main-content">
@@ -20,7 +20,7 @@ const Home = () => {
           <Button
             className="mask"
             text="About Me"
-            onClick={toggleContackModal}
+            onClick={gsapOpenContactModal}
           />
         </div>
         <div className="right">

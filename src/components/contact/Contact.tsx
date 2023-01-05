@@ -1,16 +1,13 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React from "react";
 import Button from "../button/Button";
 import "./Contact.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import { PARTICLES } from "../../PARTICLES";
+import { SKILLS } from "../../Skills";
 import "@splidejs/splide/dist/css/splide.min.css";
-import { useGlobalContext } from "../context/GlobalContext";
-import gsap from "gsap";
+import { gsapCloseContactModal } from "../../utils/gsap";
 
 const Contact = () => {
-  const { toggleContactModal: toggleContackModal } = useGlobalContext();
-
   return (
     <div className="Contact">
       <div className="container">
@@ -60,7 +57,7 @@ const Contact = () => {
                 }}
                 extensions={{ AutoScroll }}
               >
-                {PARTICLES.map((particle, idx) => {
+                {SKILLS.map((particle, idx) => {
                   return (
                     <SplideSlide key={`slide-${idx}`}>
                       <div className="skill ">
@@ -75,7 +72,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="right">
-          <div className="close" onClick={toggleContackModal}>
+          <div className="close" onClick={gsapCloseContactModal}>
             <span className="line l1"></span>
             <span className="line l2"></span>
           </div>

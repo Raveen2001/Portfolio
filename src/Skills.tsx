@@ -33,7 +33,7 @@ import { ReactComponent as GraphQLIcon } from "./assets/particles/graphql.svg";
 import { ReactComponent as NotionIcon } from "./assets/particles/notion.svg";
 import { ReactComponent as FlaskIcon } from "./assets/particles/flask.svg";
 
-export const PARTICLES = [
+export const SKILLS = [
   {
     icon: <AndroidIcon />,
     name: "Android Studio",
