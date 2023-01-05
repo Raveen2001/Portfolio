@@ -1,0 +1,94 @@
+.Footer {
+  color: #f3f3f3;
+  width: 100%;
+  background: #1c1d25;
+  padding: 8% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  .logo {
+    text-decoration: none;
+    color: #f3f3f3;
+    position: relative;
+    svg {
+      width: 70px;
+      height: 70px;
+      fill: #f3f3f3;
+      transition: all 0.3s ease;
+    }
+
+    &::after {
+      content: "Top";
+      position: absolute;
+      bottom: 30%;
+      right: 10%;
+      opacity: 0;
+      font-weight: 800;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      svg {
+        fill: white;
+      }
+      &::after {
+        right: -60%;
+        opacity: 1;
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+
+    gap: 3rem;
+    height: 100%;
+
+    .menu-item {
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      text-decoration: none;
+      font-weight: 800;
+      color: inherit;
+    }
+
+    .menu-item::after,
+    .menu-item::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      right: 0;
+      left: auto;
+      width: 0%;
+      height: 2.5px;
+      background-color: var(--animation-color-after);
+      transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+    }
+
+    .menu-item::before {
+      transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
+      background-color: var(--animation-color-before);
+    }
+
+    .menu-item:hover {
+      &::after,
+      &::before {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+    }
+
+    .clickable {
+      cursor: pointer;
+    }
+  }
+
+  p {
+    font-size: 12px;
+  }
+}

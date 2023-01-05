@@ -12,6 +12,7 @@ export const gsapOpenContactModal = () => {
 
   gsap.to(".App", { overflow: "hidden" }).duration(0);
   gsap.to(".Project", { display: "none" }).duration(0);
+  gsap.to(".Footer", { display: "none" }).duration(0);
 };
 
 export const gsapCloseContactModal = () => {
@@ -24,4 +25,5 @@ export const gsapCloseContactModal = () => {
   gsap.to(".Topbar", { y: 0 }).delay(0.2);
   gsap.to(".Home", { opacity: 1 }).delay(0.2);
   gsap.to(".Project", { display: "flex" }).duration(0);
+  gsap.to(".Footer", { display: "flex" }).duration(0);
 };

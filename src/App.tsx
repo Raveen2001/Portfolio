@@ -5,6 +5,7 @@ import "./Theme.scss";
 import "./App.scss";
 import Project from "./components/projects/Project";
 import Particles from "./components/particles/Particles";
+import Footer from "./components/footer/Footer";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <Project />
       <Contact />
+      <Footer />
     </div>
   );
 }
