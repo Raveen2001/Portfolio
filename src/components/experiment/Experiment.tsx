@@ -8,7 +8,12 @@ interface IExperimentProps {
 
 const Experiment: React.FC<IExperimentProps> = ({ experiment, number }) => {
   return (
-    <div className="Experiment">
+    <div
+      className="Experiment"
+      onClick={() => {
+        window.open(experiment.link, "_blank");
+      }}
+    >
       <div
         className="image"
         style={{ backgroundImage: `url('${experiment.image}')` }}

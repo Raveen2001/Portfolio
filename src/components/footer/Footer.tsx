@@ -1,27 +1,47 @@
 import React from "react";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { scrollToHome } from "../../utils/scroll";
 import "./Footer.scss";
 
 const Footer = () => {
   return (
     <div className="Footer">
-      <a href="#" className="logo">
+      <a className="logo" onClick={scrollToHome}>
         <Logo />
       </a>
 
       <div className="menu">
-        <a className="menu-item" href="#">
+        <a
+          target="_blank"
+          rel="noopener"
+          className="menu-item"
+          href="mailto: raveenanbarasan@outlook.com"
+        >
           Gmail
         </a>
-        <a className="menu-item" href="#">
+        <a
+          target="_blank"
+          rel="noopener"
+          className="menu-item"
+          href="https://www.linkedin.com/in/raveen2001"
+        >
           LinkedIn
         </a>
-        <a className="menu-item" href="#">
+        <a
+          target="_blank"
+          rel="noopener"
+          className="menu-item"
+          href="https://github.com/raveen2001"
+        >
           Github
         </a>
       </div>
 
       <p>© 2023 Raveen</p>
+      <p>
+        This site is under construction and all features may not work as
+        intended
+      </p>
     </div>
   );
 };

@@ -6,15 +6,17 @@ import "./App.scss";
 import Project from "./components/projects/Project";
 import Particles from "./components/particles/Particles";
 import Footer from "./components/footer/Footer";
+import ModalParticles from "./components/ModalParticles/ModalParticles";
 function App() {
   return (
     <div className="App">
       <Topbar />
+      {/* <ModalParticles /> */}
       <Particles />
       <Home />
       <Project />
-      <Contact />
       <Footer />
+      <Contact />
     </div>
   );
 }

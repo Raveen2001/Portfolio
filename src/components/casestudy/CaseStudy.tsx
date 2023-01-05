@@ -27,7 +27,12 @@ const CaseStudy: React.FC<ICaseStudyProps> = ({ caseStudy, number }) => {
       <div className={`content content-${contentPosition}`}>
         <h3>{caseStudy.title}</h3>
         <h5>{caseStudy.description}</h5>
-        <Button text="Case Study" onClick={() => {}} />
+        <Button
+          text="Case Study"
+          onClick={() => {
+            window.open(caseStudy.link, "_blank");
+          }}
+        />
       </div>
     </a>
   );

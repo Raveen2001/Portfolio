@@ -2,45 +2,59 @@ export interface IProject {
   title: string;
   description: string;
   image: string;
+  link: string;
 }
 
 export const CASESTUDIES: IProject[] = [
   {
     title: "Path Visualizer",
-    description: "Path Visualizer Built using React js",
-    image: "one.jpg",
+    description: "Built using ReactJs",
+    image: "casestudies/path.png",
+    link: "https://raveen2001.github.io/Path-Finding-Visualizer/",
   },
   {
     title: "Sort Visualizer",
-    description: "Path Visualizer Built using React js",
-    image: "one.jpg",
+    description: "Built using P5Js",
+    image: "casestudies/sort.png",
+    link: "https://raveen2001.github.io/Sorting-visualizations/",
   },
   {
-    title: "Sort Visualizer",
-    description: "Path Visualizer Built using React js",
-    image: "one.jpg",
+    title: "Bills Application",
+    description: "Built using Flutter",
+    image: "casestudies/bills.png",
+    link: "https://github.com/Raveen2001/Bills-Application",
+  },
+  {
+    title: "Stone Paper Scissor game",
+    description: "Built using HTML, CSS, JS",
+    image: "casestudies/stone.png",
+    link: "https://raveen2001.github.io/Stone-Paper-Scissor-game/",
   },
 ];
 
 export const EXPERIMENTS: IProject[] = [
   {
-    title: "Path Visualizer",
-    description: "Path Visualizer Built using React js",
-    image: "one.jpg",
+    title: "Android Architectural Components",
+    description: "Built using Android JAVA",
+    image: "experiments/architecture.png",
+    link: "https://github.com/Raveen2001/Android-Architectural-Components",
   },
   {
-    title: "Sort Visualizer",
-    description: "Path Visualizer Built using React js",
-    image: "one.jpg",
+    title: "Job Finding Website",
+    description: "Built using HTML, CSS",
+    image: "experiments/mystic.png",
+    link: "https://raveen2001.github.io/Mystic/",
   },
   {
-    title: "Sort Visualizer",
-    description: "Path Visualizer Built using React js",
-    image: "one.jpg",
+    title: "Network",
+    description: "Built using JAVA",
+    image: "experiments/network.png",
+    link: "https://github.com/Raveen2001/AjiraNet",
   },
   {
-    title: "Sort Visualizer",
-    description: "Path Visualizer Built using React js",
-    image: "one.jpg",
+    title: "Gesture Detection",
+    description: "Built using YOLOv7",
+    image: "experiments/gesture.png",
+    link: "https://github.com/Raveen2001/gesture-detection",
   },
 ];

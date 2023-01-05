@@ -2,23 +2,28 @@ import "./Topbar.scss";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import ThemeSwitcher from "../theme-switcher/ThemeSwitcher";
 import { gsapOpenContactModal } from "../../utils/gsap";
+import {
+  scrollToCaseStudy,
+  scrollToExperiments,
+  scrollToHome,
+} from "../../utils/scroll";
 
 const Topbar = () => {
   return (
     <div className="Topbar">
-      <div>
+      <div className="clickable" onClick={scrollToHome}>
         <Logo width={50} height={50} fill="var(--icon-color)" />
       </div>
       <div className="menu">
-        <a className="menu-item" href="#">
+        <div className="menu-item clickable" onClick={scrollToCaseStudy}>
           Casestudy
-        </a>
-        <a className="menu-item" href="#">
+        </div>
+        <div className="menu-item clickable" onClick={scrollToExperiments}>
           Experiments
-        </a>
-        <a className="menu-item clickable" onClick={gsapOpenContactModal}>
+        </div>
+        <div className="menu-item clickable" onClick={gsapOpenContactModal}>
           Contact
-        </a>
+        </div>
 
         <div className="menu-item clickable">
           <ThemeSwitcher />

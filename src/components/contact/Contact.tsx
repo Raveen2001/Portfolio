@@ -6,6 +6,7 @@ import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { SKILLS } from "../../Skills";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { gsapCloseContactModal } from "../../utils/gsap";
+import ModalParticles from "../ModalParticles/ModalParticles";
 
 const Contact = () => {
   return (
@@ -17,13 +18,13 @@ const Contact = () => {
             <h3>About Me.</h3>
             <p>Interactive Front-end developer</p>
             <div>
-              I'm Riccardo Zanutta, a 22-year-old Italian{" "}
-              <strong>Freelance Front-end developer</strong>. I'm a weird guy
-              who likes making weird things with web technologies. I like to
-              resolve design problems, create smart user interface and imagine
-              useful interaction, developing rich web experiences & web
-              applications. When not working or futzing around with code, I
-              study how to escape from University. Actually for hire
+              I'm Raveen, a 21 year old Indian{" "}
+              <strong>Fullstack Web and Mobile developer</strong>. I'm a weird
+              guy who likes making weird things with web and mobile
+              technologies.I have <strong>4 years experience</strong> in web and
+              mobile development. I like to
+              <strong> resolve logical problems, solving critial bugs </strong>.
+              Actually for hire.
             </div>
 
             <div>
@@ -91,7 +92,12 @@ const Contact = () => {
             <div className="input textarea">
               <textarea id="message" />
             </div>
-            <Button className="button" text="Send Message" onClick={() => {}} />
+            <Button
+              className="button"
+              text="Send Message"
+              onClick={() => {}}
+              disabled={true}
+            />
           </form>
           <h1 className="bg">Contact</h1>
         </div>

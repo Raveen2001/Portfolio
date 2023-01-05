@@ -7,6 +7,7 @@ import "./Home.scss";
 import Button from "../button/Button";
 import { gsapOpenContactModal } from "../../utils/gsap";
 import Particles from "../particles/Particles";
+import { scrollToCaseStudy } from "../../utils/scroll";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
         <div className="left">
           <h1 className="name mask">Raveen</h1>
           <h3 className="designation mask">
-            <i>Frontend developer</i>
+            <i>Fullstack Web and Mobile developer</i>
           </h3>
           <Button
             className="mask"
@@ -24,15 +25,23 @@ const Home = () => {
           />
         </div>
         <div className="right">
-          <a href="#">
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.linkedin.com/in/raveen2001"
+          >
             <LinkedInIcon />
           </a>
-          <a href="#">
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/raveen2001"
+          >
             <GithubIcon />
           </a>
         </div>
       </div>
-      <a className="bottom-content" href="#">
+      <a className="bottom-content" onClick={scrollToCaseStudy}>
         <span>Works</span>
         <MouseIcon width={50} height={46} />
       </a>
