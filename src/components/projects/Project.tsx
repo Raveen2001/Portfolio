@@ -16,14 +16,22 @@ const Project = () => {
       <h2>Latest Works</h2>
       <div className="casestudies">
         {CASESTUDIES.map((caseStudy, idx) => (
-          <CaseStudy caseStudy={caseStudy} number={idx + 1} />
+          <CaseStudy
+            caseStudy={caseStudy}
+            number={idx + 1}
+            key={`casestudy-${idx}`}
+          />
         ))}
       </div>
       <h4>Experiments & Open Source</h4>
       <h2>Web is fun.</h2>
       <div className="experiments">
         {EXPERIMENTS.map((experiment, idx) => (
-          <Experiment experiment={experiment} number={idx + 1} />
+          <Experiment
+            experiment={experiment}
+            number={idx + 1}
+            key={`experiment-${idx}`}
+          />
         ))}
       </div>
     </div>
