@@ -3,7 +3,7 @@ import Home from "./components/home/Home";
 import Topbar from "./components/topbar/Topbar";
 import "./Theme.scss";
 import "./App.scss";
-import Project from "./components/projects/Project";
+import Projects from "./components/projects/Project";
 import Particles from "./components/particles/Particles";
 import Footer from "./components/footer/Footer";
 import ModalParticles from "./components/ModalParticles/ModalParticles";
@@ -14,7 +14,7 @@ function App() {
       {/* <ModalParticles /> */}
       <Particles />
       <Home />
-      <Project />
+      <Projects />
       <Footer />
       <Contact />
     </div>

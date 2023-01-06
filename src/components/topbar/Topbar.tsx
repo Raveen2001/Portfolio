@@ -16,7 +16,7 @@ const Topbar = () => {
       </div>
       <div className="menu">
         <div className="menu-item clickable" onClick={scrollToCaseStudy}>
-          Casestudy
+          Projects
         </div>
         <div className="menu-item clickable" onClick={scrollToExperiments}>
           Experiments
@@ -24,10 +24,7 @@ const Topbar = () => {
         <div
           className="menu-item clickable"
           onClick={() => {
-            window.open(
-              "https://drive.google.com/file/d/1XMllqOhUNryzXcSd21X7mlA7nXxvnqcR/view?usp=sharing",
-              "_blank"
-            );
+            window.open("/Resume.pdf", "_blank");
           }}
         >
           Resume

@@ -21,8 +21,8 @@ const Experiment: React.FC<IExperimentProps> = ({ experiment, number }) => {
 
       <div className="content">
         <div className="title">
-          <h3>Title</h3>
-          <h6>{experiment.title}</h6>
+          <h3>{experiment.title}</h3>
+          <h6>{experiment.description}</h6>
         </div>
         <div
           className="line"

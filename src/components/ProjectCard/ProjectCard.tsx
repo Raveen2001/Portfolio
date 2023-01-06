@@ -1,14 +1,14 @@
 import React, { useMemo } from "react";
 import { IProject } from "../../data";
 import Button from "../button/Button";
-import "./CaseStudy.scss";
+import "./ProjectCard.scss";
 
-interface ICaseStudyProps {
-  caseStudy: IProject;
+interface IProjectProps {
+  project: IProject;
   number: number;
 }
 
-const CaseStudy: React.FC<ICaseStudyProps> = ({ caseStudy, number }) => {
+const ProjectCard: React.FC<IProjectProps> = ({ project, number }) => {
   const numPosition = useMemo(() => (number % 2 === 0 ? "left" : "right"), []);
   const contentPosition = useMemo(
     () => (number % 2 === 0 ? "right" : "left"),
@@ -16,8 +16,8 @@ const CaseStudy: React.FC<ICaseStudyProps> = ({ caseStudy, number }) => {
   );
   return (
     <a
-      className={`CaseStudy card-${numPosition}`}
-      style={{ backgroundImage: `url('${caseStudy.image}')` }}
+      className={`ProjectCard card-${numPosition}`}
+      style={{ backgroundImage: `url('${project.image}')` }}
     >
       <div className="mask"></div>
       <div className={`mask-num num-${numPosition}`}>
@@ -25,12 +25,12 @@ const CaseStudy: React.FC<ICaseStudyProps> = ({ caseStudy, number }) => {
       </div>
 
       <div className={`content content-${contentPosition}`}>
-        <h3>{caseStudy.title}</h3>
-        <h5>{caseStudy.description}</h5>
+        <h3>{project.title}</h3>
+        <h5>{project.description}</h5>
         <Button
-          text="Case Study"
+          text="View Project"
           onClick={() => {
-            window.open(caseStudy.link, "_blank");
+            window.open(project.link, "_blank");
           }}
         />
       </div>
@@ -38,4 +38,4 @@ const CaseStudy: React.FC<ICaseStudyProps> = ({ caseStudy, number }) => {
   );
 };
 
-export default CaseStudy;
+export default ProjectCard;

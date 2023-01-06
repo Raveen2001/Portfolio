@@ -5,18 +5,18 @@ export interface IProject {
   link: string;
 }
 
-export const CASESTUDIES: IProject[] = [
+export const PROJECTS: IProject[] = [
   {
     title: "Path Visualizer",
     description: "Built using ReactJs",
     image: "casestudies/path.png",
-    link: "https://raveen2001.github.io/Path-Finding-Visualizer/",
+    link: "https://visualizer.raveen.in",
   },
   {
     title: "Sort Visualizer",
     description: "Built using P5Js",
     image: "casestudies/sort.png",
-    link: "https://raveen2001.github.io/Sorting-visualizations/",
+    link: "https://sort.raveen.in",
   },
   {
     title: "Bills Application",
@@ -28,7 +28,7 @@ export const CASESTUDIES: IProject[] = [
     title: "Stone Paper Scissor game",
     description: "Built using HTML, CSS, JS",
     image: "casestudies/stone.png",
-    link: "https://raveen2001.github.io/Stone-Paper-Scissor-game/",
+    link: "https://sps.raveen.in",
   },
 ];
 
@@ -43,7 +43,7 @@ export const EXPERIMENTS: IProject[] = [
     title: "Job Finding Website",
     description: "Built using HTML, CSS",
     image: "experiments/mystic.png",
-    link: "https://raveen2001.github.io/Mystic/",
+    link: "https://mystic.raveen.in",
   },
   {
     title: "Network",

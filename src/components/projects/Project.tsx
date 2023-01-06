@@ -1,10 +1,10 @@
 import React from "react";
-import { CASESTUDIES, EXPERIMENTS } from "../../data";
-import CaseStudy from "../casestudy/CaseStudy";
+import { PROJECTS, EXPERIMENTS } from "../../data";
 import Experiment from "../experiment/Experiment";
+import ProjectCard from "../ProjectCard/ProjectCard";
 import "./Project.scss";
 
-const Project = () => {
+const Projects = () => {
   return (
     <div className="Project">
       <div className="bg">
@@ -12,14 +12,14 @@ const Project = () => {
         <div className="line"></div>
         <div className="line"></div>
       </div>
-      <h4>Case Studies</h4>
+      <h4>Projects</h4>
       <h2>Latest Works</h2>
-      <div className="casestudies">
-        {CASESTUDIES.map((caseStudy, idx) => (
-          <CaseStudy
-            caseStudy={caseStudy}
+      <div className="projects">
+        {PROJECTS.map((project, idx) => (
+          <ProjectCard
+            project={project}
             number={idx + 1}
-            key={`casestudy-${idx}`}
+            key={`project-${idx}`}
           />
         ))}
       </div>
@@ -38,4 +38,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Projects;

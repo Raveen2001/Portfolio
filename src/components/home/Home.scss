@@ -83,10 +83,11 @@
         width: 34px;
         height: 34px;
         fill: var(--icon-color);
+        filter: brightness(0.8);
         transition: all 0.3s;
 
         &:hover {
-          fill: #1c1d25;
+          filter: brightness(1);
         }
       }
     }

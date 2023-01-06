@@ -19,12 +19,16 @@ const Contact = () => {
             <p>Interactive Front-end developer</p>
             <div>
               I'm Raveen, a 21 year old Indian{" "}
-              <strong>Fullstack Web and Mobile developer</strong>. I'm a weird
-              guy who likes making weird things with web and mobile
-              technologies.I have <strong>4 years experience</strong> in web and
-              mobile development. I like to
-              <strong> resolve logical problems, solving critial bugs </strong>.
-              Actually for hire.
+              <strong>Fullstack Web and Mobile developer</strong>. I'm a cool
+              guy who likes to build ideas that pop out with web and mobile
+              technologies. I have <strong>4 years experience</strong> in web
+              and mobile development. I like to
+              <strong>
+                {" "}
+                create new stuffs, resolve logical problems, solving critial
+                bugs
+              </strong>
+              . Actually for hire.
             </div>
 
             <div>
