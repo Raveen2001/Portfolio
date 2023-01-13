@@ -1,0 +1,123 @@
+@keyframes updown {
+  0% {
+    top: 0px;
+  }
+
+  80% {
+    top: -10px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes lefttoright {
+  from {
+    visibility: visible;
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.Home {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .main {
+    margin-top: var(--topbar-height);
+    padding: var(--page-padding);
+    padding-right: 2rem;
+    flex: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      .mask {
+        position: relative;
+        width: max-content;
+        overflow: hidden;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          padding: 0px 5px;
+          height: 100%;
+          width: 100%;
+          transform: translateX(100%);
+          animation: lefttoright 1.2s;
+          background-color: white;
+        }
+      }
+      .name {
+        font-size: 5rem;
+        font-weight: 700;
+        margin: 0;
+        padding: 20px 0px;
+      }
+
+      .designation {
+        font-style: italic;
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      svg {
+        width: 34px;
+        height: 34px;
+        fill: var(--icon-color);
+        filter: brightness(0.8);
+        transition: all 0.3s;
+
+        &:hover {
+          filter: brightness(1);
+        }
+      }
+    }
+  }
+
+  .bottom-content {
+    text-decoration: none;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding-bottom: 10px;
+
+    cursor: pointer;
+
+    span {
+      font-size: 1em;
+      font-weight: 400;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      top: 0px;
+      fill: var(--icon-color);
+      transform: rotate(90deg);
+      animation: updown 1s infinite;
+    }
+  }
+}
