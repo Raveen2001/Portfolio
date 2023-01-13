@@ -1,3 +1,30 @@
-.ProjectModal{
-    
+.ProjectModal {
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+
+    .container {
+        width: 78vw;
+        height: 90vh;
+        background-color: red;
+        // position: relative;
+
+        .left {
+            width: 100%;
+            height: 50%;
+            background-color: blue;
+        }
+
+        .middle {
+            width: 100%;
+            height: 20%;
+            background-color: green;
+        }
+    }
 }

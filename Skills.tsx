@@ -32,6 +32,7 @@ import ExpressIcon from "./assets/particles/express.svg";
 import GraphQLIcon from "./assets/particles/graphql.svg";
 import NotionIcon from "./assets/particles/notion.svg";
 import FlaskIcon from "./assets/particles/flask.svg";
+import P5Icon from "../../assets/particles/p5.svg";
 
 export const SKILLS = [
   {
@@ -173,4 +174,8 @@ export const SKILLS = [
     icon: <SocketIOIcon />,
     name: "Socket.io",
   },
+  {
+    icon: <P5Icon />,
+    name: "p5.js",
+  }
 ];

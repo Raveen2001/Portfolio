@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo } from "react";
-import Logo  from "../../assets/color_logo.svg";
+import Logo from "../../assets/color_logo.svg";
 import { throttle } from "lodash";
 import styles from "./Particles.module.scss";
 import TSIcon from "../../assets/particles/typescript.svg";
@@ -12,13 +12,13 @@ import FlutterIcon from "../../assets/particles/flutter.svg";
 import PostgresIcon from "../../assets/particles/postgres.svg";
 import ReduxIcon from "../../assets/particles/redux.svg";
 import KubernetesIcon from "../../assets/particles/kubernetes.svg";
-import Image from 'next/image'
+
 
 const Particles = () => {
   const rightMovement = useMemo(() => [0, 3, 5, 6, 8], []);
   const onMouseMove = useCallback(
     throttle((ev: MouseEvent) => {
-      const particles = document.querySelectorAll<HTMLElement>("."+styles.particle);
+      const particles = document.querySelectorAll<HTMLElement>("." + styles.particle);
       const xOffset = ev.clientX * 0.06;
       const yOffset = ev.clientY * 0.08;
       particles?.forEach((particle, idx) => {
@@ -42,7 +42,7 @@ const Particles = () => {
   return (
     <div className={styles.Particles}>
       <div className={styles.background}>
-        
+
         <Logo />
       </div>
       <div className={styles.canvas}>
