@@ -1,11 +1,12 @@
 import styles from "./Topbar.module.scss";
-import  Logo from "../../assets/logo.svg";
+import Logo from "../../assets/logo.svg";
 import ThemeSwitcher from "../theme-switcher/ThemeSwitcher";
 import { gsapOpenContactModal } from "../../utils/gsap";
 import {
-  scrollToCaseStudy,
+  scrollToProjects,
   scrollToExperiments,
   scrollToHome,
+  scrollToWorks,
 } from "../../utils/scroll";
 
 const Topbar = () => {
@@ -15,10 +16,22 @@ const Topbar = () => {
         <Logo width={50} height={50} fill="var(--icon-color)" />
       </div>
       <div className={styles.menu}>
-        <div className={`${styles["menu-item"]} ${styles.clickable}`} onClick={scrollToCaseStudy}>
+        <div
+          className={`${styles["menu-item"]} ${styles.clickable}`}
+          onClick={scrollToWorks}
+        >
+          Works
+        </div>
+        <div
+          className={`${styles["menu-item"]} ${styles.clickable}`}
+          onClick={scrollToProjects}
+        >
           Projects
         </div>
-        <div className={`${styles["menu-item"]} ${styles.clickable}`} onClick={scrollToExperiments}>
+        <div
+          className={`${styles["menu-item"]} ${styles.clickable}`}
+          onClick={scrollToExperiments}
+        >
           Experiments
         </div>
         <div
@@ -29,7 +42,10 @@ const Topbar = () => {
         >
           Resume
         </div>
-        <div className={`${styles["menu-item"]} ${styles.clickable}`} onClick={gsapOpenContactModal}>
+        <div
+          className={`${styles["menu-item"]} ${styles.clickable}`}
+          onClick={gsapOpenContactModal}
+        >
           Contact
         </div>
 

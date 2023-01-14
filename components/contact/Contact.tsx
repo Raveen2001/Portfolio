@@ -7,7 +7,6 @@ import { SKILLS } from "../../Skills";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { gsapCloseContactModal } from "../../utils/gsap";
 
-
 const Contact = () => {
   return (
     <div className={styles.Contact} id="Contact">
@@ -32,49 +31,47 @@ const Contact = () => {
               . Actually for hire.
             </div>
 
-            <div>
-              <Splide
-                onActive={(splide, component) => {
-                  setTimeout(() => {
-                    (component.slide.firstChild as HTMLElement).classList.add(
-                      styles.focus
-                    );
-                  }, 2000);
-
-                  setTimeout(() => {
-                    (
-                      component.slide.firstChild as HTMLElement
-                    ).classList.remove(styles.focus);
-                  }, 5500);
-                }}
-                options={{
-                  type: "loop",
-                  gap: "10px",
-                  drag: "free",
-                  arrows: false,
-                  pagination: false,
-                  perPage: 4,
-                  direction: "ltr",
-                  autoScroll: {
-                    pauseOnHover: false,
-                    speed: 1,
-                  },
-                  focus: 3,
-                }}
-                extensions={{ AutoScroll }}
-              >
-                {SKILLS.map((particle, idx) => {
-                  return (
-                    <SplideSlide key={`slide-${idx}`}>
-                      <div className={styles.skill}>
-                        {particle.icon}
-                        <h4>{particle.name}</h4>
-                      </div>
-                    </SplideSlide>
+            <Splide
+              onActive={(splide, component) => {
+                setTimeout(() => {
+                  (component.slide.firstChild as HTMLElement).classList.add(
+                    styles.focus
                   );
-                })}
-              </Splide>
-            </div>
+                }, 2000);
+
+                setTimeout(() => {
+                  (component.slide.firstChild as HTMLElement).classList.remove(
+                    styles.focus
+                  );
+                }, 5500);
+              }}
+              options={{
+                type: "loop",
+                gap: "10px",
+                drag: "free",
+                arrows: false,
+                pagination: false,
+                perPage: 4,
+                direction: "ltr",
+                autoScroll: {
+                  pauseOnHover: false,
+                  speed: 1,
+                },
+                focus: 3,
+              }}
+              extensions={{ AutoScroll }}
+            >
+              {SKILLS.map((particle, idx) => {
+                return (
+                  <SplideSlide key={`slide-${idx}`}>
+                    <div className={styles.skill}>
+                      {particle.icon}
+                      <h4>{particle.name}</h4>
+                    </div>
+                  </SplideSlide>
+                );
+              })}
+            </Splide>
           </div>
         </div>
         <div className={styles.right} id="right">

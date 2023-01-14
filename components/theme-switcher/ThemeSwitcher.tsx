@@ -1,6 +1,5 @@
-
 import useLocalStorage from "../../utils/useLocalStorage";
-import ThemeIcon  from "../../assets/theme.svg";
+import ThemeIcon from "../../assets/theme.svg";
 import styles from "./Theme.module.scss";
 import { useEffect } from "react";
 
@@ -11,9 +10,9 @@ const ThemeSwitcher = ({ ...props }) => {
 
   // change theme
   useEffect(() => {
-    document.body.classList.remove(styles['dark'], styles['dark']);
-    if (theme === "dark") document.body.classList.add(styles['dark']);
-    if (theme === "light") document.body.classList.add(styles['light']);
+    document.body.classList.remove(styles["dark"], styles["dark"]);
+    if (theme === "dark") document.body.classList.add(styles["dark"]);
+    if (theme === "light") document.body.classList.add(styles["light"]);
   }, [theme]);
   return (
     <div
