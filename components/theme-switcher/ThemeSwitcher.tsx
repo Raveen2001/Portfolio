@@ -6,13 +6,15 @@ import { useEffect } from "react";
 type Theme = "light" | "dark";
 
 const ThemeSwitcher = ({ ...props }) => {
-  const [theme, setTheme] = useLocalStorage<Theme>("theme", "light");
+  const [theme, setTheme] = useLocalStorage<Theme>("theme", "dark");
 
   // change theme
   useEffect(() => {
-    document.body.classList.remove(styles["dark"], styles["dark"]);
-    if (theme === "dark") document.body.classList.add(styles["dark"]);
-    if (theme === "light") document.body.classList.add(styles["light"]);
+    document.documentElement.classList.remove(styles["light"], styles["dark"]);
+    if (theme === "dark")
+      document.documentElement.classList.add(styles["dark"]);
+    if (theme === "light")
+      document.documentElement.classList.add(styles["light"]);
   }, [theme]);
   return (
     <div

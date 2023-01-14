@@ -5,8 +5,8 @@
 html,
 body {
   width: 100vw;
-
   overflow-x: hidden;
+  color-scheme: var(--color-scheme);
   margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
