@@ -1,10 +1,10 @@
-import Logo  from "../../assets/logo.svg";
+import Logo from "../../assets/logo.svg";
 import { scrollToHome } from "../../utils/scroll";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <div className={styles.Footer}>
+    <div className={styles.Footer} id="Footer">
       <a className={styles.logo} onClick={scrollToHome}>
         <Logo />
       </a>

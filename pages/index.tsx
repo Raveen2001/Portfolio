@@ -42,7 +42,7 @@ export default function App() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <GlobalContextProvider>
-        <main className={styles.App}>
+        <main className={styles.App} id="App">
           <Topbar />
           {!isLoadingComplete && <PageLoading />}
           {isLoadingComplete && [

@@ -11,12 +11,14 @@ export const gsapOpenContactModal = () => {
 
   // gsap.to(".App", { overflow: "hidden" }).duration(0);
   gsap.to("#Home", { opacity: 0 });
+  gsap.to("#Works", { opacity: 0 });
   gsap.to("#Projects", { opacity: 0 });
   gsap.to("#Footer", { opacity: 0 });
-  gsap.to("body", { overflow: "hidden" });
+  gsap.to("body", { overflowY: "hidden" });
 };
 
 export const gsapCloseContactModal = () => {
+  gsap.to("body", { overflowY: "visible" }).duration(0);
   gsap.fromTo("#Contact", { display: "flex" }, { display: "none" });
   gsap.context(() => {
     gsap.fromTo("#left", { y: 0 }, { y: "200%" });
@@ -25,8 +27,8 @@ export const gsapCloseContactModal = () => {
 
   gsap.to("#Topbar", { y: 0 }).delay(0.2);
   gsap.to("#Home", { opacity: 1 }).delay(0.2);
+  gsap.to("#Works", { opacity: 1 }).delay(0.2);
 
   gsap.to("#Projects", { opacity: 1 }).delay(0.2);
   gsap.to("#Footer", { opacity: 1 }).delay(0.2);
-  gsap.to("body", { overflow: "visible" }).duration(0);
 };
