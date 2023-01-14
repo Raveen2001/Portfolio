@@ -10,10 +10,24 @@ import Footer from "../components/footer/Footer";
 import ProjectModal from "../components/ProjectModal/ProjectModal";
 import GlobalContextProvider from "../components/context/GlobalContext";
 import WorkExperience from "../components/WorkExperience/WorkExperience";
+import PageLoading from "../components/FakeLoading/PageLoading";
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const LOADING_TIME = 4300;
 export default function App() {
+  const [isLoadingComplete, setIsLoadingComplete] = useState<boolean>(false);
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setIsLoadingComplete(true);
+    }, LOADING_TIME);
+
+    return () => {
+      clearTimeout(id);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -29,12 +43,16 @@ export default function App() {
         <main className={styles.App}>
           <Topbar />
           <Particles />
-          <Home />
-          <WorkExperience />
-          <Projects />
-          <Footer />
+          {!isLoadingComplete && <PageLoading />}
+          {isLoadingComplete &&
+            [
+              // <Home />,
+              // <WorkExperience />,
+              // <Projects />,
+              // <Footer />,
+            ]}
+          {/* <ProjectModal /> */}
           <Contact />
-          {/* <ProjectModal/> */}
         </main>
       </GlobalContextProvider>
     </>
