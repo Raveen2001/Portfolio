@@ -1,12 +1,12 @@
-import LinkedInIcon  from "../../assets/linkedin.svg";
-import  GithubIcon  from "../../assets/github.svg";
-import  MouseIcon  from "../../assets/arrow_right.svg";
+import LinkedInIcon from "../../assets/linkedin.svg";
+import GithubIcon from "../../assets/github.svg";
+import MouseIcon from "../../assets/arrow_right.svg";
 
 import styles from "./Home.module.scss";
 import Button from "../button/Button";
 import { gsapOpenContactModal } from "../../utils/gsap";
 
-import { scrollToCaseStudy } from "../../utils/scroll";
+import { scrollToProjects } from "../../utils/scroll";
 
 const Home = () => {
   return (
@@ -40,7 +40,7 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <a className={styles['bottom-content']} onClick={scrollToCaseStudy}>
+      <a className={styles["bottom-content"]} onClick={scrollToProjects}>
         <span>Works</span>
         <MouseIcon width={50} height={46} />
       </a>
