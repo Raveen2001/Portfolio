@@ -25,11 +25,11 @@
 
 .Home {
   height: 100vh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
   .main {
     margin-top: var(--topbar-height);

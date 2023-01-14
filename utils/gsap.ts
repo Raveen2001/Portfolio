@@ -1,7 +1,7 @@
 import gsap from "gsap";
 
 export const gsapOpenContactModal = () => {
-  gsap.to("#Topbar", { y: -100 });
+  gsap.to("#Topbar", { y: "-100%" });
 
   gsap.fromTo("#Contact", { display: "none" }, { display: "flex" }).duration(0);
   gsap.context(() => {

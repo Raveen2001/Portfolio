@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/App.module.scss";
 import Home from "../components/home/Home";
 import Topbar from "../components/topbar/Topbar";
 import Particles from "../components/particles/Particles";
@@ -12,15 +12,17 @@ import GlobalContextProvider from "../components/context/GlobalContext";
 import WorkExperience from "../components/WorkExperience/WorkExperience";
 import PageLoading from "../components/FakeLoading/PageLoading";
 import { useEffect, useState } from "react";
+import { gsap } from "gsap";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const LOADING_TIME = 4300;
+const LOADING_TIME = 2000;
 export default function App() {
   const [isLoadingComplete, setIsLoadingComplete] = useState<boolean>(false);
   useEffect(() => {
     const id = setTimeout(() => {
       setIsLoadingComplete(true);
+      gsap.to("#Topbar", { y: 0 });
     }, LOADING_TIME);
 
     return () => {
@@ -42,15 +44,14 @@ export default function App() {
       <GlobalContextProvider>
         <main className={styles.App}>
           <Topbar />
-          <Particles />
           {!isLoadingComplete && <PageLoading />}
-          {isLoadingComplete &&
-            [
-              // <Home />,
-              // <WorkExperience />,
-              // <Projects />,
-              // <Footer />,
-            ]}
+          {isLoadingComplete && [
+            <Particles />,
+            <Home />,
+            <WorkExperience />,
+            <Projects />,
+            <Footer />,
+          ]}
           {/* <ProjectModal /> */}
           <Contact />
         </main>

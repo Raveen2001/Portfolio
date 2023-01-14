@@ -5,20 +5,15 @@ import { gsap } from "gsap";
 const PageLoading = () => {
   useEffect(() => {
     gsap.to(`.${styles["closing-mask"]}`, {
-      delay: 2,
+      delay: 1.5,
+      duration: 0.5,
       width: "100%",
     });
 
     gsap.to(`.${styles.stripes}`, {
-      delay: 2,
+      delay: 1.5,
       duration: 0.3,
       opacity: 0,
-    });
-
-    gsap.to(`.${styles["closing-mask"]}`, {
-      delay: 3,
-      duration: 0.5,
-      backgroundColor: "var(--background-color)",
     });
   }, []);
 
