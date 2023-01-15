@@ -23,7 +23,7 @@ const PageLoading = () => {
       <div className={styles.stripes}>
         <div className={styles.a}></div>
         <div className={styles.b}></div>
-        <div className={styles.c}></div>
+        {/* <div className={styles.c}></div> */}
       </div>
     </div>
   );

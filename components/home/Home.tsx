@@ -20,7 +20,7 @@ const Home = () => {
                 duration={2}
                 isPlaying={true}
                 characters="Fullstack Web and Mobile developer"
-                characterSet={["<", "/", ">", "▒", "▓", "░"]}
+                characterSet={["▒", "▓", "░"]}
               />
             </i>
           </h3>
