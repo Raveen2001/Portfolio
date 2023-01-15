@@ -28,30 +28,16 @@
     overflow: hidden;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     z-index: 3;
-    transition: all 1s ease;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      display: block;
-      background: linear-gradient(270deg, rgba(35, 90, 166), rgba(16, 27, 59));
-      transition: all 1s ease;
-      // transform: translateX(50%);
-    }
+    transition: all 0.35s cubic-bezier(0.694, 0.048, 0.335, 1);
+    background: linear-gradient(270deg, rgba(35, 90, 166), rgba(16, 27, 59));
   }
 
   .reveal {
-    &::before {
-      transform: translateX(100%);
-    }
+    width: 0%;
   }
 
   .content {
