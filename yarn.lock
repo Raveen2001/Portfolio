@@ -2488,6 +2488,13 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-random-reveal@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-random-reveal/-/react-random-reveal-2.0.0.tgz#1bae6de24408445e3b8fdf4c16e7ef29dd895b89"
+  integrity sha512-z+yxBOI6oFLubwhor0g809+vyIQ5rRrzrHEJgG567GCF7S85WEuOq37EbrSb9+BQ5vT4bnhcnxgoGQYEVF1VZQ==
+  dependencies:
+    use-elapsed-time "3.0.2"
+
 react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
@@ -2787,6 +2794,11 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+use-elapsed-time@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/use-elapsed-time/-/use-elapsed-time-3.0.2.tgz#ef22bf520e60f9873fd102925a2d5cbc5d4faaf5"
+  integrity sha512-2EY9lJ5DWbAvT8wWiEp6Ztnl46DjXz2j78uhWbXaz/bg3OfpbgVucCAlcN8Bih6hTJfFTdVYX9L6ySMn5py/wQ==
 
 which@^2.0.1:
   version "2.0.2"

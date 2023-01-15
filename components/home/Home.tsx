@@ -5,8 +5,8 @@ import MouseIcon from "../../assets/arrow_right.svg";
 import styles from "./Home.module.scss";
 import Button from "../button/Button";
 import { gsapOpenContactModal } from "../../utils/gsap";
-
 import { scrollToProjects } from "../../utils/scroll";
+import { RandomReveal } from "react-random-reveal";
 
 const Home = () => {
   return (
@@ -15,8 +15,16 @@ const Home = () => {
         <div className={styles.left}>
           <h1 className={styles.name + " " + styles.mask}>Raveen</h1>
           <h3 className={`${styles.designation} ${styles.mask}`}>
-            <i>Fullstack Web and Mobile developer</i>
+            <i>
+              <RandomReveal
+                duration={2}
+                isPlaying={true}
+                characters="Fullstack Web and Mobile developer"
+                characterSet={["<", "/", ">", "▒", "▓", "░"]}
+              />
+            </i>
           </h3>
+
           <Button
             className={styles.mask}
             text="About Me"
