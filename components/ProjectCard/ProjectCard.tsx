@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import { IProject } from "../../data";
 import Button from "../button/Button";
 import styles from "./ProjectCard.module.scss";
@@ -11,18 +11,35 @@ interface IProjectProps {
 }
 
 const ProjectCard: React.FC<IProjectProps> = ({ project, number }) => {
-  const numPosition = useMemo(() => (number % 2 === 0 ? "left" : "right"), []);
-  const contentPosition = useMemo(
-    () => (number % 2 === 0 ? "right" : "left"),
-    []
-  );
+  const cardRef = useRef<any>();
+  const revealMaskRef = useRef<any>();
+  // add intersection observer to animate the card
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            revealMaskRef.current.classList.add(styles["reveal"]);
+          }
+          console.log(revealMaskRef.current);
+        });
+      },
+      { threshold: 0.8 }
+    );
+
+    observer.observe(cardRef.current);
+  }, []);
+
+  const cardPosition = useMemo(() => (number % 2 === 0 ? "left" : "right"), []);
   return (
     <a
-      className={`${styles.ProjectCard} ${styles[`card-${numPosition}`]}`}
+      className={`${styles.ProjectCard} ${styles[`card-${cardPosition}`]}`}
       style={{ backgroundImage: `url('${project.image}')` }}
+      ref={cardRef}
     >
+      <div className={styles["reveal-mask"]} ref={revealMaskRef}></div>
       <div className={styles.mask}></div>
-      <div className={`${styles['num']} ${styles[`num-${numPosition}`]}`}>
+      <div className={`${styles["num"]} ${styles[`num-${cardPosition}`]}`}>
         {String(number).padStart(2, "0")}
       </div>
 
@@ -30,21 +47,28 @@ const ProjectCard: React.FC<IProjectProps> = ({ project, number }) => {
         <h3>{project.title}</h3>
         <h5>{project.description}</h5>
         <div className={styles.links}>
-
-          {project.link &&
+          {project.link && (
             <Button
               text="Live Preview"
               onClick={() => {
                 openLink(project.link!);
               }}
-            />}
+            />
+          )}
 
-          <div className={styles.github} onClick={() => openLink(project.github)}><GithubIcon /></div>
+          <div
+            className={styles.github}
+            onClick={() => openLink(project.github)}
+          >
+            <GithubIcon />
+          </div>
         </div>
       </div>
 
-      <div className={`${styles['tech-stack']}`}>
-        {project.techStack.map((icon, idx) => <div key={`techStack-${idx}`}>{icon}</div>)}
+      <div className={`${styles["tech-stack"]}`}>
+        {project.techStack.map((icon, idx) => (
+          <div key={`techStack-${idx}`}>{icon}</div>
+        ))}
       </div>
     </a>
   );
