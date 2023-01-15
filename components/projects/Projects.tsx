@@ -15,8 +15,6 @@ const Projects = () => {
           if (entry.isIntersecting) {
             maskRef.current.classList.add(styles["reveal"]);
           }
-
-          console.log(maskRef.current);
         });
       },
       { threshold: 0.8 }

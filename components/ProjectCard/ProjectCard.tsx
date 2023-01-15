@@ -21,10 +21,9 @@ const ProjectCard: React.FC<IProjectProps> = ({ project, number }) => {
           if (entry.isIntersecting) {
             revealMaskRef.current.classList.add(styles["reveal"]);
           }
-          console.log(revealMaskRef.current);
         });
       },
-      { threshold: 0.8 }
+      { threshold: 0.5 }
     );
 
     observer.observe(cardRef.current);

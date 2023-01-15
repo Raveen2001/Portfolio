@@ -22,14 +22,10 @@
     width: 100%;
     display: flex;
     position: relative;
+    overflow: hidden;
 
     .reveal {
-      &::before {
-        transform: translateY(-100%) !important;
-      }
-      &::after {
-        transform: translateY(-100%) !important;
-      }
+      transform: translateY(-201%) !important;
     }
 
     .mask {
@@ -39,32 +35,20 @@
       width: 100%;
       height: 100%;
       z-index: 10;
-      overflow: hidden;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        display: block;
-        background: var(--animation-color-after);
-        transition: all 1s ease;
-        // transform: translateY(-50%);
-      }
+      // overflow: hidden;
+      background: var(--animation-color-after);
+      transition: all 1s ease;
 
       &::after {
         content: "";
         position: absolute;
-        left: 0;
+        top: 0;
         top: 0;
         height: 100%;
         width: 100%;
         display: block;
-        transform: translateY(100%);
         background: var(--animation-color-before);
-        transition: all 1.5s ease;
+        transform: translateY(100%);
       }
     }
   }
