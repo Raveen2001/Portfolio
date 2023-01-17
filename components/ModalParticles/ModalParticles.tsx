@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useMemo } from "react";
 import { throttle } from "lodash";
 import "./ModalParticles.scss";
-import { ReactComponent as P1 } from "../../assets/shapes/1.svg";
-import { ReactComponent as P2 } from "../../assets/shapes/2.svg";
-import { ReactComponent as P3 } from "../../assets/shapes/3.svg";
-import { ReactComponent as P4 } from "../../assets/shapes/4.svg";
-import { ReactComponent as P5 } from "../../assets/shapes/5.svg";
+import P1  from "../../assets/shapes/1.svg";
+import  P2  from "../../assets/shapes/2.svg";
+import  P3  from "../../assets/shapes/3.svg";
+import  P4  from "../../assets/shapes/4.svg";
+import  P5  from "../../assets/shapes/5.svg";
 
 const ModalParticles = () => {
   const rightMovement = useMemo(() => [0, 3, 5, 6, 8], []);

@@ -21,7 +21,6 @@
     }
 
     p {
-      font-size: 12px;
       margin-bottom: 18px;
     }
 
@@ -55,6 +54,8 @@
         div {
           margin: 20px 0px;
           font-size: 1em;
+          letter-spacing: 1px;
+          line-height: 1.2em;
           text-align: justify;
 
           strong {
@@ -119,7 +120,10 @@
       box-shadow: 0px 0px 20px #0000008c;
       .form {
         display: flex;
-        width: 70%;
+        
+        p{
+          margin-bottom: 30px;
+        }
         flex-direction: column;
         justify-content: center;
         label {

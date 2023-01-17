@@ -11,12 +11,14 @@
     .title {
       font-size: 1.1em;
       letter-spacing: 2px;
+      font-weight: 700;
 
       margin-bottom: 5px;
     }
 
     .date {
       font-size: 12px;
+      font-family: var(--secondary-font);
       color: var(--title-color);
       letter-spacing: 2px;
     }
@@ -51,11 +53,11 @@
     margin-bottom: 50px;
 
     .title {
-      font-size: 1.1em;
+      font-size: 1.2em;
       letter-spacing: 2px;
       color: var(--title-color);
       margin-bottom: 5px;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .description {

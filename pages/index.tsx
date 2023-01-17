@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
+import { League_Spartan, Libre_Baskerville, Roboto } from "@next/font/google";
 import styles from "../styles/App.module.scss";
 import Home from "../components/home/Home";
 import Topbar from "../components/topbar/Topbar";
@@ -14,7 +14,8 @@ import PageLoading from "../components/FakeLoading/PageLoading";
 import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 
-const inter = Inter({ subsets: ["latin"] });
+const leagueSpartan = League_Spartan({ subsets: ['latin'], display: "swap", });
+const libreBaskerville = Roboto({weight: ["400"], subsets: ["latin"], style: ["italic", 'normal'],display: 'swap', variable: "--secondary-font"})
 
 const LOADING_TIME = 2000;
 export default function App() {
@@ -42,7 +43,7 @@ export default function App() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <GlobalContextProvider>
-        <main className={styles.App} id="App">
+        <main className={`${styles.App} ${leagueSpartan.className} ${libreBaskerville.variable}`} id="App">
           <Topbar />
           {!isLoadingComplete && <PageLoading />}
           {isLoadingComplete && [

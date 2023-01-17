@@ -41,7 +41,7 @@
       .category {
         // text-align: end;
         font-size: 1em;
-        font-weight: 900;
+        font-weight: 700;
         letter-spacing: 2px;
       }
       .skills-container {
@@ -50,6 +50,7 @@
         gap: 5px;
 
         .skill {
+          font-family: var(--secondary-font);
           width: max-content;
           font-size: 0.85em;
           padding: 0.1rem 0.5rem;
