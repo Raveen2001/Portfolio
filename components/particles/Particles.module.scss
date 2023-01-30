@@ -1,3 +1,5 @@
+@use '../../styles/Breakpoint.scss' as *;
+
 @keyframes dash {
   from {
     stroke-dashoffset: 500;
@@ -102,6 +104,37 @@
     #p10 {
       top: 7%;
       right: 3%;
+    }
+  }
+
+
+  @include sm{
+    .canvas{
+      #p1{
+        top: 17%;
+        left: 17%;
+      }
+
+      #p2{
+        top: 12%;
+        left: 50%;
+      } 
+
+      #p4{
+        top: 20%;
+        left: 77%;
+      }
+
+      #p9{
+        top: 45%;
+        right: 10%;
+      }
+      
+      #p10{
+        top: 30%;
+        left: 7%;
+      }
+      
     }
   }
 }

@@ -1,3 +1,5 @@
+@use '../../styles/Breakpoint.scss' as *;
+
 .ProjectCard {
   width: 90%;
   margin-left: auto;
@@ -8,6 +10,10 @@
   background-position: center;
   position: relative;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 20px 80px 0 rgb(0 0 0 / 45%);
 
   &::before {
@@ -52,11 +58,13 @@
     h3 {
       font-size: 3em;
       margin: 0;
+      text-align: center;
       font-weight: 900;
     }
 
     h5 {
       margin: 20px 0;
+      text-align: center;
       font-size: 1em;
       font-style: italic;
       font-weight: 400;
@@ -90,6 +98,7 @@
       );
     }
   }
+ 
 
   .links {
     display: flex;
@@ -109,6 +118,8 @@
         transform: scale(1.1);
       }
     }
+
+   
   }
 
   .tech-stack {
@@ -158,6 +169,10 @@
       transform: translateY(-15px);
     }
 
+    .links{
+      flex-direction: column;
+    }
+
     .tech-stack {
       opacity: 1;
     }
@@ -165,6 +180,42 @@
 
   svg {
     fill: white;
+  }
+
+
+  @include sm{
+    width: 100%;
+    gap: 10px;
+    .content{
+      position: static;
+      align-items: center !important;
+
+
+      h3 {
+        font-size: 2em;
+      }
+    }
+
+    .num {
+      position: static;
+      font-size: 6em;
+    }
+
+    .links{
+      flex-direction: column;
+    }
+
+    .tech-stack{
+      position: static;
+      margin-top: 40px;
+      transform: translateY(20px);
+    }
+
+    &:hover{
+      .tech-stack{
+        transform: translateY(0);
+      }
+    }
   }
 }
 
@@ -193,6 +244,13 @@
       left: -5%;
     }
   }
+  @include sm{
+    left: 0;
+
+    .links{
+      flex-direction: inherit;
+    }
+  }
 }
 
 .card-right {
@@ -216,4 +274,10 @@
       right: -5%;
     }
   }
+  @include sm{
+    right: 0;
+
+  }
+
 }
+

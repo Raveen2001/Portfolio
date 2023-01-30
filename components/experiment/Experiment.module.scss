@@ -1,3 +1,4 @@
+@use '../../styles/Breakpoint' as *;
 .Experiment {
   width: 100%;
   background-color: white;
@@ -108,6 +109,29 @@
         transform: rotateZ(-90deg), scaleY(1);
         top: -100%;
       }
+    }
+  }
+
+  @include sm{
+    .content{
+      justify-content: center;
+      align-items: center;
+
+      .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3{
+          &::before{
+            display: none;
+          }
+        }
+      }
+    }
+
+    .line{
+      display: none;
     }
   }
 }

@@ -1,3 +1,5 @@
+@use '../../styles/Breakpoint.scss' as *;
+
 .Projects {
   width: 100%;
   height: 100%;
@@ -21,6 +23,7 @@
   .experiments {
     width: 100%;
     display: flex;
+    
     position: relative;
     overflow: hidden;
 
@@ -84,6 +87,21 @@
       width: 1px;
       height: 100%;
       background-color: #1c1d250d;
+    }
+  }
+
+  @include sm{
+    .projects{
+      padding: var(--page-padding);
+      padding-bottom: 80px;
+    }
+
+    .experiments{
+      flex-direction: column;
+      .mask{
+        
+        transform: translateY(-201%) !important;
+      }
     }
   }
 }

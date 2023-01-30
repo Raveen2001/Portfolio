@@ -41,7 +41,7 @@ const ProjectCard: React.FC<IProjectProps> = ({ project, number }) => {
       <div className={`${styles["num"]} ${styles[`num-${cardPosition}`]}`}>
         {String(number).padStart(2, "0")}
       </div>
-
+      
       <div className={styles.content}>
         <h3>{project.title}</h3>
         <h5>{project.description}</h5>

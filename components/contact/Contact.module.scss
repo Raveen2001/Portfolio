@@ -1,3 +1,5 @@
+@use '../../styles/Breakpoint' as *;
+
 .Contact {
   align-items: center;
   position: fixed;
@@ -12,7 +14,7 @@
   .container {
     width: 78vw;
     height: 90vh;
-
+    
     display: flex;
     h3 {
       margin: 0;

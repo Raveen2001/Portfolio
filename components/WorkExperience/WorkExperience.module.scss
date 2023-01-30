@@ -1,3 +1,5 @@
+@use '../../styles/Breakpoint.scss' as *;
+
 .WorkExperience {
   width: 100vw;
   display: flex;
@@ -59,6 +61,16 @@
           border: 1px solid var(--title-color);
         }
       }
+    }
+  }
+
+  @include sm{
+
+    padding-bottom: 80px;
+
+    .layout{
+
+      flex-direction: column;
     }
   }
 }

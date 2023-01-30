@@ -1,5 +1,7 @@
+@use '../../styles/Breakpoint.scss' as *;
+
 @keyframes updown {
-  0% {
+0% {
     top: 0px;
   }
 
@@ -120,6 +122,25 @@
       fill: var(--icon-color);
       transform: rotate(90deg);
       animation: updown 1s infinite;
+    }
+  }
+
+
+  @include sm{
+    .main{
+      justify-content: center;
+      .left{
+        .name{
+          font-size: 4rem;
+        }
+
+        .designation{
+          font-size: 1rem;
+        }
+      }
+      .right{
+        display: none;
+      }
     }
   }
 }

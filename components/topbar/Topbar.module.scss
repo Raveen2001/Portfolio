@@ -1,3 +1,5 @@
+@use '../../styles/Breakpoint.scss' as *;
+
 .Topbar {
   height: var(--topbar-height);
   background-color: var(--topbar-color);
@@ -58,5 +60,12 @@
   }
   .clickable {
     cursor: pointer;
+  }
+
+
+  @include sm{
+    .menu{
+      display: none;
+    }
   }
 }
