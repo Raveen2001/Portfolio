@@ -14,8 +14,8 @@
   .container {
     width: 78vw;
     height: 90vh;
-    
     display: flex;
+    flex-direction: row-reverse;
     h3 {
       margin: 0;
       font-size: 1.5em;
@@ -114,6 +114,7 @@
       flex: 1;
       background-color: #1c1d25fb;
       display: flex;
+      
       justify-content: center;
       align-items: center;
       color: #dadada;
@@ -263,6 +264,29 @@
         right: -30%;
         opacity: 0.03;
         font-weight: 900;
+      }
+    }
+  }
+
+
+  @include sm{
+    overflow: scroll;
+    height: 100vh;
+    .container{
+      width: 100vw;
+      height: 100%;
+      display: block;
+      
+      
+      .left{
+        height: 60vh;
+      }
+      .right{
+        height: 60vh;
+
+        .close{
+          top: 6%
+        }
       }
     }
   }

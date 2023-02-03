@@ -11,6 +11,35 @@ const Contact = () => {
   return (
     <div className={styles.Contact} id="Contact">
       <div className={styles.container}>
+      <div className={styles.right} id="right">
+          <div className={styles.close} onClick={gsapCloseContactModal}>
+            <span className={`${styles.line} ${styles.l1}`}></span>
+            <span className={`${styles.line} ${styles.l2}`}></span>
+          </div>
+          <form className={styles.form}>
+            <h3>Let's talk.</h3>
+            <p>New projects, freelance inquiry or even a coffee.</p>
+            <label htmlFor="name">Name*</label>
+            <div className={styles.input}>
+              <input type="text" id="name" />
+            </div>
+            <label htmlFor="email">E-mail*</label>
+            <div className={styles.input}>
+              <input type="email" id="email" />
+            </div>
+            <label htmlFor="message">Message*</label>
+            <div className={`${styles.input} ${styles.textarea}`}>
+              <textarea id="message" />
+            </div>
+            <Button
+              className={styles.button}
+              text="Send Message"
+              onClick={() => {}}
+              disabled={true}
+            />
+          </form>
+          <h1 className={styles.bg}>Contact</h1>
+        </div>
         <div className={styles.left} id="left">
           <h1 className={styles.bg}>About</h1>
           <div className={styles.about}>
@@ -74,35 +103,7 @@ const Contact = () => {
             </Splide>
           </div>
         </div>
-        <div className={styles.right} id="right">
-          <div className={styles.close} onClick={gsapCloseContactModal}>
-            <span className={`${styles.line} ${styles.l1}`}></span>
-            <span className={`${styles.line} ${styles.l2}`}></span>
-          </div>
-          <form className={styles.form}>
-            <h3>Let's talk.</h3>
-            <p>New projects, freelance inquiry or even a coffee.</p>
-            <label htmlFor="name">Name*</label>
-            <div className={styles.input}>
-              <input type="text" id="name" />
-            </div>
-            <label htmlFor="email">E-mail*</label>
-            <div className={styles.input}>
-              <input type="email" id="email" />
-            </div>
-            <label htmlFor="message">Message*</label>
-            <div className={`${styles.input} ${styles.textarea}`}>
-              <textarea id="message" />
-            </div>
-            <Button
-              className={styles.button}
-              text="Send Message"
-              onClick={() => {}}
-              disabled={true}
-            />
-          </form>
-          <h1 className={styles.bg}>Contact</h1>
-        </div>
+        
       </div>
     </div>
   );
