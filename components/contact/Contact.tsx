@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <div className={styles.Contact} id="Contact">
       <div className={styles.container}>
-      <div className={styles.right} id="right">
+        <div className={styles.right} id="right">
           <div className={styles.close} onClick={gsapCloseContactModal}>
             <span className={`${styles.line} ${styles.l1}`}></span>
             <span className={`${styles.line} ${styles.l2}`}></span>
@@ -103,7 +103,6 @@ const Contact = () => {
             </Splide>
           </div>
         </div>
-        
       </div>
     </div>
   );

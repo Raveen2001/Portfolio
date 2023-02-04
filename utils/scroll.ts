@@ -2,6 +2,10 @@ export const scrollToHome = () => {
   document.getElementById("Home")?.scrollIntoView({ behavior: "smooth" });
 };
 
+export const scrollToHomeWithoutAnimation = () => {
+  document.getElementById("Home")?.scrollIntoView();
+};
+
 export const scrollToWorks = () => {
   const element = document.getElementById("Works") as HTMLElement;
   scrollToElement(element, 30);

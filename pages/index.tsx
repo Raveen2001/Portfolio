@@ -13,9 +13,16 @@ import WorkExperience from "../components/WorkExperience/WorkExperience";
 import PageLoading from "../components/FakeLoading/PageLoading";
 import { useEffect, useState } from "react";
 import { gsap } from "gsap";
+import Sidebar from "../components/sidebar/Sidebar";
 
-const leagueSpartan = League_Spartan({ subsets: ['latin'], display: "swap", });
-const libreBaskerville = Roboto({weight: ["400"], subsets: ["latin"], style: ["italic", 'normal'],display: 'swap', variable: "--secondary-font"})
+const leagueSpartan = League_Spartan({ subsets: ["latin"], display: "swap" });
+const libreBaskerville = Roboto({
+  weight: ["400"],
+  subsets: ["latin"],
+  style: ["italic", "normal"],
+  display: "swap",
+  variable: "--secondary-font",
+});
 
 const LOADING_TIME = 2000;
 export default function App() {
@@ -43,7 +50,10 @@ export default function App() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <GlobalContextProvider>
-        <main className={`${styles.App} ${leagueSpartan.className} ${libreBaskerville.variable}`} id="App">
+        <main
+          className={`${styles.App} ${leagueSpartan.className} ${libreBaskerville.variable}`}
+          id="App"
+        >
           <Topbar />
           {!isLoadingComplete && <PageLoading />}
           {isLoadingComplete && [
@@ -55,6 +65,7 @@ export default function App() {
           ]}
           {/* <ProjectModal /> */}
           <Contact />
+          <Sidebar />
         </main>
       </GlobalContextProvider>
     </>

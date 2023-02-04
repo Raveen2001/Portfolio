@@ -1,4 +1,4 @@
-@use '../../styles/Breakpoint.scss' as *;
+@use "../../styles/Breakpoint.scss" as *;
 
 .Topbar {
   height: var(--topbar-height);
@@ -58,14 +58,21 @@
       }
     }
   }
+
+  .sidebar-icon {
+    display: none;
+  }
   .clickable {
     cursor: pointer;
   }
 
-
-  @include sm{
-    .menu{
+  @include sm {
+    .menu {
       display: none;
+    }
+
+    .sidebar-icon {
+      display: block;
     }
   }
 }

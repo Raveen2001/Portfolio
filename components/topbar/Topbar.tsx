@@ -1,7 +1,8 @@
 import styles from "./Topbar.module.scss";
 import Logo from "../../assets/logo.svg";
+import SidebarIcon from "../../assets/sidebar.svg";
 import ThemeSwitcher from "../theme-switcher/ThemeSwitcher";
-import { gsapOpenContactModal } from "../../utils/gsap";
+import { gsapOpenContactModal, openSidebar } from "../../utils/gsap";
 import {
   scrollToProjects,
   scrollToExperiments,
@@ -52,6 +53,12 @@ const Topbar = () => {
         <div className={`${styles["menu-item"]} ${styles.clickable}`}>
           <ThemeSwitcher />
         </div>
+      </div>
+      <div
+        className={styles.clickable + " " + styles["sidebar-icon"]}
+        onClick={openSidebar}
+      >
+        <SidebarIcon width={50} height={50} fill="var(--icon-color)" />
       </div>
     </div>
   );
