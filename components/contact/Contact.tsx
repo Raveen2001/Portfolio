@@ -87,6 +87,12 @@ const Contact = () => {
                   speed: 1,
                 },
                 focus: 3,
+
+                breakpoints: {
+                  640: {
+                    perPage: 3,
+                  },
+                },
               }}
               extensions={{ AutoScroll }}
             >

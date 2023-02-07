@@ -20,7 +20,6 @@ const ThemeSwitcher = ({ ...props }) => {
     <div
       className={styles["Theme-Switcher"]}
       onClick={(e) => {
-        e.stopPropagation();
         if (theme === "dark") setTheme("light");
         if (theme === "light") setTheme("dark");
       }}

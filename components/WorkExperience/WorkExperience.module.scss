@@ -1,4 +1,4 @@
-@use '../../styles/Breakpoint.scss' as *;
+@use "../../styles/Breakpoint.scss" as *;
 
 .WorkExperience {
   width: 100vw;
@@ -11,7 +11,6 @@
   padding: var(--page-padding);
 
   margin: 0;
-  padding: 0 10vw;
   padding-top: 40px;
 
   h4 {
@@ -64,12 +63,10 @@
     }
   }
 
-  @include sm{
-
+  @include sm {
     padding-bottom: 80px;
 
-    .layout{
-
+    .layout {
       flex-direction: column;
     }
   }
