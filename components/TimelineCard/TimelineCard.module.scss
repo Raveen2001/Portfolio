@@ -1,4 +1,4 @@
-@use '../../styles/Breakpoint.scss' as *;
+@use "../../styles/Breakpoint.scss" as *;
 
 .TimelineCard {
   width: 100%;
@@ -35,7 +35,7 @@
     .line {
       width: 3px;
       height: 10px;
-      
+
       background-color: var(--title-color);
       &:last-child {
         flex: 1;
@@ -72,35 +72,34 @@
     }
   }
 
-
-  @include sm{
-    .left{
-      width: 35%;
-      .title{
+  @include sm {
+    .left {
+      width: 45%;
+      .title {
         text-align: center;
         font-size: 1.1em;
       }
     }
 
-    .center{
+    .center {
       width: 5%;
 
-      .line{
+      .line {
         width: 2px;
       }
 
-      .circle{
+      .circle {
         width: 15px;
         height: 15px;
         border: 2px solid var(--title-color);
       }
     }
-    .right{
-      width: 60%;
-      .title{
+    .right {
+      width: 50%;
+      .title {
         font-size: 1.1em;
       }
-      .description{
+      .description {
         font-size: 0.9em;
       }
     }
