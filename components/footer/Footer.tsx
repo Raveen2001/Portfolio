@@ -37,10 +37,6 @@ const Footer = () => {
       </div>
 
       <p>© 2023 Raveen</p>
-      <p>
-        This site is under construction and all features may not work as
-        intended
-      </p>
     </div>
   );
 };
