@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowRightIcon  from "../../assets/arrow_right.svg";
+import ArrowRightIcon from "../../assets/arrow_right.svg";
 import styles from "./Button.module.scss";
 interface IButtonProps {
   text: string;
@@ -16,6 +16,7 @@ const Button: React.FC<IButtonProps> = ({
   return (
     <button
       className={`${styles.Button} ${className}`}
+      type="submit"
       onClick={onClick}
       disabled={disabled}
     >
