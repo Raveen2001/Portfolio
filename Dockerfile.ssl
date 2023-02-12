@@ -1,0 +1,8 @@
+FROM ubuntu:23.04
+RUN apt update && apt install -y certbot
+RUN mkdir /letsencrypt 
+
+CMD certbot certonly --webroot --webroot-path /letsencrypt --agree-tos --no-eff-email --email raveenanbarasan@gmail.com -d raveen.in -d www.raveen.in
+
+
+
