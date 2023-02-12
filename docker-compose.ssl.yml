@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx.ssl
+
+    image: "nginx/ssl:1.0.0"
+
+    ports:
+      - "80:80"
+
+    volumes:
+      - /letsencrypt:/letsencrypt
+      - /etc/letsencrypt:/etc/letsencrypt
+
+    entrypoint: ["nginx", "-g", "daemon off;"]
+
+  ssl:
+    build:
+      context: .
+      dockerfile: Dockerfile.ssl
+
+    image: "ssl:1.0.0"
+
+    volumes:
+      - /letsencrypt:/letsencrypt
+      - /etc/letsencrypt:/etc/letsencrypt
+
+    depends_on:
+      - nginx
