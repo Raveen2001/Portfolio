@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This Portfolio website is entirely build using NextJs.
 
-## Getting Started
+## For Development
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
+```
+yarn install
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the dev server in port 3000
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## For Production
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Add cloud server docker to local docker CLI using docker context.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   1. start a ssh agend and add your ssh key for server
 
-## Learn More
+      ```
+      eval `ssh agent`
+      ssh-add [ssh key file location]
+      ```
 
-To learn more about Next.js, take a look at the following resources:
+   2. Create docker context
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+      ```
+      docker context create portfolio-DO --description "This is my docker client for Digital Ocean docker client" --docker "host=ssh://root@[server-ip]"
+      ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   3. Change the docker context to point to server
+      ```
+      docker context use portfolio-DO
+      ```
 
-## Deploy on Vercel
+2. Accure a SSL certificate for HTTPS.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```
+   docker compose -f docker-compose.ssl.yml up --build
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   Then bring down the container once we accure the token
+
+3. Start your web containers.
+   ```
+   docker compose -f docker-compose.prod.yml up --build
+   ```
+4. For auto renewal of the SSL certificate.
+   ```
+   docker exec -it [nginx container id] bin/sh
+   certbot renew --dry-run
+   ```
