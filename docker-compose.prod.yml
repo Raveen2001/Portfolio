@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+
+    image: "portfolio:1.0.0"
+
+    ports:
+      - "3000:3000"
+
+    restart: unless-stopped
+    entrypoint: ["yarn", "start"]
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+
+    image: "nginx:1.0.0"
+
+    depends_on:
+      - web
+
+    ports:
+      - "80:80"
+      - "443:443"
+
+    restart: unless-stopped
+
+    volumes:
+      - /letsencrypt:/letsencrypt
+      - /etc/letsencrypt:/etc/letsencrypt
