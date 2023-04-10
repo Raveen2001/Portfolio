@@ -22,7 +22,7 @@ export const sendMail = (name: string, email: string, msg: string) => {
   sgMail
     .send(mail)
     .then(() => {
-      console.log("Email sent");
+      console.error("Email sent");
     })
     .catch((error) => {
       console.error(error.body);
