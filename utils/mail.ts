@@ -15,15 +15,16 @@ export const sendMail = (name: string, email: string, msg: string) => {
       msg,
     },
   };
+  console.error(process.env.SENDGRID_API_KEY!);
+  console.error(process.env.SENDGRID_TEMPLATE_ID);
+  console.error("-----", process.env);
+
   sgMail
     .send(mail)
     .then(() => {
       console.log("Email sent");
     })
     .catch((error) => {
-      console.error(process.env.SENDGRID_API_KEY!);
-      console.error(process.env.SENDGRID_TEMPLATE_ID);
-      console.error("-----", process.env);
       console.error(error.body);
     });
 };

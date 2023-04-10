@@ -7,6 +7,13 @@ import HTMLIcon from "./assets/particles/html.svg";
 import CSSIcon from "./assets/particles/css.svg";
 import JSIcon from "./assets/particles/js.svg";
 import TSIcon from "./assets/particles/typescript.svg";
+import CertBotIcon from "./assets/particles/certbot.svg";
+import NginxIcon from "./assets/particles/nginx.svg";
+import DigitalOceanIcon from "./assets/particles/digital-ocean.svg";
+import GithubActionsIcon from "./assets/particles/github-actions.svg";
+import WebRTCIcon from "./assets/particles/webrtc.svg";
+import QwikIcon from "./assets/particles/qwik.svg";
+import SocketIOIcon from "./assets/particles/socketio.svg";
 
 export interface IProject {
   title: string;
@@ -18,6 +25,23 @@ export interface IProject {
 }
 
 export const PROJECTS: IProject[] = [
+  {
+    title: "Video Chat",
+    description: "Built using Qwik & WebRTC",
+    image: "casestudies/video-chat.png",
+    link: "https://video-chat.raveen.in",
+    github: "https://github.com/Raveen2001/video-chat",
+    techStack: [
+      <QwikIcon />,
+      <TSIcon />,
+      <SocketIOIcon />,
+      <WebRTCIcon />,
+      <GithubActionsIcon />,
+      <DigitalOceanIcon />,
+      <NginxIcon />,
+      <CertBotIcon />,
+    ],
+  },
   {
     title: "Path Visualizer",
     description: "Built using ReactJs",
@@ -93,14 +117,14 @@ export const WORK_TIMELINE: IWork[] = [
   {
     name: "Maersk",
     date: "May 2022 - Present",
-    designation: "Software Developer Intern",
+    designation: "Fullstack Web Developer(FE Heavy)",
     description:
       'Working on "Fleet Energy" project, focusing on optimizing efficient use of fuels in the ships by analysis the data from the engine.',
   },
 
   {
     name: "Camaford",
-    date: "Dec 2021 - Jan 2022",
+    date: "Dec 2021 - Apr 2022",
     designation: "Fullstack Android Developer",
     description:
       "Developed an Android application for the photographers community to showcase their work and get hired or rent/sell equipments.",
@@ -108,21 +132,21 @@ export const WORK_TIMELINE: IWork[] = [
 
   {
     name: "Arima Labs",
-    date: "May 2021 - July 2021",
+    date: "May 2021 - Nov 2021",
     designation: "Fullstack Web Developer",
     description:
       "Developed a dashboard which is backed by ML model that helps the officials to keeps track of vehicles passing through traffic signals and also captures the vechicles which violated the traffic rules & regulations.",
   },
   {
     name: "PadAngels",
-    date: "Jan 2021 - Mar 2021",
+    date: "Jan 2021 - Apr 2021",
     designation: "Fullstack Android Developer",
     description:
       "Developed an ecommerce application for buying sanitary pads and other products which helps women during their mensuration cycles.",
   },
   {
     name: "LintCloud",
-    date: "May 2020 - Sept 2022",
+    date: "May 2020 - Nov 2020",
     designation: "Frontend Android Developer",
     description:
       "Developed an application that help companies assign jobs to their employees by creating and assigning tickets to them and also keeps track of the employees location.",
@@ -132,45 +156,48 @@ export const WORK_TIMELINE: IWork[] = [
 export const SKILLS_BY_CATEGORY: Map<string, string[]> = new Map([
   [
     "Programming Languages",
-    ["Java", "Python", "JavaScript", "Dart", "C", "SQL"],
+    ["Java", "Python", "JavaScript", "Dart", "C", "SQL", "PSQL"],
   ],
   [
     "Frontend",
     [
       "ReactJs",
       "NextJs",
+      "Qwik",
+      "Angular",
+      "P5Js",
       "Redux",
       "Flutter",
       "Native Android",
-      "Angular",
-      "P5Js",
     ],
   ],
   [
     "Backend",
-    [
-      "NodeJs",
-      "FastAPI",
-      "Django",
-      "ExpressJs",
-      "Flask",
-      "REST API",
-      "GraphQL",
-    ],
+    ["ExpressJs", "Fastify", "FastAPI", "Django", "Flask", "Firebase"],
   ],
-  ["Databases", ["MySQL", "MongoDB", "PostgreSQL", "SQLite"]],
+  [
+    "Databases",
+    ["MySQL", "MongoDB", "PostgreSQL", "SQLite", "Cloud Firestore", "Redis"],
+  ],
   [
     "DevOps",
     [
       "Git",
       "GitHub",
+      "Github Actions",
+      "GitHub Pages",
       "Docker",
       "Kubernetes",
-      "Firebase",
+      "WebRTC",
       "Digital Ocean",
       "AWS",
       "Azure",
       "Heroku",
+      "Nginx",
+      "Netlify",
+      "Vercel",
+      "CertBot",
+      "Grafana",
     ],
   ],
   [
@@ -181,15 +208,31 @@ export const SKILLS_BY_CATEGORY: Map<string, string[]> = new Map([
       "TypeScript",
       "Bootstrap",
       "Tailwind CSS",
+      "Material UI",
       "SASS",
       "Pandas",
       "NumPy",
       "SQLAlchemy",
       "PyDantic",
+      "Alembic",
+      "Prisma",
       "Google Maps",
       "Here Maps",
       "GetX",
+      "REST API",
+      "GraphQL",
     ],
   ],
-  ["Tools", ["Linux", "VS Code", "Android Studio", "Postman", "Figma"]],
+  [
+    "Tools",
+    [
+      "Linux",
+      "NeoVIM",
+      "VS Code",
+      "Android Studio",
+      "Chrome Dev Tools",
+      "Postman",
+      "Figma",
+    ],
+  ],
 ]);

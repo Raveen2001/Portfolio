@@ -33,6 +33,15 @@ import GraphQLIcon from "./assets/particles/graphql.svg";
 import NotionIcon from "./assets/particles/notion.svg";
 import FlaskIcon from "./assets/particles/flask.svg";
 import P5Icon from "./assets/particles/p5.svg";
+import CertBotIcon from "./assets/particles/certbot.svg";
+import NginxIcon from "./assets/particles/nginx.svg";
+import DigitalOceanIcon from "./assets/particles/digital-ocean.svg";
+import FastifyIcon from "./assets/particles/fastify.svg";
+import GithubActionsIcon from "./assets/particles/github-actions.svg";
+import WebRTCIcon from "./assets/particles/webrtc.svg";
+import VercelIcon from "./assets/particles/vercel.svg";
+import NetlifyIcon from "./assets/particles/netlify.svg";
+import QwikIcon from "./assets/particles/qwik.svg";
 
 export const SKILLS = [
   {
@@ -177,5 +186,41 @@ export const SKILLS = [
   {
     icon: <P5Icon />,
     name: "p5.js",
-  }
+  },
+  {
+    icon: <CertBotIcon />,
+    name: "CertBot",
+  },
+  {
+    icon: <NginxIcon />,
+    name: "Nginx",
+  },
+  {
+    icon: <DigitalOceanIcon />,
+    name: "Digital Ocean",
+  },
+  {
+    icon: <FastifyIcon />,
+    name: "Fastify",
+  },
+  {
+    icon: <GithubActionsIcon />,
+    name: "Github Actions",
+  },
+  {
+    icon: <WebRTCIcon />,
+    name: "WebRTC",
+  },
+  {
+    icon: <VercelIcon />,
+    name: "Vercel",
+  },
+  {
+    icon: <NetlifyIcon />,
+    name: "Netlify",
+  },
+  {
+    icon: <QwikIcon />,
+    name: "Qwik",
+  },
 ];

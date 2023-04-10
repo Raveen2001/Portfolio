@@ -1,4 +1,4 @@
-@use '../../styles/Breakpoint.scss' as *;
+@use "../../styles/Breakpoint.scss" as *;
 
 .ProjectCard {
   width: 90%;
@@ -98,7 +98,6 @@
       );
     }
   }
- 
 
   .links {
     display: flex;
@@ -118,8 +117,6 @@
         transform: scale(1.1);
       }
     }
-
-   
   }
 
   .tech-stack {
@@ -169,10 +166,6 @@
       transform: translateY(-15px);
     }
 
-    .links{
-      flex-direction: column;
-    }
-
     .tech-stack {
       opacity: 1;
     }
@@ -182,14 +175,12 @@
     fill: white;
   }
 
-
-  @include sm{
+  @include sm {
     width: 100%;
     gap: 10px;
-    .content{
+    .content {
       position: static;
       align-items: center !important;
-
 
       h3 {
         font-size: 2em;
@@ -201,18 +192,18 @@
       font-size: 6em;
     }
 
-    .links{
+    .links {
       flex-direction: column;
     }
 
-    .tech-stack{
+    .tech-stack {
       position: static;
       margin-top: 40px;
       transform: translateY(20px);
     }
 
-    &:hover{
-      .tech-stack{
+    &:hover {
+      .tech-stack {
         transform: translateY(0);
       }
     }
@@ -244,10 +235,10 @@
       left: -5%;
     }
   }
-  @include sm{
+  @include sm {
     left: 0;
 
-    .links{
+    .links {
       flex-direction: inherit;
     }
   }
@@ -274,10 +265,7 @@
       right: -5%;
     }
   }
-  @include sm{
+  @include sm {
     right: 0;
-
   }
-
 }
-

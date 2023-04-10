@@ -47,7 +47,7 @@ const Sidebar = () => {
               className={`${styles["menu-item"]} ${styles.clickable}`}
               onClick={() => {
                 closeSidebar();
-                window.open("/Resume.pdf", "_blank");
+                window.open("/resume.pdf", "_blank");
               }}
             >
               Resume

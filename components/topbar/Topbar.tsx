@@ -38,7 +38,7 @@ const Topbar = () => {
         <div
           className={`${styles["menu-item"]} ${styles.clickable}`}
           onClick={() => {
-            window.open("/Resume.pdf", "_blank");
+            window.open("/resume.pdf", "_blank");
           }}
         >
           Resume
