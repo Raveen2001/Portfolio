@@ -104,7 +104,7 @@ const Contact = () => {
                 create new stuffs, resolve logical problems, solving critial
                 bugs
               </strong>
-              . Actually for hire.
+              .{/* Actually for hire. */}
             </div>
 
             <Splide
