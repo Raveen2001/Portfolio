@@ -2,7 +2,7 @@ import sgMail from "@sendgrid/mail";
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
-export const sendMail = (name: string, email: string, msg: string) => {
+export const sendMail = async (name: string, email: string, msg: string) => {
   const mail = {
     to: "raveenanbarasan@gmail.com", // Change to your recipient
     from: "raveenanbarasan@gmail.com", // Change to your verified sender
@@ -19,12 +19,5 @@ export const sendMail = (name: string, email: string, msg: string) => {
   console.error("Template ID:", process.env.SENDGRID_TEMPLATE_ID);
   console.error("-----");
 
-  sgMail
-    .send(mail)
-    .then(() => {
-      console.error("Email sent");
-    })
-    .catch((error) => {
-      console.error(error.body);
-    });
+  await sgMail.send(mail);
 };
