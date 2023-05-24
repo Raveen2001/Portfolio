@@ -137,22 +137,21 @@ export const WORK_TIMELINE: IWork[] = [
       'Working on "Fleet Energy" project, focusing on optimizing efficient use of fuels in the ships by analysis the data from the engine.',
     techStacks: [
       { icon: <ReactIcon />, name: "ReactJs" },
+      { icon: <TSIcon />, name: "Typescript" },
+      { icon: <FastAPIIcon />, name: "FastAPI" },
+      { icon: <PandasIcon />, name: "Pandas" },
+      { icon: <PythonIcon />, name: "Python" },
       { icon: <PostgresIcon />, name: "PostgreSQL" },
+      { icon: <RedisIcon />, name: "RedisDB" },
       { icon: <GitIcon />, name: "GIT" },
-      { icon: <GithubIcon />, name: "GitHub" },
       { icon: <GithubActionsIcon />, name: "GitHub Actions" },
       { icon: <DockerIcon />, name: "Docker" },
       { icon: <KubernetesIcon />, name: "Kubernetes" },
       { icon: <AzureIcon />, name: "Azure" },
-      { icon: <PythonIcon />, name: "Python" },
       {
         icon: <Image src="/grafana.png" width={40} height={40} alt="grafana" />,
         name: "Grafana",
       },
-      { icon: <FastAPIIcon />, name: "FastAPI" },
-      { icon: <PandasIcon />, name: "Pandas" },
-      { icon: <TSIcon />, name: "Typescript" },
-      { icon: <RedisIcon />, name: "RedisDB" },
     ],
 
     workDone: [
