@@ -124,6 +124,7 @@ export interface IWork {
   designation: string;
   description: string;
   techStacks: ISkill[];
+  workDone: string[];
 }
 
 export const WORK_TIMELINE: IWork[] = [
@@ -149,6 +150,16 @@ export const WORK_TIMELINE: IWork[] = [
       { icon: <GrafanaIcon />, name: "Grafana" },
       { icon: <RedisIcon />, name: "RedisDB" },
     ],
+
+    workDone: [
+      "Worked with ReactJs forfront-end and FastAPI for back-end along with PostgreSQL to build a dashboard that helps in optimising efficient use of fuel in ships.",
+      "Used Pandas and worked with a huge amount of data for manipulating and analysing the data which will be displayed in the front-end using interactive graphs and table.",
+      "Used Tanstack Table and improved the performance of the front-end by using virtualized rows which received applause from users as well as fellow developers.",
+      "Used E-chart and developed a synchronized scrollable chart.",
+      "Developed an enhanced search feature that lets the userto see suggestions as they type in the search bar.",
+      "Made the database secure by creating new users and role.",
+      "Wrote clean code which received honours from fellow developers.",
+    ],
   },
 
   {
@@ -158,6 +169,7 @@ export const WORK_TIMELINE: IWork[] = [
     description:
       "Developed an Android application for the photographers community to showcase their work and get hired or rent/sell equipments.",
     techStacks: [],
+    workDone: [],
   },
 
   {
@@ -167,6 +179,7 @@ export const WORK_TIMELINE: IWork[] = [
     description:
       "Developed a dashboard which is backed by ML model that helps the officials to keeps track of vehicles passing through traffic signals and also captures the vechicles which violated the traffic rules & regulations.",
     techStacks: [],
+    workDone: [],
   },
   {
     name: "PadAngels",
@@ -175,6 +188,7 @@ export const WORK_TIMELINE: IWork[] = [
     description:
       "Developed an ecommerce application for buying sanitary pads and other products which helps women during their mensuration cycles.",
     techStacks: [],
+    workDone: [],
   },
   {
     name: "LintCloud",
@@ -183,6 +197,7 @@ export const WORK_TIMELINE: IWork[] = [
     description:
       "Developed an application that help companies assign jobs to their employees by creating and assigning tickets to them and also keeps track of the employees location.",
     techStacks: [],
+    workDone: [],
   },
 ];
 

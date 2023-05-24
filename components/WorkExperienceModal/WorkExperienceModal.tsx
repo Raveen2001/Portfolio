@@ -29,7 +29,14 @@ const WorkExperienceModal = () => {
             </div>
           </div>
         </div>
-        <div className={styles.right} id="right"></div>
+        <div className={styles.right} id="right">
+          <h3 className={styles.title}>Work done: </h3>
+          <ul>
+            {selectedWorkExperience.workDone.map((work) => (
+              <li>{work}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </Modal>
   );

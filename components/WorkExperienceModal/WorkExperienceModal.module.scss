@@ -5,11 +5,11 @@
   z-index: 1000;
 
   .left {
+    // transform: translateY(200%);
     padding: 40px 20px;
     width: 40%;
     height: 100%;
     background-color: #1c1d25fb;
-    // transform: translateY(200%);
     color: #dadada;
     box-shadow: 0px 0px 20px #0000008c;
 
@@ -58,12 +58,21 @@
     width: 60%;
     height: 100%;
     background-color: #f2f2f2f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 40px 20px;
     color: #1c1d25;
     position: relative;
-    z-index: 1;
     box-shadow: 0px 0px 20px #0000008c;
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    li {
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
   }
 }
