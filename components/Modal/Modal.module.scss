@@ -1,14 +1,4 @@
 .Modal {
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-
   .container {
     position: relative;
 
@@ -29,7 +19,7 @@
         position: absolute;
         height: 3px;
         width: 35px;
-        background-color: var(--icon-color);
+        background-color: #1c1d25;
         overflow: hidden;
         transition: all 0.4s cubic-bezier(0.694, 0.048, 0.335, 1);
 
