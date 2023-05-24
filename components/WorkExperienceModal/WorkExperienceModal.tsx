@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./WorkExperienceModal.module.scss";
-import Modal from "../Modal/Modal";
 import { useGlobalContext } from "../context/GlobalContext";
 import { closeModalFor } from "../../utils/gsap";
 
@@ -22,8 +21,11 @@ const WorkExperienceModal = () => {
             <h5 className={styles.title}>Tech-stacks Used</h5>
             <div className={styles.techContainer}>
               {selectedWorkExperience.techStacks.map((techStack) => (
-                <div className={styles.item}>
-                  {techStack.icon}
+                <div
+                  className={styles.item}
+                  key={selectedWorkExperience.name + techStack.name}
+                >
+                  <div className={styles.icon}>{techStack.icon}</div>
                   <h5>{techStack.name}</h5>
                 </div>
               ))}

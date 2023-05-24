@@ -33,7 +33,7 @@ const GlobalContextProvider: React.FC<IGlobalProvider> = ({ children }) => {
         selectedProject,
         setSelectedProject,
         selectedWorkExperience,
-        setSelectedWorkExperience(data) {},
+        setSelectedWorkExperience,
       }}
     >
       {children}

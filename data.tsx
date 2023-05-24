@@ -15,6 +15,7 @@ import WebRTCIcon from "./assets/particles/webrtc.svg";
 import QwikIcon from "./assets/particles/qwik.svg";
 import SocketIOIcon from "./assets/particles/socketio.svg";
 import PostgresIcon from "./assets/particles/postgres.svg";
+
 import GitIcon from "./assets/particles/git.svg";
 import GithubIcon from "./assets/particles/github.svg";
 import KubernetesIcon from "./assets/particles/kubernetes.svg";
@@ -22,10 +23,10 @@ import DockerIcon from "./assets/particles/docker.svg";
 import PythonIcon from "./assets/particles/python.svg";
 import RedisIcon from "./assets/particles/redis.svg";
 import FastAPIIcon from "./assets/particles/fastapi.svg";
-import GrafanaIcon from "./assets/particles/grafana.svg";
 import AzureIcon from "./assets/particles/azure.svg";
 import PandasIcon from "./assets/particles/pandas.svg";
 import { ISkill } from "./Skills";
+import Image from "next/image";
 
 export interface IProject {
   title: string;
@@ -144,10 +145,13 @@ export const WORK_TIMELINE: IWork[] = [
       { icon: <KubernetesIcon />, name: "Kubernetes" },
       { icon: <AzureIcon />, name: "Azure" },
       { icon: <PythonIcon />, name: "Python" },
+      {
+        icon: <Image src="/grafana.png" width={40} height={40} alt="grafana" />,
+        name: "Grafana",
+      },
       { icon: <FastAPIIcon />, name: "FastAPI" },
       { icon: <PandasIcon />, name: "Pandas" },
       { icon: <TSIcon />, name: "Typescript" },
-      { icon: <GrafanaIcon />, name: "Grafana" },
       { icon: <RedisIcon />, name: "RedisDB" },
     ],
 
