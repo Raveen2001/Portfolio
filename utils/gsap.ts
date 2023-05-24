@@ -1,14 +1,14 @@
 import gsap from "gsap";
 import { scrollToHomeWithoutAnimation } from "./scroll";
 
-export const gsapOpenContactModal = () => {
+export const openModalFor = (id: string) => {
   gsap.to("#Topbar", { y: "-100%" });
 
-  gsap.fromTo("#Contact", { display: "none" }, { display: "flex" }).duration(0);
+  gsap.fromTo(`#${id}`, { display: "none" }, { display: "flex" }).duration(0);
   gsap.context(() => {
     gsap.fromTo("#left", { y: "200%" }, { y: 0 }).delay(0.2);
     gsap.fromTo("#right", { y: "-200%" }, { y: 0 }).delay(0.2);
-  }, "#Contact");
+  }, `#${id}`);
 
   // gsap.to(".App", { overflow: "hidden" }).duration(0);
   gsap.to("#Home", { opacity: 0 });
@@ -17,12 +17,12 @@ export const gsapOpenContactModal = () => {
   gsap.to("#Footer", { opacity: 0 });
 };
 
-export const gsapCloseContactModal = () => {
-  gsap.fromTo("#Contact", { display: "flex" }, { display: "none" });
+export const closeModalFor = (id: string) => {
+  gsap.fromTo(`#${id}`, { display: "flex" }, { display: "none" });
   gsap.context(() => {
     gsap.fromTo("#left", { y: 0 }, { y: "200%" });
     gsap.fromTo("#right", { y: 0 }, { y: "-200%" });
-  }, "#Contact");
+  }, `#${id}`);
 
   gsap.to("#Topbar", { y: 0 }).delay(0.2);
   gsap.to("#Home", { opacity: 1 }).delay(0.2);

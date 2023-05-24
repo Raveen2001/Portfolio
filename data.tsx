@@ -14,6 +14,18 @@ import GithubActionsIcon from "./assets/particles/github-actions.svg";
 import WebRTCIcon from "./assets/particles/webrtc.svg";
 import QwikIcon from "./assets/particles/qwik.svg";
 import SocketIOIcon from "./assets/particles/socketio.svg";
+import PostgresIcon from "./assets/particles/postgres.svg";
+import GitIcon from "./assets/particles/git.svg";
+import GithubIcon from "./assets/particles/github.svg";
+import KubernetesIcon from "./assets/particles/kubernetes.svg";
+import DockerIcon from "./assets/particles/docker.svg";
+import PythonIcon from "./assets/particles/python.svg";
+import RedisIcon from "./assets/particles/redis.svg";
+import FastAPIIcon from "./assets/particles/fastapi.svg";
+import GrafanaIcon from "./assets/particles/grafana.svg";
+import AzureIcon from "./assets/particles/azure.svg";
+import PandasIcon from "./assets/particles/pandas.svg";
+import { ISkill } from "./Skills";
 
 export interface IProject {
   title: string;
@@ -111,45 +123,66 @@ export interface IWork {
   date: string;
   designation: string;
   description: string;
+  techStacks: ISkill[];
 }
 
 export const WORK_TIMELINE: IWork[] = [
   {
-    name: "Maersk",
+    name: "Maersk Global Services Private Limited",
     date: "May 2022 - Present",
-    designation: "Fullstack Web Developer(FE Heavy)",
+    designation: "Fullstack Web Developer Intern(FE Heavy)",
     description:
       'Working on "Fleet Energy" project, focusing on optimizing efficient use of fuels in the ships by analysis the data from the engine.',
+    techStacks: [
+      { icon: <ReactIcon />, name: "ReactJs" },
+      { icon: <PostgresIcon />, name: "PostgreSQL" },
+      { icon: <GitIcon />, name: "GIT" },
+      { icon: <GithubIcon />, name: "GitHub" },
+      { icon: <GithubActionsIcon />, name: "GitHub Actions" },
+      { icon: <DockerIcon />, name: "Docker" },
+      { icon: <KubernetesIcon />, name: "Kubernetes" },
+      { icon: <AzureIcon />, name: "Azure" },
+      { icon: <PythonIcon />, name: "Python" },
+      { icon: <FastAPIIcon />, name: "FastAPI" },
+      { icon: <PandasIcon />, name: "Pandas" },
+      { icon: <TSIcon />, name: "Typescript" },
+      { icon: <GrafanaIcon />, name: "Grafana" },
+      { icon: <RedisIcon />, name: "RedisDB" },
+    ],
   },
 
   {
     name: "Camaford",
     date: "Dec 2021 - Apr 2022",
-    designation: "Fullstack Android Developer",
+    designation: "Freelancer Fullstack Android Developer",
     description:
       "Developed an Android application for the photographers community to showcase their work and get hired or rent/sell equipments.",
+    techStacks: [],
   },
 
   {
     name: "Arima Labs",
     date: "May 2021 - Nov 2021",
-    designation: "Fullstack Web Developer",
+    designation: "Freelancer Fullstack Web Developer",
     description:
       "Developed a dashboard which is backed by ML model that helps the officials to keeps track of vehicles passing through traffic signals and also captures the vechicles which violated the traffic rules & regulations.",
+    techStacks: [],
   },
   {
     name: "PadAngels",
     date: "Jan 2021 - Apr 2021",
-    designation: "Fullstack Android Developer",
+    designation: "Freelancer Fullstack Android Developer",
     description:
       "Developed an ecommerce application for buying sanitary pads and other products which helps women during their mensuration cycles.",
+    techStacks: [],
   },
   {
     name: "LintCloud",
     date: "May 2020 - Nov 2020",
-    designation: "Frontend Android Developer",
+    designation: "Freelancer Frontend Android Developer",
     description:
       "Developed an application that help companies assign jobs to their employees by creating and assigning tickets to them and also keeps track of the employees location.",
+    techStacks: [],
   },
 ];
 

@@ -5,7 +5,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { SKILLS } from "../../Skills";
 import "@splidejs/splide/dist/css/splide.min.css";
-import { gsapCloseContactModal } from "../../utils/gsap";
+import { closeModalFor } from "../../utils/gsap";
 
 const Contact = () => {
   const formData = useRef({
@@ -46,7 +46,10 @@ const Contact = () => {
     <div className={styles.Contact} id="Contact">
       <div className={styles.container}>
         <div className={styles.right} id="right">
-          <div className={styles.close} onClick={gsapCloseContactModal}>
+          <div
+            className={styles.close}
+            onClick={() => closeModalFor("Contact")}
+          >
             <span className={`${styles.line} ${styles.l1}`}></span>
             <span className={`${styles.line} ${styles.l2}`}></span>
           </div>

@@ -2,7 +2,7 @@ import styles from "./Topbar.module.scss";
 import Logo from "../../assets/logo.svg";
 import SidebarIcon from "../../assets/sidebar.svg";
 import ThemeSwitcher from "../theme-switcher/ThemeSwitcher";
-import { gsapOpenContactModal, openSidebar } from "../../utils/gsap";
+import { openModalFor, openSidebar } from "../../utils/gsap";
 import {
   scrollToProjects,
   scrollToExperiments,
@@ -45,7 +45,7 @@ const Topbar = () => {
         </div>
         <div
           className={`${styles["menu-item"]} ${styles.clickable}`}
-          onClick={gsapOpenContactModal}
+          onClick={() => openModalFor("Contact")}
         >
           Contact
         </div>

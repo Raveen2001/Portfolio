@@ -11,7 +11,7 @@ const Experiment: React.FC<IExperimentProps> = ({ experiment, number }) => {
     <div
       className={styles.Experiment}
       onClick={() => {
-        window.open(experiment.link, "_blank");
+        window.open(experiment.github, "_blank");
       }}
     >
       <div

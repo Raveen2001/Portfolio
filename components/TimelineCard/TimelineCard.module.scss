@@ -14,7 +14,7 @@
       font-size: 1.1em;
       letter-spacing: 2px;
       font-weight: 700;
-
+      text-align: right;
       margin-bottom: 5px;
     }
 
@@ -69,6 +69,13 @@
       line-height: 20px;
       letter-spacing: 1.2px;
       margin-bottom: 25px;
+    }
+
+    .readMore {
+      all: unset;
+      cursor: pointer;
+      color: var(--title-color);
+      text-decoration: underline;
     }
   }
 

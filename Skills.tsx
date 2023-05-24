@@ -42,8 +42,13 @@ import WebRTCIcon from "./assets/particles/webrtc.svg";
 import VercelIcon from "./assets/particles/vercel.svg";
 import NetlifyIcon from "./assets/particles/netlify.svg";
 import QwikIcon from "./assets/particles/qwik.svg";
-
-export const SKILLS = [
+import GrafanaIcon from "./assets/particles/grafana.svg";
+import PandasIcon from "./assets/particles/pandas.svg";
+export interface ISkill {
+  icon: JSX.Element;
+  name: string;
+}
+export const SKILLS: ISkill[] = [
   {
     icon: <AndroidIcon />,
     name: "Android Studio",
@@ -155,6 +160,7 @@ export const SKILLS = [
     icon: <PythonIcon />,
     name: "Python",
   },
+  { icon: <PandasIcon />, name: "Pandas" },
   {
     icon: <FastAPIIcon />,
     name: "FastAPI",
@@ -199,6 +205,7 @@ export const SKILLS = [
     icon: <DigitalOceanIcon />,
     name: "Digital Ocean",
   },
+  { icon: <GrafanaIcon />, name: "Grafana" },
   {
     icon: <FastifyIcon />,
     name: "Fastify",

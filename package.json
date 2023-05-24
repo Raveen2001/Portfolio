@@ -24,12 +24,13 @@
     "next": "^13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-modal": "^3.16.1",
     "react-random-reveal": "^2.0.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
-    "@types/gsap": "^3.0.0",
     "@types/lodash": "^4.14.191",
+    "@types/react-modal": "^3.16.0",
     "gh-pages": "^4.0.0",
     "sass": "^1.57.0",
     "typescript": "^4.9.3"

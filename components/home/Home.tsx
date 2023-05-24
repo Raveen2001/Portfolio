@@ -4,7 +4,7 @@ import MouseIcon from "../../assets/arrow_right.svg";
 
 import styles from "./Home.module.scss";
 import Button from "../button/Button";
-import { gsapOpenContactModal } from "../../utils/gsap";
+import { openModalFor } from "../../utils/gsap";
 import { scrollToProjects } from "../../utils/scroll";
 import { RandomReveal } from "react-random-reveal";
 
@@ -28,7 +28,7 @@ const Home = () => {
           <Button
             className={styles.mask}
             text="About Me"
-            onClick={gsapOpenContactModal}
+            onClick={() => openModalFor("Contact")}
           />
         </div>
         <div className={styles.right}>
