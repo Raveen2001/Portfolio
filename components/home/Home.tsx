@@ -17,7 +17,7 @@ const Home = () => {
           <h3 className={`${styles.designation} ${styles.mask}`}>
             <i>
               <RandomReveal
-                duration={1}
+                duration={1.5}
                 isPlaying={true}
                 characters="Fullstack Web and Mobile developer"
                 characterSet={["▒", "▓", "░"]}
@@ -51,7 +51,7 @@ const Home = () => {
       <div className={styles.experiencedIn}>
         <span>
           <RandomReveal
-            duration={1}
+            duration={1.5}
             isPlaying={true}
             characters="Experienced in"
             characterSet={["▒", "▓", "░"]}
@@ -60,7 +60,7 @@ const Home = () => {
 
         <strong>
           <RandomReveal
-            duration={1}
+            duration={1.5}
             isPlaying={true}
             characters="ReactJs, NextJs, ExpressJs, NodeJS, Pandas, SQL"
             characterSet={["▒", "▓", "░"]}
