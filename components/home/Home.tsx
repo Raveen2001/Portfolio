@@ -17,7 +17,7 @@ const Home = () => {
           <h3 className={`${styles.designation} ${styles.mask}`}>
             <i>
               <RandomReveal
-                duration={2}
+                duration={1}
                 isPlaying={true}
                 characters="Fullstack Web and Mobile developer"
                 characterSet={["▒", "▓", "░"]}
@@ -47,6 +47,24 @@ const Home = () => {
             <GithubIcon />
           </a>
         </div>
+      </div>
+      <div className={styles.experiencedIn}>
+        <h3>
+          <RandomReveal
+            duration={1}
+            isPlaying={true}
+            characters="Experienced in"
+            characterSet={["▒", "▓", "░"]}
+          />
+        </h3>
+        <strong>
+          <RandomReveal
+            duration={1}
+            isPlaying={true}
+            characters="ReactJs, NextJs, ExpressJs, NodeJS, Pandas, SQL"
+            characterSet={["▒", "▓", "░"]}
+          />
+        </strong>
       </div>
       <a className={styles["bottom-content"]} onClick={scrollToProjects}>
         <span>Works</span>

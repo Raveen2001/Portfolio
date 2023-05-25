@@ -97,6 +97,19 @@
     }
   }
 
+  .experiencedIn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    h3 {
+      margin-bottom: 10px;
+    }
+    strong {
+      color: var(--animation-color-after);
+    }
+  }
+
   .bottom-content {
     text-decoration: none;
     color: var(--text-color);

@@ -189,33 +189,34 @@ export const WORK_TIMELINE: IWork[] = [
     techStacks: [
       {
         icon: <AndroidIcon />,
-        name: "Android Studio",
+        name: "Android",
       },
-      {
-        icon: <GitIcon />,
-        name: "Git",
-      },
+
       {
         icon: <FlutterIcon />,
         name: "Flutter",
-      },
-      {
-        icon: <FirebaseIcon />,
-        name: "Firebase",
       },
       {
         icon: <DartIcon />,
         name: "Dart",
       },
       {
-        icon: <AWSIcon />,
-        name: "AWS",
+        icon: <FirebaseIcon />,
+        name: "Firebase",
       },
       {
         icon: <FirestoreIcon />,
         name: "Firestore",
       },
+      {
+        icon: <AWSIcon />,
+        name: "AWS",
+      },
       { icon: <HereMapsIcon />, name: "Here Maps" },
+      {
+        icon: <GitIcon />,
+        name: "Git",
+      },
     ],
     workDone: [
       "Integrated HereMaps into the application to provide location-based search functionality, enabling users to search for specific places or services based on their geographical location. Additionally, implemented a categorization system that classifies users into eight distinct categories based on their respective locations, enhancing personalized user experiences and tailored services.",
@@ -263,6 +264,10 @@ export const WORK_TIMELINE: IWork[] = [
         icon: <NginxIcon />,
         name: "Nginx",
       },
+      {
+        icon: <GitIcon />,
+        name: "Git",
+      },
     ],
     workDone: [
       "Implemented a series of optimizations that resulted in a remarkable 30% improvement in search performance. This was achieved by strategically restructuring the database schema and executing optimized queries to efficiently filter search results based on specified filter conditions.",
@@ -282,23 +287,19 @@ export const WORK_TIMELINE: IWork[] = [
     techStacks: [
       {
         icon: <AndroidIcon />,
-        name: "Android Studio",
-      },
-      {
-        icon: <GitIcon />,
-        name: "Git",
+        name: "Android",
       },
       {
         icon: <FlutterIcon />,
         name: "Flutter",
       },
       {
-        icon: <FirebaseIcon />,
-        name: "Firebase",
-      },
-      {
         icon: <DartIcon />,
         name: "Dart",
+      },
+      {
+        icon: <FirebaseIcon />,
+        name: "Firebase",
       },
       {
         icon: <FirestoreIcon />,
@@ -307,6 +308,10 @@ export const WORK_TIMELINE: IWork[] = [
       {
         icon: <StripeIcon />,
         name: "Stripe",
+      },
+      {
+        icon: <GitIcon />,
+        name: "Git",
       },
     ],
     workDone: [],
@@ -411,6 +416,8 @@ export const SKILLS_BY_CATEGORY: Map<string, string[]> = new Map([
       "GetX",
       "REST API",
       "GraphQL",
+      "Grafana",
+      "stripe",
     ],
   ],
   [

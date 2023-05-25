@@ -30,7 +30,7 @@ const Projects = () => {
         <div className={styles.line}></div>
         <div className={styles.line}></div>
       </div>
-      <h4>Projects</h4>
+      <h4>Personal Projects</h4>
       <h2>Latest Works</h2>
       <div className={styles.projects}>
         {PROJECTS.map((project, idx) => (

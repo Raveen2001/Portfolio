@@ -94,7 +94,7 @@ const Contact = () => {
           <h1 className={styles.bg}>About</h1>
           <div className={styles.about}>
             <h3>About Me.</h3>
-            <p>Interactive Front-end developer</p>
+            <p>Interactive Fullstack developer</p>
             <div>
               I am Raveen, a{" "}
               <strong>talented Fullstack Web and Mobile developer</strong> with
