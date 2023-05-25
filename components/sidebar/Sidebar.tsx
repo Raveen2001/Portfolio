@@ -1,5 +1,5 @@
 import React from "react";
-import { closeSidebar, gsapOpenContactModal } from "../../utils/gsap";
+import { closeSidebar, openModalFor } from "../../utils/gsap";
 import {
   scrollToExperiments,
   scrollToProjects,
@@ -54,7 +54,7 @@ const Sidebar = () => {
             </div>
             <div
               className={`${styles["menu-item"]} ${styles.clickable}`}
-              onClick={() => scrollTo(gsapOpenContactModal)}
+              onClick={() => scrollTo(() => openModalFor("Contact"))}
             >
               Contact
             </div>
