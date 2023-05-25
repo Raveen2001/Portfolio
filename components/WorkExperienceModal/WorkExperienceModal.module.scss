@@ -23,7 +23,7 @@
     background-color: #1c1d25fb;
     color: #dadada;
     gap: 0px;
-    overflow-y: auto;
+
     box-shadow: 0px 0px 20px #0000008c;
 
     .title {
@@ -46,8 +46,9 @@
       }
 
       .techContainer {
-        height: 100%;
+        overflow-y: auto;
         display: flex;
+        height: 250px;
         flex-wrap: wrap;
         gap: 20px;
         align-items: center;
@@ -79,10 +80,16 @@
     padding: 40px 20px;
     color: #1c1d25;
     position: relative;
+    // overflow-y: auto;
     box-shadow: 0px 0px 20px #0000008c;
 
     .title {
       font-size: 1.5rem;
+    }
+
+    ul {
+      height: 90%;
+      overflow-y: auto;
     }
 
     li {

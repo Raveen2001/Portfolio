@@ -28,6 +28,14 @@
   .layout {
     display: flex;
     gap: 80px;
+    padding-bottom: 40px;
+  }
+
+  .left {
+    flex: 3;
+  }
+  .right {
+    flex: 2;
   }
 
   .skills {
@@ -68,6 +76,13 @@
 
     .layout {
       flex-direction: column;
+
+      .left {
+        flex: 1;
+      }
+      .right {
+        flex: 1;
+      }
     }
   }
 }
