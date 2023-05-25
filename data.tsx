@@ -311,7 +311,13 @@ export const WORK_TIMELINE: IWork[] = [
         name: "Git",
       },
     ],
-    workDone: [],
+    workDone: [
+      "Developed an intuitive mobile admin app for product management, incorporating features for updating, categorizing, and managing inventory. Engineered a user-friendly mobile application allowing seamless browsing and purchasing of products for enhanced user experience.",
+      "Integrated login options via email, mobile number, as well as popular social media platforms like Google, Apple, and Facebook.",
+      "Developed a coupon module that empowered administrators to create customized coupons and enabled users to apply those coupons during the checkout process, subject to specific criteria.",
+      "Implemented online payment functionality using Stripe, allowing seamless and secure transactions on the ecommerce platform.",
+      "Utilized Firebase Cloud Messaging to facilitate seamless delivery of notifications to users on the ecommerce platform.",
+    ],
   },
   {
     name: "LintCloud",
