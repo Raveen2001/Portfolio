@@ -1,3 +1,5 @@
+@use "../../styles/Breakpoint" as *;
+
 .WorkExperienceModal {
   align-items: center;
   position: fixed;
@@ -18,39 +20,62 @@
   .left {
     transform: translateY(200%);
     padding: 40px 20px;
-    width: 40%;
     height: 100%;
     background-color: #1c1d25fb;
     color: #dadada;
-    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 15px;
 
     box-shadow: 0px 0px 20px #0000008c;
 
+    hr {
+      width: 100%;
+    }
+
+    .close {
+      display: none;
+    }
+
     .title {
       font-size: 1.5rem;
+      margin: 0;
     }
 
     .date {
       font-size: 1.1rem;
+      margin: 0;
     }
 
     .description {
+      margin: 0;
       font-size: 1.1rem;
       font-weight: 500;
       line-height: 20px;
     }
 
     .techStack {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      overflow: hidden;
+
       .title {
         font-size: 1.3rem;
       }
 
-      .techContainer {
-        overflow-y: auto;
+      .scrollContainer {
         display: flex;
-        height: 250px;
+        height: 100%;
+        overflow-y: scroll;
+      }
+
+      .techContainer {
+        display: flex;
+        width: 100%;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 30px;
         align-items: center;
         justify-content: center;
         .item {
@@ -79,17 +104,21 @@
     background-color: #f2f2f2f7;
     padding: 40px 20px;
     color: #1c1d25;
-    position: relative;
-    // overflow-y: auto;
+    // position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0px 0px 20px #0000008c;
-
+    gap: 15px;
     .title {
+      margin: 0;
       font-size: 1.5rem;
     }
 
     ul {
-      height: 90%;
+      height: 100%;
       overflow-y: auto;
+      margin: 0;
     }
 
     li {
@@ -132,6 +161,11 @@
         transition: all 0.6s cubic-bezier(0.694, 0.048, 0.335, 1);
       }
     }
+
+    .white {
+      background-color: white;
+    }
+
     .l1 {
       transform: rotate(45deg);
     }
@@ -148,6 +182,44 @@
       }
       .l2 {
         transform: rotate(45deg);
+      }
+    }
+  }
+
+  @include sm {
+    overflow-y: auto;
+    .container {
+      position: relative;
+      height: 100dvh;
+      width: 100dvw;
+      display: block;
+
+      .left {
+        width: 100%;
+        height: max-content;
+        .close {
+          display: flex;
+        }
+        .techStack {
+          .techContainer {
+            height: max-content;
+            overflow: hidden;
+          }
+        }
+      }
+
+      .right {
+        height: max-content;
+        width: 100%;
+
+        .close {
+          display: none;
+        }
+
+        ul {
+          height: max-content;
+          overflow: hidden;
+        }
       }
     }
   }

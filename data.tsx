@@ -243,7 +243,7 @@ export const WORK_TIMELINE: IWork[] = [
       },
       { icon: <PythonIcon />, name: "Python" },
       {
-        icon: <MySQLIcon />,
+        icon: <Image src="/mysql.png" width={40} height={40} alt="mysql" />,
         name: "MySQL",
       },
       {
@@ -254,10 +254,7 @@ export const WORK_TIMELINE: IWork[] = [
         icon: <ReduxIcon />,
         name: "Redux",
       },
-      {
-        icon: <ExpressIcon />,
-        name: "ExpressJS",
-      },
+
       { icon: <GitIcon />, name: "GIT" },
       { icon: <DockerIcon />, name: "Docker" },
       {

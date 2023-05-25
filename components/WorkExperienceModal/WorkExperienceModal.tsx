@@ -9,6 +9,17 @@ const WorkExperienceModal = () => {
     <div className={styles.WorkExperienceModal} id="WorkExperienceModal">
       <div className={styles.container}>
         <div className={styles.left} id="left">
+          <div
+            className={styles.close}
+            onClick={() => closeModalFor("WorkExperienceModal")}
+          >
+            <span
+              className={`${styles.line} ${styles.l1} ${styles.white}`}
+            ></span>
+            <span
+              className={`${styles.line} ${styles.l2} ${styles.white}`}
+            ></span>
+          </div>
           <h3 className={styles.title}>{selectedWorkExperience.name}</h3>
           <h5 className={styles.date}>{selectedWorkExperience.date}</h5>
           <h4 className={styles.description}>
@@ -19,16 +30,18 @@ const WorkExperienceModal = () => {
 
           <div className={styles.techStack}>
             <h5 className={styles.title}>Tech-stacks Used</h5>
-            <div className={styles.techContainer}>
-              {selectedWorkExperience.techStacks.map((techStack) => (
-                <div
-                  className={styles.item}
-                  key={selectedWorkExperience.name + techStack.name}
-                >
-                  <div className={styles.icon}>{techStack.icon}</div>
-                  <h5>{techStack.name}</h5>
-                </div>
-              ))}
+            <div className={styles.scrollContainer}>
+              <div className={styles.techContainer}>
+                {selectedWorkExperience.techStacks.map((techStack) => (
+                  <div
+                    className={styles.item}
+                    key={selectedWorkExperience.name + techStack.name}
+                  >
+                    <div className={styles.icon}>{techStack.icon}</div>
+                    <h5>{techStack.name}</h5>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
