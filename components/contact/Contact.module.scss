@@ -6,14 +6,14 @@
   top: 0;
   left: 0;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   overflow: hidden;
   display: none;
 
   .container {
-    width: 78vw;
-    height: 90vh;
+    width: 78dvw;
+    height: 90dvh;
     display: flex;
     flex-direction: row-reverse;
     h3 {
@@ -267,14 +267,14 @@
 
   @include sm {
     overflow-y: scroll;
-    height: 100vh;
+    height: 100dvh;
     .container {
-      width: 100vw;
+      width: 100dvw;
       height: 100%;
       display: block;
 
       .left {
-        height: 80vh;
+        height: 80dvh;
 
         .about {
           display: flex;
@@ -288,7 +288,7 @@
         }
       }
       .right {
-        height: 80vh;
+        height: 80dvh;
 
         .form {
           width: 80%;

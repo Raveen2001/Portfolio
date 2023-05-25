@@ -54,19 +54,21 @@ export default function App() {
           className={`${styles.App} ${leagueSpartan.className} ${libreBaskerville.variable}`}
           id="App"
         >
-          <Topbar />
-          {!isLoadingComplete && <PageLoading />}
-          {isLoadingComplete && [
-            <Particles />,
-            <Home />,
-            <WorkExperience />,
-            <Projects />,
-            <Footer />,
-          ]}
-          {/* <ProjectModal /> */}
-          <Contact />
-          <WorkExperienceModal />
-          <Sidebar />
+          <div>
+            <Topbar />
+            {!isLoadingComplete && <PageLoading />}
+            {isLoadingComplete && [
+              <Particles />,
+              <Home />,
+              <WorkExperience />,
+              <Projects />,
+              <Footer />,
+            ]}
+            {/* <ProjectModal /> */}
+            <Contact />
+            <WorkExperienceModal />
+            <Sidebar />
+          </div>
         </main>
       </GlobalContextProvider>
     </>

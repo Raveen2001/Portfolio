@@ -35,7 +35,7 @@
     .line {
       width: 3px;
       height: 10px;
-
+      line-height: 20px;
       background-color: var(--title-color);
       &:last-child {
         flex: 1;
@@ -55,10 +55,14 @@
     width: 70%;
     margin-top: 10px;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 
     .title {
       font-size: 1.2em;
       letter-spacing: 2px;
+      line-height: 20px;
       color: var(--title-color);
       margin-bottom: 5px;
       font-weight: 700;
@@ -71,10 +75,10 @@
       margin-bottom: 25px;
     }
 
-    .readMore {
+    .more {
       all: unset;
       cursor: pointer;
-      color: var(--title-color);
+      color: var(--animation-color-after);
       text-decoration: underline;
     }
   }

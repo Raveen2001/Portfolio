@@ -1,15 +1,16 @@
-@use './Breakpoint' as *;
+@use "./Breakpoint" as *;
 
 .App {
-  --page-padding: 0 15vw;
-  --topbar-height: 10vh;
-  width: 100vw;
-  height: 100%;
+  --page-padding: 0 15dvw;
+  --topbar-height: 10dvh;
+  width: 100dvw;
+  height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: scroll;
   position: relative;
 
-
-  @include sm{
-    --page-padding: 0 5vw;
+  @include sm {
+    --page-padding: 0 5dvw;
     --topbar-height: 15vh;
   }
 }

@@ -1,4 +1,4 @@
-@use '../../styles/Breakpoint.scss' as *;
+@use "../../styles/Breakpoint.scss" as *;
 
 .Projects {
   width: 100%;
@@ -12,7 +12,7 @@
   // padding-bottom: 100px;
 
   .projects {
-    padding: 0 15vw;
+    padding: 0 15dvw;
     width: 100%;
     display: flex;
     gap: 135px;
@@ -23,7 +23,7 @@
   .experiments {
     width: 100%;
     display: flex;
-    
+
     position: relative;
     overflow: hidden;
 
@@ -75,7 +75,7 @@
 
   .bg {
     position: absolute;
-    padding: 0 18vw;
+    padding: 0 18dvw;
     top: 0px;
     left: 0;
     width: 100%;
@@ -90,16 +90,15 @@
     }
   }
 
-  @include sm{
-    .projects{
+  @include sm {
+    .projects {
       padding: var(--page-padding);
       padding-bottom: 80px;
     }
 
-    .experiments{
+    .experiments {
       flex-direction: column;
-      .mask{
-        
+      .mask {
         transform: translateY(-201%) !important;
       }
     }

@@ -1,7 +1,7 @@
-@use '../../styles/Breakpoint.scss' as *;
+@use "../../styles/Breakpoint.scss" as *;
 
 @keyframes updown {
-0% {
+  0% {
     top: 0px;
   }
 
@@ -26,7 +26,7 @@
 }
 
 .Home {
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,20 +125,19 @@
     }
   }
 
-
-  @include sm{
-    .main{
+  @include sm {
+    .main {
       justify-content: center;
-      .left{
-        .name{
+      .left {
+        .name {
           font-size: 4rem;
         }
 
-        .designation{
+        .designation {
           font-size: 1rem;
         }
       }
-      .right{
+      .right {
         display: none;
       }
     }

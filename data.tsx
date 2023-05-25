@@ -142,7 +142,7 @@ export const WORK_TIMELINE: IWork[] = [
   {
     name: "Maersk Global Services Private Limited",
     date: "May 2022 - Present",
-    designation: "Fullstack Web Developer Intern(FE Heavy)",
+    designation: "Web Developer Intern(FE Heavy)",
     description:
       'Engaged in the "Fleet Energy" project, emphasizing the optimization of fuel utilization in ships through data analysis obtained from the ship\'s engine. Contributed to improving fuel efficiency by leveraging data-driven insights to identify areas for optimization and implement measures to enhance fuel consumption management in the maritime industry.',
     techStacks: [
@@ -183,7 +183,7 @@ export const WORK_TIMELINE: IWork[] = [
   {
     name: "Camaford",
     date: "Dec 2021 - Apr 2022",
-    designation: "Freelancer Fullstack Android Developer",
+    designation: "Student + Freelancer: Fullstack Android Developer",
     description:
       "Created a dynamic Android application catering to the photographers' community, providing a platform to showcase their portfolios, connect with potential clients, and facilitate equipment rental or sale transactions. The application serves as a comprehensive hub for photographers to promote their work and expand their professional opportunities.",
     techStacks: [
@@ -230,7 +230,7 @@ export const WORK_TIMELINE: IWork[] = [
   {
     name: "Arima Labs",
     date: "May 2021 - Nov 2021",
-    designation: "Freelancer Fullstack Web Developer",
+    designation: "Student + Freelancer: Fullstack Web Developer",
     description:
       "Developed an advanced dashboard equipped with a machine learning model that enables officials to effectively monitor and track vehicles passing through traffic signals. The dashboard not only records the vehicles but also captures instances of traffic rule violations, ensuring enhanced enforcement of regulations and promoting safer road conditions.",
     techStacks: [
@@ -276,7 +276,7 @@ export const WORK_TIMELINE: IWork[] = [
   {
     name: "PadAngels",
     date: "Jan 2021 - Apr 2021",
-    designation: "Freelancer Fullstack Android Developer",
+    designation: "Student + Freelancer: Fullstack Android Developer",
     description:
       "Created a user-friendly E-commerce application focused on catering to the needs of women during their menstrual cycles. The application provides a convenient platform for purchasing sanitary pads and other related products, ensuring a seamless and discreet shopping experience.",
     techStacks: [
@@ -314,7 +314,7 @@ export const WORK_TIMELINE: IWork[] = [
   {
     name: "LintCloud",
     date: "May 2020 - Nov 2020",
-    designation: "Freelancer Frontend Android Developer",
+    designation: "Student + Freelancer: Frontend Android Developer",
     description:
       "Designed and developed a comprehensive application facilitating streamlined job assignment for companies. The application includes features for creating and assigning tickets to employees, while also integrating location tracking functionality to monitor their whereabouts in real-time.",
     techStacks: [

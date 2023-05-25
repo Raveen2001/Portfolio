@@ -2,6 +2,7 @@ import gsap from "gsap";
 import { scrollToHomeWithoutAnimation } from "./scroll";
 
 export const openModalFor = (id: string) => {
+  gsap.to("#body", { overflow: "hidden" });
   gsap.to("#Topbar", { y: "-100%" });
 
   gsap.fromTo(`#${id}`, { display: "none" }, { display: "flex" }).duration(0);

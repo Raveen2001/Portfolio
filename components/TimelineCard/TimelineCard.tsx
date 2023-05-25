@@ -22,13 +22,13 @@ const TimelineCard: React.FC<IWork> = (data) => {
         <div className={styles.title}>{data.designation}</div>
         {/* <div className={styles.description}>{data.description}</div> */}
         <button
-          className={styles.readMore}
+          className={styles.more}
           onClick={() => {
             setSelectedWorkExperience(data);
             openModalFor("WorkExperienceModal");
           }}
         >
-          Read more
+          Know more
         </button>
       </div>
     </div>
