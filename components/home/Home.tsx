@@ -49,14 +49,15 @@ const Home = () => {
         </div>
       </div>
       <div className={styles.experiencedIn}>
-        <h3>
+        <span>
           <RandomReveal
             duration={1}
             isPlaying={true}
             characters="Experienced in"
             characterSet={["▒", "▓", "░"]}
           />
-        </h3>
+        </span>
+
         <strong>
           <RandomReveal
             duration={1}
