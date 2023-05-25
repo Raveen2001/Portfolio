@@ -7,21 +7,23 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  display: flex;
+  display: none;
   .container {
     width: 80dvw;
-    height: 95dvh;
     display: flex;
     z-index: 1000;
+    height: 90dvh;
   }
 
   .left {
-    // transform: translateY(200%);
+    transform: translateY(200%);
     padding: 40px 20px;
     width: 40%;
     height: 100%;
     background-color: #1c1d25fb;
     color: #dadada;
+    gap: 0px;
+    overflow-y: auto;
     box-shadow: 0px 0px 20px #0000008c;
 
     .title {
@@ -44,12 +46,12 @@
       }
 
       .techContainer {
+        height: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
         align-items: center;
         justify-content: center;
-
         .item {
           display: flex;
           flex-direction: column;
@@ -70,7 +72,7 @@
   }
 
   .right {
-    // transform: translateY(-200%);
+    transform: translateY(-200%);
     width: 60%;
     height: 100%;
     background-color: #f2f2f2f7;

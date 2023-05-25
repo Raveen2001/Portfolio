@@ -15,7 +15,6 @@ import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import Sidebar from "../components/sidebar/Sidebar";
 import WorkExperienceModal from "../components/WorkExperienceModal/WorkExperienceModal";
-
 const leagueSpartan = League_Spartan({ subsets: ["latin"], display: "swap" });
 const libreBaskerville = Roboto({
   weight: ["400"],

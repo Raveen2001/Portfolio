@@ -44,10 +44,15 @@ import NetlifyIcon from "./assets/particles/netlify.svg";
 import QwikIcon from "./assets/particles/qwik.svg";
 import GrafanaIcon from "./assets/particles/grafana.svg";
 import PandasIcon from "./assets/particles/pandas.svg";
+import HereMapsIcon from "./assets/particles/here-maps.svg";
+import FirestoreIcon from "./assets/particles/firestore.svg";
+import StripeIcon from "./assets/particles/stripe.svg";
+
 export interface ISkill {
   icon: JSX.Element;
   name: string;
 }
+
 export const SKILLS: ISkill[] = [
   {
     icon: <AndroidIcon />,
@@ -139,7 +144,10 @@ export const SKILLS: ISkill[] = [
     icon: <PostgresIcon />,
     name: "PostgreSQL",
   },
-
+  {
+    icon: <FirestoreIcon />,
+    name: "Firestore",
+  },
   {
     icon: <TSIcon />,
     name: "TypeScript",
@@ -229,5 +237,10 @@ export const SKILLS: ISkill[] = [
   {
     icon: <QwikIcon />,
     name: "Qwik",
+  },
+  { icon: <HereMapsIcon />, name: "Here Maps" },
+  {
+    icon: <StripeIcon />,
+    name: "Stripe",
   },
 ];

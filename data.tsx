@@ -12,10 +12,20 @@ import NginxIcon from "./assets/particles/nginx.svg";
 import DigitalOceanIcon from "./assets/particles/digital-ocean.svg";
 import GithubActionsIcon from "./assets/particles/github-actions.svg";
 import WebRTCIcon from "./assets/particles/webrtc.svg";
+import JavaIcon from "./assets/particles/java.svg";
 import QwikIcon from "./assets/particles/qwik.svg";
 import SocketIOIcon from "./assets/particles/socketio.svg";
 import PostgresIcon from "./assets/particles/postgres.svg";
-
+import ExpressIcon from "./assets/particles/express.svg";
+import HereMapsIcon from "./assets/particles/here-maps.svg";
+import AWSIcon from "./assets/particles/aws.svg";
+import DartIcon from "./assets/particles/dart.svg";
+import NodeIcon from "./assets/particles/node.svg";
+import MySQLIcon from "./assets/particles/mysql.svg";
+import FirestoreIcon from "./assets/particles/firestore.svg";
+import StripeIcon from "./assets/particles/stripe.svg";
+import DjangoIcon from "./assets/particles/django.svg";
+import ReduxIcon from "./assets/particles/redux.svg";
 import GitIcon from "./assets/particles/git.svg";
 import GithubIcon from "./assets/particles/github.svg";
 import KubernetesIcon from "./assets/particles/kubernetes.svg";
@@ -147,6 +157,10 @@ export const WORK_TIMELINE: IWork[] = [
       { icon: <GithubActionsIcon />, name: "GitHub Actions" },
       { icon: <DockerIcon />, name: "Docker" },
       { icon: <KubernetesIcon />, name: "Kubernetes" },
+      {
+        icon: <NginxIcon />,
+        name: "Nginx",
+      },
       { icon: <AzureIcon />, name: "Azure" },
       {
         icon: <Image src="/grafana.png" width={40} height={40} alt="grafana" />,
@@ -155,11 +169,11 @@ export const WORK_TIMELINE: IWork[] = [
     ],
 
     workDone: [
-      "Worked with ReactJs forfront-end and FastAPI for back-end along with PostgreSQL to build a dashboard that helps in optimising efficient use of fuel in ships.",
+      "Worked with ReactJs for front-end and FastAPI for back-end along with PostgreSQL to build a dashboard that helps in optimising efficient use of fuel in ships.",
       "Used Pandas and worked with a huge amount of data for manipulating and analysing the data which will be displayed in the front-end using interactive graphs and table.",
       "Used Tanstack Table and improved the performance of the front-end by using virtualized rows which received applause from users as well as fellow developers.",
       "Used E-chart and developed a synchronized scrollable chart.",
-      "Developed an enhanced search feature that lets the userto see suggestions as they type in the search bar.",
+      "Developed an enhanced search feature that lets the user to see suggestions as they type in the search bar.",
       "Made the database secure by creating new users and role.",
       "Wrote clean code which received honours from fellow developers.",
     ],
@@ -171,7 +185,37 @@ export const WORK_TIMELINE: IWork[] = [
     designation: "Freelancer Fullstack Android Developer",
     description:
       "Developed an Android application for the photographers community to showcase their work and get hired or rent/sell equipments.",
-    techStacks: [],
+    techStacks: [
+      {
+        icon: <AndroidIcon />,
+        name: "Android Studio",
+      },
+      {
+        icon: <GitIcon />,
+        name: "Git",
+      },
+      {
+        icon: <FlutterIcon />,
+        name: "Flutter",
+      },
+      {
+        icon: <FirebaseIcon />,
+        name: "Firebase",
+      },
+      {
+        icon: <DartIcon />,
+        name: "Dart",
+      },
+      {
+        icon: <AWSIcon />,
+        name: "AWS",
+      },
+      {
+        icon: <FirestoreIcon />,
+        name: "Firestore",
+      },
+      { icon: <HereMapsIcon />, name: "Here Maps" },
+    ],
     workDone: [],
   },
 
@@ -181,7 +225,37 @@ export const WORK_TIMELINE: IWork[] = [
     designation: "Freelancer Fullstack Web Developer",
     description:
       "Developed a dashboard which is backed by ML model that helps the officials to keeps track of vehicles passing through traffic signals and also captures the vechicles which violated the traffic rules & regulations.",
-    techStacks: [],
+    techStacks: [
+      { icon: <ReactIcon />, name: "ReactJs" },
+      { icon: <TSIcon />, name: "Typescript" },
+      {
+        icon: <DjangoIcon />,
+        name: "Django",
+      },
+      { icon: <PythonIcon />, name: "Python" },
+      {
+        icon: <MySQLIcon />,
+        name: "MySQL",
+      },
+      {
+        icon: <NodeIcon />,
+        name: "NodeJS",
+      },
+      {
+        icon: <ReduxIcon />,
+        name: "Redux",
+      },
+      {
+        icon: <ExpressIcon />,
+        name: "ExpressJS",
+      },
+      { icon: <GitIcon />, name: "GIT" },
+      { icon: <DockerIcon />, name: "Docker" },
+      {
+        icon: <NginxIcon />,
+        name: "Nginx",
+      },
+    ],
     workDone: [],
   },
   {
@@ -190,7 +264,36 @@ export const WORK_TIMELINE: IWork[] = [
     designation: "Freelancer Fullstack Android Developer",
     description:
       "Developed an ecommerce application for buying sanitary pads and other products which helps women during their mensuration cycles.",
-    techStacks: [],
+    techStacks: [
+      {
+        icon: <AndroidIcon />,
+        name: "Android Studio",
+      },
+      {
+        icon: <GitIcon />,
+        name: "Git",
+      },
+      {
+        icon: <FlutterIcon />,
+        name: "Flutter",
+      },
+      {
+        icon: <FirebaseIcon />,
+        name: "Firebase",
+      },
+      {
+        icon: <DartIcon />,
+        name: "Dart",
+      },
+      {
+        icon: <FirestoreIcon />,
+        name: "Firestore",
+      },
+      {
+        icon: <StripeIcon />,
+        name: "Stripe",
+      },
+    ],
     workDone: [],
   },
   {
@@ -199,7 +302,20 @@ export const WORK_TIMELINE: IWork[] = [
     designation: "Freelancer Frontend Android Developer",
     description:
       "Developed an application that help companies assign jobs to their employees by creating and assigning tickets to them and also keeps track of the employees location.",
-    techStacks: [],
+    techStacks: [
+      {
+        icon: <AndroidIcon />,
+        name: "Android Studio",
+      },
+      {
+        icon: <JavaIcon />,
+        name: "JAVA",
+      },
+      {
+        icon: <GitIcon />,
+        name: "Git",
+      },
+    ],
     workDone: [],
   },
 ];
