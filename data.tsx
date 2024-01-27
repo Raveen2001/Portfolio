@@ -170,7 +170,7 @@ export const WORK_TIMELINE: IWork[] = [
   {
     name: "Maersk Global Services Private Limited",
     date: "May 2022 - Present",
-    designation: "Web Developer Intern(FE Heavy)",
+    designation: "Associate Software Engineer",
     description:
       'Engaged in the "Fleet Energy" project, emphasizing the optimization of fuel utilization in ships through data analysis obtained from the ship\'s engine. Contributed to improving fuel efficiency by leveraging data-driven insights to identify areas for optimization and implement measures to enhance fuel consumption management in the maritime industry.',
     techStacks: [
