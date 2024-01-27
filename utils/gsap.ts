@@ -9,6 +9,7 @@ export const openModalFor = (id: string) => {
   gsap.context(() => {
     gsap.fromTo("#left", { y: "200%" }, { y: 0 }).delay(0.2);
     gsap.fromTo("#right", { y: "-200%" }, { y: 0 }).delay(0.2);
+    gsap.fromTo("#main", { x: "-200%" }, { x: "0%" }).delay(0.2);
   }, `#${id}`);
 
   // gsap.to(".App", { overflow: "hidden" }).duration(0);
@@ -23,6 +24,7 @@ export const closeModalFor = (id: string) => {
   gsap.context(() => {
     gsap.fromTo("#left", { y: 0 }, { y: "200%" });
     gsap.fromTo("#right", { y: 0 }, { y: "-200%" });
+    gsap.fromTo("#main", { x: "0%" }, { x: "-200%" });
   }, `#${id}`);
 
   gsap.to("#Topbar", { y: 0 }).delay(0.2);

@@ -61,7 +61,7 @@ export const PROJECTS: IProject[] = [
     image: "casestudies/portfolio.png",
     link: "https://raveen.in",
     github: "https://github.com/Raveen2001/Portfolio",
-    techStack: [<NextIcon />, <TSIcon />],
+    techStack: [<NextIcon />, <GSapIcon />],
   },
   {
     title: "Shop Master",

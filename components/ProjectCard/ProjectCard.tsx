@@ -4,6 +4,8 @@ import Button from "../Button/Button";
 import styles from "./ProjectCard.module.scss";
 import GithubIcon from "../../assets/particles/github.svg";
 import { openLink } from "../../utils/util";
+import { openModalFor } from "../../utils/gsap";
+import { useGlobalContext } from "../Context/GlobalContext";
 
 interface IProjectProps {
   project: IProject;
@@ -11,6 +13,7 @@ interface IProjectProps {
 }
 
 const ProjectCard: React.FC<IProjectProps> = ({ project, number }) => {
+  const { setSelectedProject } = useGlobalContext();
   const cardRef = useRef<any>();
   const revealMaskRef = useRef<any>();
   // add intersection observer to animate the card
@@ -55,13 +58,26 @@ const ProjectCard: React.FC<IProjectProps> = ({ project, number }) => {
             />
           )}
 
-          <div
-            className={styles.github}
-            onClick={() => openLink(project.github)}
-          >
-            <GithubIcon />
-          </div>
+          {project.demoVideo && (
+            <Button
+              text="Demo Video"
+              onClick={() => {
+                setSelectedProject(project);
+                openModalFor("ProjectModal");
+              }}
+            />
+          )}
+
+          {project.github && (
+            <div
+              className={styles.github}
+              onClick={() => openLink(project.github ?? "")}
+            >
+              <GithubIcon />
+            </div>
+          )}
         </div>
+        {!project.github && <pre>*GIT repo is private.</pre>}
       </div>
 
       <div className={`${styles["tech-stack"]}`}>

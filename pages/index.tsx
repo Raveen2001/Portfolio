@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { League_Spartan, Libre_Baskerville, Roboto } from "@next/font/google";
 import styles from "../styles/App.module.scss";
-import Home from "../components/home/Home";
+import Home from "../components/Home/Home";
 import Topbar from "../components/Topbar/Topbar";
 import Particles from "../components/Particles/Particles";
 import Contact from "../components/Contact/Contact";
@@ -68,7 +68,7 @@ export default function App() {
               <Projects key="projects" />,
               <Footer key="footer" />,
             ]}
-            {/* <ProjectModal /> */}
+            <ProjectModal />
             <Contact />
             <WorkExperienceModal />
             <Sidebar />
