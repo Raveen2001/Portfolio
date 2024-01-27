@@ -3,7 +3,7 @@ import GithubIcon from "../../assets/github.svg";
 import MouseIcon from "../../assets/arrow_right.svg";
 
 import styles from "./Home.module.scss";
-import Button from "../button/Button";
+import Button from "../Button/Button";
 import { openModalFor } from "../../utils/gsap";
 import { scrollToProjects } from "../../utils/scroll";
 import { RandomReveal } from "react-random-reveal";
@@ -33,6 +33,7 @@ const Home = () => {
         </div>
         <div className={styles.right}>
           <a
+            title="LinkedIn"
             target="_blank"
             rel="noopener"
             href="https://www.linkedin.com/in/raveen2001"
@@ -40,6 +41,7 @@ const Home = () => {
             <LinkedInIcon />
           </a>
           <a
+            title="Github"
             target="_blank"
             rel="noopener"
             href="https://github.com/raveen2001"

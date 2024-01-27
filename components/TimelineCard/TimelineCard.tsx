@@ -1,7 +1,7 @@
 import { IWork } from "../../data";
 import styles from "./TimelineCard.module.scss";
 import { openModalFor } from "../../utils/gsap";
-import { useGlobalContext } from "../context/GlobalContext";
+import { useGlobalContext } from "../Context/GlobalContext";
 
 const TimelineCard: React.FC<IWork> = (data) => {
   const { setSelectedWorkExperience } = useGlobalContext();

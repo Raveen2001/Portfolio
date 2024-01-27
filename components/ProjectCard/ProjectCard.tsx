@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef } from "react";
 import { IProject } from "../../data";
-import Button from "../button/Button";
+import Button from "../Button/Button";
 import styles from "./ProjectCard.module.scss";
 import GithubIcon from "../../assets/particles/github.svg";
 import { openLink } from "../../utils/util";
@@ -41,7 +41,7 @@ const ProjectCard: React.FC<IProjectProps> = ({ project, number }) => {
       <div className={`${styles["num"]} ${styles[`num-${cardPosition}`]}`}>
         {String(number).padStart(2, "0")}
       </div>
-      
+
       <div className={styles.content}>
         <h3>{project.title}</h3>
         <h5>{project.description}</h5>

@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useState } from "react";
-import Button from "../button/Button";
+import Button from "../Button/Button";
 import styles from "./Contact.module.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";

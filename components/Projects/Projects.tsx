@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { PROJECTS, EXPERIMENTS } from "../../data";
-import Experiment from "../experiment/Experiment";
+import Experiment from "../Experiment/Experiment";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import styles from "./Projects.module.scss";
 

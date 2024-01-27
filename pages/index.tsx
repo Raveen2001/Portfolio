@@ -2,18 +2,18 @@ import Head from "next/head";
 import { League_Spartan, Libre_Baskerville, Roboto } from "@next/font/google";
 import styles from "../styles/App.module.scss";
 import Home from "../components/home/Home";
-import Topbar from "../components/topbar/Topbar";
-import Particles from "../components/particles/Particles";
-import Contact from "../components/contact/Contact";
-import Projects from "../components/projects/Projects";
-import Footer from "../components/footer/Footer";
+import Topbar from "../components/Topbar/Topbar";
+import Particles from "../components/Particles/Particles";
+import Contact from "../components/Contact/Contact";
+import Projects from "../components/Projects/Projects";
+import Footer from "../components/Footer/Footer";
 import ProjectModal from "../components/ProjectModal/ProjectModal";
-import GlobalContextProvider from "../components/context/GlobalContext";
+import GlobalContextProvider from "../components/Context/GlobalContext";
 import WorkExperience from "../components/WorkExperience/WorkExperience";
 import PageLoading from "../components/FakeLoading/PageLoading";
 import { useEffect, useState } from "react";
 import { gsap } from "gsap";
-import Sidebar from "../components/sidebar/Sidebar";
+import Sidebar from "../components/Sidebar/Sidebar";
 import WorkExperienceModal from "../components/WorkExperienceModal/WorkExperienceModal";
 const leagueSpartan = League_Spartan({ subsets: ["latin"], display: "swap" });
 const libreBaskerville = Roboto({
@@ -46,7 +46,11 @@ export default function App() {
           name="description"
           content="This is my portfolio where I showcase my project and works"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"
+        />
+
         <link rel="icon" href="/logo.svg" />
       </Head>
       <GlobalContextProvider>
@@ -58,11 +62,11 @@ export default function App() {
             <Topbar />
             {!isLoadingComplete && <PageLoading />}
             {isLoadingComplete && [
-              <Particles />,
-              <Home />,
-              <WorkExperience />,
-              <Projects />,
-              <Footer />,
+              <Particles key="particles" />,
+              <Home key="home" />,
+              <WorkExperience key="workExperience" />,
+              <Projects key="projects" />,
+              <Footer key="footer" />,
             ]}
             {/* <ProjectModal /> */}
             <Contact />

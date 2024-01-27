@@ -5,7 +5,7 @@ import {
   scrollToProjects,
   scrollToWorks,
 } from "../../utils/scroll";
-import ThemeSwitcher from "../theme-switcher/ThemeSwitcher";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 import LinkedInIcon from "../../assets/linkedin.svg";
 import GithubIcon from "../../assets/github.svg";
 import styles from "./Sidebar.module.scss";
@@ -68,6 +68,7 @@ const Sidebar = () => {
           </div>
           <div className={styles.footer}>
             <a
+              title="LinkedIn"
               target="_blank"
               rel="noopener"
               href="https://www.linkedin.com/in/raveen2001"
@@ -75,6 +76,7 @@ const Sidebar = () => {
               <LinkedInIcon />
             </a>
             <a
+              title="Github"
               target="_blank"
               rel="noopener"
               href="https://github.com/raveen2001"

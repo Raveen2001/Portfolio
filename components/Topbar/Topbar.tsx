@@ -1,7 +1,7 @@
 import styles from "./Topbar.module.scss";
 import Logo from "../../assets/logo.svg";
 import SidebarIcon from "../../assets/sidebar.svg";
-import ThemeSwitcher from "../theme-switcher/ThemeSwitcher";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 import { openModalFor, openSidebar } from "../../utils/gsap";
 import {
   scrollToProjects,

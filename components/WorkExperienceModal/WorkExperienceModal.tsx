@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./WorkExperienceModal.module.scss";
-import { useGlobalContext } from "../context/GlobalContext";
+import { useGlobalContext } from "../Context/GlobalContext";
 import { closeModalFor } from "../../utils/gsap";
 
 const WorkExperienceModal = () => {
@@ -55,8 +55,10 @@ const WorkExperienceModal = () => {
           </div>
           <h3 className={styles.title}>Work done: </h3>
           <ul>
-            {selectedWorkExperience.workDone.map((work) => (
-              <li>{work}</li>
+            {selectedWorkExperience.workDone.map((work, idx) => (
+              <li key={`${selectedWorkExperience.name} - work - ${idx}`}>
+                {work}
+              </li>
             ))}
           </ul>
         </div>

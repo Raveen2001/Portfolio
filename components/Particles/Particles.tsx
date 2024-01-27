@@ -13,12 +13,13 @@ import PostgresIcon from "../../assets/particles/postgres.svg";
 import ReduxIcon from "../../assets/particles/redux.svg";
 import KubernetesIcon from "../../assets/particles/kubernetes.svg";
 
-
 const Particles = () => {
   const rightMovement = useMemo(() => [0, 3, 5, 6, 8], []);
   const onMouseMove = useCallback(
     throttle((ev: MouseEvent) => {
-      const particles = document.querySelectorAll<HTMLElement>("." + styles.particle);
+      const particles = document.querySelectorAll<HTMLElement>(
+        "." + styles.particle
+      );
       const xOffset = ev.clientX * 0.06;
       const yOffset = ev.clientY * 0.08;
       particles?.forEach((particle, idx) => {
@@ -41,39 +42,38 @@ const Particles = () => {
   }, []);
   return (
     <div className={styles.Particles}>
-      <div className={styles.background}>
-
+      <div className={styles.background} key="bg">
         <Logo />
       </div>
       <div className={styles.canvas}>
-        <div className={styles.particle} id={styles.p1}>
+        <div className={styles.particle} id={styles.p1} key="p1">
           <NodeIcon />
         </div>
-        <div className={styles.particle} id={styles.p2}>
+        <div className={styles.particle} id={styles.p2} key="p2">
           <TSIcon />
         </div>
-        <div className={styles.particle} id={styles.p3}>
+        <div className={styles.particle} id={styles.p3} key="p3">
           <PythonIcon />
         </div>
-        <div className={styles.particle} id={styles.p4}>
+        <div className={styles.particle} id={styles.p4} key="p4">
           <GitIcon />
         </div>
-        <div className={styles.particle} id={styles.p5}>
+        <div className={styles.particle} id={styles.p5} key="p5">
           <ReactIcon />
         </div>
-        <div className={styles.particle} id={styles.p6}>
+        <div className={styles.particle} id={styles.p6} key="p6">
           <FirebaseIcon />
         </div>
-        <div className={styles.particle} id={styles.p7}>
+        <div className={styles.particle} id={styles.p7} key="p7">
           <FlutterIcon />
         </div>
-        <div className={styles.particle} id={styles.p8}>
+        <div className={styles.particle} id={styles.p8} key="p8">
           <ReduxIcon />
         </div>
-        <div className={styles.particle} id={styles.p9}>
+        <div className={styles.particle} id={styles.p9} key="p9">
           <KubernetesIcon />
         </div>
-        <div className={styles.particle} id={styles.p10}>
+        <div className={styles.particle} id={styles.p10} key="p10">
           <PostgresIcon />
         </div>
       </div>
