@@ -35,6 +35,12 @@ import RedisIcon from "./assets/particles/redis.svg";
 import FastAPIIcon from "./assets/particles/fastapi.svg";
 import AzureIcon from "./assets/particles/azure.svg";
 import PandasIcon from "./assets/particles/pandas.svg";
+import NextIcon from "./assets/particles/next.svg";
+import GSapIcon from "./assets/particles/gsap.svg";
+import FastifyIcon from "./assets/particles/fastify.svg";
+import TailwindIcon from "./assets/particles/tailwind.svg";
+import TurboRepoIcon from "./assets/particles/turborepo.svg";
+
 import { ISkill } from "./Skills";
 import Image from "next/image";
 
@@ -43,11 +49,33 @@ export interface IProject {
   description: string;
   image: string;
   link?: string;
-  github: string;
+  github?: string;
+  demoVideo?: string;
   techStack: JSX.Element[];
 }
 
 export const PROJECTS: IProject[] = [
+  {
+    title: "Portfolio",
+    description: "Built using NextJs",
+    image: "casestudies/portfolio.png",
+    link: "https://raveen.in",
+    github: "https://github.com/Raveen2001/Portfolio",
+    techStack: [<NextIcon />, <TSIcon />],
+  },
+  {
+    title: "Shop Master",
+    description: "Shop Management System built using React, Fastify.",
+    image: "casestudies/shop_master.png",
+    demoVideo: "casestudies/shop_master.webm",
+    techStack: [
+      <ReactIcon />,
+      <FastifyIcon />,
+      <PostgresIcon />,
+      <TailwindIcon />,
+      <TurboRepoIcon />,
+    ],
+  },
   {
     title: "Video Chat",
     description: "Built using Qwik & WebRTC",
@@ -71,7 +99,7 @@ export const PROJECTS: IProject[] = [
     image: "casestudies/path.png",
     link: "https://visualizer.raveen.in",
     github: "https://github.com/Raveen2001/Path-Finding-Visualizer.git",
-    techStack: [<ReactIcon />, <TSIcon />],
+    techStack: [<ReactIcon />, <GSapIcon />],
   },
   {
     title: "Sort Visualizer",
