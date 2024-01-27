@@ -25,7 +25,7 @@
     display: block;
     content: "";
     background: #1c1d25;
-    opacity: 0.6;
+    opacity: 0.7;
     transition: opacity 0.3s ease;
     z-index: 2;
   }
@@ -91,11 +91,9 @@
       transition: transform 0.35s cubic-bezier(0.694, 0.048, 0.335, 1) 0.2s,
         opacity 0.2s;
 
-      background: linear-gradient(
-        270deg,
-        rgba(35, 90, 166, 0.9),
-        rgba(16, 27, 59, 0.9)
-      );
+      background: linear-gradient(270deg,
+          rgba(35, 90, 166, 0.9),
+          rgba(16, 27, 59, 0.9));
     }
   }
 
@@ -178,6 +176,7 @@
   @include sm {
     width: 100%;
     gap: 10px;
+
     .content {
       position: static;
       align-items: center !important;
@@ -235,6 +234,7 @@
       left: -5%;
     }
   }
+
   @include sm {
     left: 0;
 
@@ -265,6 +265,7 @@
       right: -5%;
     }
   }
+
   @include sm {
     right: 0;
   }
