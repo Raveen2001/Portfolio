@@ -26,6 +26,9 @@ dependencies:
   '@types/react-dom':
     specifier: 18.0.10
     version: 18.0.10
+  '@wojtekmaj/react-hooks':
+    specifier: ^1.18.1
+    version: 1.18.1(@types/react@18.0.26)(react@18.2.0)
   eslint:
     specifier: 8.31.0
     version: 8.31.0
@@ -1805,6 +1808,19 @@ packages:
 
   /@types/scheduler@0.16.3:
     resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==}
+
+  /@wojtekmaj/react-hooks@1.18.1(@types/react@18.0.26)(react@18.2.0):
+    resolution: {integrity: sha512-hvaKC4+xBt+jrccMZsV3oHveaAjcO/Lw833vH78Y/auIwya14H4WH9E1i7EEnm/RcGJmUzCYNA9Ulx9aY1TMhQ==}
+    peerDependencies:
+      '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 18.0.26
+      react: 18.2.0
+    dev: false
 
   /abbrev@1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}

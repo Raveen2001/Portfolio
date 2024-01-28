@@ -15,6 +15,15 @@ import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import Sidebar from "../components/Sidebar/Sidebar";
 import WorkExperienceModal from "../components/WorkExperienceModal/WorkExperienceModal";
+import AchievementModal from "../components/AchievementModal/AchievementModal";
+
+import { pdfjs } from "react-pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.js",
+  import.meta.url
+).toString();
+
 const leagueSpartan = League_Spartan({ subsets: ["latin"], display: "swap" });
 const libreBaskerville = Roboto({
   weight: ["400"],
@@ -69,6 +78,7 @@ export default function App() {
               <Footer key="footer" />,
             ]}
             <ProjectModal />
+            <AchievementModal />
             <Contact />
             <WorkExperienceModal />
             <Sidebar />

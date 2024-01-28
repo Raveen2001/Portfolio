@@ -1,3 +1,5 @@
+@use '../../styles/Breakpoint.scss' as *;
+
 .AchievementsAndCertifications {
     width: 100%;
     display: flex;
@@ -37,5 +39,15 @@
         }
     }
 
+    @include sm {
+
+        .container {
+            flex-direction: column;
+
+            .mask {
+                transform: translateY(-201%) !important;
+            }
+        }
+    }
 
 }

@@ -1,18 +1,22 @@
 import React from "react";
 import { IAchievement } from "../../../data";
 import styles from "./styles.module.scss";
+import { openModalFor } from "../../../utils/gsap";
+import { useGlobalContext } from "../../Context/GlobalContext";
 interface IAchievementProps {
   achievement: IAchievement;
   number: number;
 }
 
 const Card: React.FC<IAchievementProps> = ({ achievement, number }) => {
+  const { setSelectedAchievement } = useGlobalContext();
   return (
     <div
       className={styles.Card}
-      // onClick={() => {
-      //   window.open(achievement.github, "_blank");
-      // }}
+      onClick={() => {
+        setSelectedAchievement(achievement);
+        openModalFor("AchievementModal");
+      }}
     >
       <img
         title={achievement.title}

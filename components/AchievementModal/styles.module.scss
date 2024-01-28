@@ -1,6 +1,6 @@
 @use "../../styles/Breakpoint.scss" as *;
 
-.ProjectModal {
+.AchievementModal {
   align-items: center;
   position: fixed;
   top: 0;
@@ -14,7 +14,8 @@
   isolation: isolate;
 
   .container {
-    width: 80dvw;
+    width: 50%;
+    height: 80dvh;
     background-color: #1c1d25fb;
     position: relative;
 
@@ -22,9 +23,16 @@
       padding: 0px 40px 0 10px;
     }
 
-    .demo-video {
+    .pdf {
+
+      display: flex;
+      justify-content: center;
       width: 100%;
       height: 100%;
+
+      .container {
+        width: 100%;
+      }
     }
 
     .close {

@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useState } from "react";
-import { IProject, PROJECTS } from "../../data";
+import { ACHIEVEMENTS, IAchievement, IProject, PROJECTS } from "../../data";
 import { WORK_TIMELINE } from "../../data";
 import { IWork } from "../../data";
 export type GlobalContext = {
@@ -8,6 +8,9 @@ export type GlobalContext = {
 
   selectedWorkExperience: IWork;
   setSelectedWorkExperience: (data: IWork) => void;
+
+  selectedAchievement: IAchievement;
+  setSelectedAchievement: (data: IAchievement) => void;
 };
 export const MyGlobalContext = createContext<GlobalContext>({
   selectedProject: PROJECTS[0],
@@ -15,6 +18,9 @@ export const MyGlobalContext = createContext<GlobalContext>({
 
   selectedWorkExperience: WORK_TIMELINE[0],
   setSelectedWorkExperience: (data: IWork) => {},
+
+  selectedAchievement: ACHIEVEMENTS[0],
+  setSelectedAchievement: (data: IAchievement) => {},
 });
 export const useGlobalContext = () => useContext(MyGlobalContext);
 
@@ -27,6 +33,9 @@ const GlobalContextProvider: React.FC<IGlobalProvider> = ({ children }) => {
   const [selectedWorkExperience, setSelectedWorkExperience] = useState(
     WORK_TIMELINE[0]
   );
+  const [selectedAchievement, setSelectedAchievement] = useState(
+    ACHIEVEMENTS[0]
+  );
   return (
     <MyGlobalContext.Provider
       value={{
@@ -34,6 +43,8 @@ const GlobalContextProvider: React.FC<IGlobalProvider> = ({ children }) => {
         setSelectedProject,
         selectedWorkExperience,
         setSelectedWorkExperience,
+        selectedAchievement,
+        setSelectedAchievement,
       }}
     >
       {children}
