@@ -1,16 +1,16 @@
 import React, { useCallback, useEffect, useMemo } from "react";
 import { throttle } from "lodash";
 import "./ModalParticles.scss";
-import P1  from "../../assets/shapes/1.svg";
-import  P2  from "../../assets/shapes/2.svg";
-import  P3  from "../../assets/shapes/3.svg";
-import  P4  from "../../assets/shapes/4.svg";
-import  P5  from "../../assets/shapes/5.svg";
+import P1 from "../../assets/shapes/1.svg";
+import P2 from "../../assets/shapes/2.svg";
+import P3 from "../../assets/shapes/3.svg";
+import P4 from "../../assets/shapes/4.svg";
+import P5 from "../../assets/shapes/5.svg";
 
 const ModalParticles = () => {
-  const rightMovement = useMemo(() => [0, 3, 5, 6, 8], []);
-  const onMouseMove = useCallback(
-    throttle((ev: MouseEvent) => {
+  useEffect(() => {
+    const rightMovement = [0, 3, 5, 6, 8];
+    const onMouseMove = throttle((ev: MouseEvent) => {
       const particles = document.querySelectorAll<HTMLElement>(".particle");
       const xOffset = ev.clientX * 0.06;
       const yOffset = ev.clientY * 0.08;
@@ -21,11 +21,7 @@ const ModalParticles = () => {
           particle.style.transform = `translate3d(${-xOffset}px, ${yOffset}px, 0)`;
         }
       });
-    }, 100),
-    []
-  );
-
-  useEffect(() => {
+    }, 100);
     document.addEventListener("mousemove", onMouseMove);
 
     return () => {

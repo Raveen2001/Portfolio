@@ -32,7 +32,7 @@ const ProjectCard: React.FC<IProjectProps> = ({ project, number }) => {
     observer.observe(cardRef.current);
   }, []);
 
-  const cardPosition = useMemo(() => (number % 2 === 0 ? "left" : "right"), []);
+  const cardPosition = number % 2 === 0 ? "left" : "right";
   return (
     <a
       className={`${styles.ProjectCard} ${styles[`card-${cardPosition}`]}`}

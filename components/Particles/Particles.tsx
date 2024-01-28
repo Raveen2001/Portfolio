@@ -14,9 +14,9 @@ import ReduxIcon from "../../assets/particles/redux.svg";
 import KubernetesIcon from "../../assets/particles/kubernetes.svg";
 
 const Particles = () => {
-  const rightMovement = useMemo(() => [0, 3, 5, 6, 8], []);
-  const onMouseMove = useCallback(
-    throttle((ev: MouseEvent) => {
+  useEffect(() => {
+    const rightMovement = [0, 3, 5, 6, 8];
+    const onMouseMove = throttle((ev: MouseEvent) => {
       const particles = document.querySelectorAll<HTMLElement>(
         "." + styles.particle
       );
@@ -29,11 +29,7 @@ const Particles = () => {
           particle.style.transform = `translate3d(${-xOffset}px, ${yOffset}px, 0)`;
         }
       });
-    }, 100),
-    []
-  );
-
-  useEffect(() => {
+    }, 100);
     document.addEventListener("mousemove", onMouseMove);
 
     return () => {

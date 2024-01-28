@@ -60,7 +60,7 @@ const Contact = () => {
             autoComplete="off"
             ref={formRef}
           >
-            <h3>Let's talk.</h3>
+            <h3>Let&apos;s talk.</h3>
             <p>New projects, freelance inquiry or even a coffee.</p>
             <label htmlFor="name">Name*</label>
             <div className={styles.input}>

@@ -22,6 +22,7 @@ const Card: React.FC<IAchievementProps> = ({ achievement, number }) => {
         title={achievement.title}
         src={achievement.image}
         className={styles.image}
+        alt={achievement.title}
       />
 
       <div className={styles.content}>

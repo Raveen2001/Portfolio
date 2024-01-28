@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { League_Spartan, Libre_Baskerville, Roboto } from "@next/font/google";
+import { League_Spartan, Roboto } from "@next/font/google";
 import styles from "../styles/App.module.scss";
 import Home from "../components/Home/Home";
 import Topbar from "../components/Topbar/Topbar";
@@ -16,13 +16,6 @@ import { gsap } from "gsap";
 import Sidebar from "../components/Sidebar/Sidebar";
 import WorkExperienceModal from "../components/WorkExperienceModal/WorkExperienceModal";
 import AchievementModal from "../components/AchievementModal/AchievementModal";
-
-import { pdfjs } from "react-pdf";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.js",
-  import.meta.url
-).toString();
 
 const leagueSpartan = League_Spartan({ subsets: ["latin"], display: "swap" });
 const libreBaskerville = Roboto({
