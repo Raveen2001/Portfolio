@@ -3,6 +3,7 @@ import { PROJECTS, EXPERIMENTS } from "../../data";
 import Experiment from "../Experiment/Experiment";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import styles from "./Projects.module.scss";
+import AchievementsAndCertifications from "../AchievementsAndCertifications/AchievementsAndCertifications";
 
 const Projects = () => {
   const experimentsRef = useRef<any>();
@@ -41,6 +42,9 @@ const Projects = () => {
           />
         ))}
       </div>
+
+      <AchievementsAndCertifications />
+
       <h4>Experiments & Open Source</h4>
       <h2>Web is fun.</h2>
       <div className={styles.experiments} id="Experiments" ref={experimentsRef}>

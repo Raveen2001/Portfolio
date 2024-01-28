@@ -15,8 +15,7 @@ const ProjectModal: React.FC = () => {
           <span className={`${styles.line} ${styles.l1}`}></span>
           <span className={`${styles.line} ${styles.l2}`}></span>
         </div>
-        {/* <div className={styles.left}></div> */}
-        {/* <div className={styles.middle}></div> */}
+
         <div className={styles.header}>
           <h1>{selectedProject.title}</h1>
           <p>

@@ -54,6 +54,13 @@ export interface IProject {
   techStack: JSX.Element[];
 }
 
+export type IAchievement = {
+  title: string;
+  description: string;
+  image: string;
+  pdf: string;
+};
+
 export const PROJECTS: IProject[] = [
   {
     title: "Portfolio",
@@ -376,6 +383,30 @@ export const WORK_TIMELINE: IWork[] = [
       "Engineered a robust report generation module capable of producing comprehensive reports enriched with graphs and tables on a daily, weekly, monthly, and customizable basis.",
       "Successfully excelled in designing complex and highly interactive components, demonstrating proficiency in creating visually appealing and functionally robust user interface elements.",
     ],
+  },
+];
+
+export const ACHIEVEMENTS: IAchievement[] = [
+  {
+    title: "Best Academic Student 2019 - 2023",
+    description:
+      "Awarded for being the best academic student in the batch of 2019 - 2023 at Kongu Engineering College, Tamilnadu.",
+    image: "achievements/best_academic_student.png",
+    pdf: "achievements/best_academic_student.pdf",
+  },
+  {
+    title: "AlgoExpert Certification",
+    description:
+      "AlgoExpert is a platform that helps prospective Software Engineers prepare for algorithm-intensive programming interviews.",
+    image: "achievements/algoexpert.jpeg",
+    pdf: "achievements/algoexpert.pdf",
+  },
+  {
+    title: "NeetCodeIO Certification",
+    description:
+      "NeetCodeIO is a platform that helps prospective Software Engineers prepare for algorithm-intensive programming interviews.",
+    image: "achievements/neetcodeio.jpeg",
+    pdf: "achievements/neetcodeio.pdf",
   },
 ];
 

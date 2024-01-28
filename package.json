@@ -25,6 +25,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-modal": "^3.16.1",
+    "react-pdf": "^7.7.0",
     "react-random-reveal": "^2.0.0"
   },
   "devDependencies": {
