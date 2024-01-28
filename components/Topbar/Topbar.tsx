@@ -8,6 +8,7 @@ import {
   scrollToExperiments,
   scrollToHome,
   scrollToWorks,
+  scrollToAchievements,
 } from "../../utils/scroll";
 
 const Topbar = () => {
@@ -28,6 +29,12 @@ const Topbar = () => {
           onClick={scrollToProjects}
         >
           Projects
+        </div>
+        <div
+          className={`${styles["menu-item"]} ${styles.clickable}`}
+          onClick={scrollToAchievements}
+        >
+          Achievements
         </div>
         <div
           className={`${styles["menu-item"]} ${styles.clickable}`}

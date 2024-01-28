@@ -1,6 +1,7 @@
 import React from "react";
 import { closeSidebar, openModalFor } from "../../utils/gsap";
 import {
+  scrollToAchievements,
   scrollToExperiments,
   scrollToProjects,
   scrollToWorks,
@@ -36,6 +37,12 @@ const Sidebar = () => {
               onClick={() => scrollTo(scrollToProjects)}
             >
               Projects
+            </div>
+            <div
+              className={`${styles["menu-item"]} ${styles.clickable}`}
+              onClick={() => scrollTo(scrollToAchievements)}
+            >
+              Achievements
             </div>
             <div
               className={`${styles["menu-item"]} ${styles.clickable}`}

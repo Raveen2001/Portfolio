@@ -24,16 +24,13 @@ export const PDFViewer: React.FC<PDFViewerProps> = ({ file }) => {
   const [numPages, setNumPages] = useState<number>();
   const [containerRef, setContainerRef] = useState<HTMLElement | null>(null);
 
-  console.log("width" + containerRef?.clientWidth);
   const [containerWidth, setContainerWidth] = useState<number>();
-  const [containerHeight, setContainerHeight] = useState<number>();
 
   const onResize = useCallback<ResizeObserverCallback>((entries) => {
     const [entry] = entries;
 
     if (entry) {
       setContainerWidth(entry.contentRect.width);
-      setContainerHeight(entry.contentRect.height);
     }
   }, []);
 
@@ -55,7 +52,6 @@ export const PDFViewer: React.FC<PDFViewerProps> = ({ file }) => {
             key={`page_${index + 1}`}
             pageNumber={index + 1}
             width={containerWidth}
-            height={500}
           />
         ))}
       </Document>

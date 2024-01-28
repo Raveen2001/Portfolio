@@ -50,6 +50,7 @@
     }
 
     .menu-item:hover {
+
       &::after,
       &::before {
         left: 0;
@@ -62,11 +63,13 @@
   .sidebar-icon {
     display: none;
   }
+
   .clickable {
     cursor: pointer;
   }
 
-  @include sm {
+
+  @include md {
     .menu {
       display: none;
     }
@@ -75,4 +78,5 @@
       display: block;
     }
   }
+
 }

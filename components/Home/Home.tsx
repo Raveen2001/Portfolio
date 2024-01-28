@@ -19,7 +19,7 @@ const Home = () => {
               <RandomReveal
                 duration={1.5}
                 isPlaying={true}
-                characters="Fullstack Web and Mobile developer"
+                characters="Fullstack Web developer"
                 characterSet={["▒", "▓", "░"]}
               />
             </i>
@@ -52,21 +52,23 @@ const Home = () => {
       </div>
       <div className={styles.experiencedIn}>
         <span>
-          <RandomReveal
+          Experienced in
+          {/* <RandomReveal
             duration={1.5}
             isPlaying={true}
             characters="Experienced in"
             characterSet={["▒", "▓", "░"]}
-          />
+          /> */}
         </span>
 
         <strong>
-          <RandomReveal
+          ReactJs, NextJs, ExpressJs, Python, Pandas, SQL
+          {/* <RandomReveal
             duration={1.5}
             isPlaying={true}
-            characters="ReactJs, NextJs, ExpressJs, NodeJS, Pandas, SQL"
+            characters="ReactJs, NextJs, ExpressJs, Python, Pandas, SQL"
             characterSet={["▒", "▓", "░"]}
-          />
+          /> */}
         </strong>
       </div>
       <a className={styles["bottom-content"]} onClick={scrollToProjects}>

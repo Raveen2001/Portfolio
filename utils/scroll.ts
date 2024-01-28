@@ -21,6 +21,13 @@ export const scrollToExperiments = () => {
   element.scrollIntoView({ behavior: "smooth" });
 };
 
+export const scrollToAchievements = () => {
+  const element = document.getElementById(
+    "AchievementsAndCertifications"
+  ) as HTMLElement;
+  element.scrollIntoView({ behavior: "smooth" });
+};
+
 //! This is not working since the overflow is on the App component
 //! for this to work the overflow should be on the html
 // const scrollToElement = (element: HTMLElement, offset: number) => {
