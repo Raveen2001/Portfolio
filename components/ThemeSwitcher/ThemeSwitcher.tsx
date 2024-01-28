@@ -3,10 +3,36 @@ import ThemeIcon from "../../assets/theme.svg";
 import styles from "./Theme.module.scss";
 import { useEffect } from "react";
 
-type Theme = "light" | "dark";
+type Theme = "light" | "dark" | "default";
 
 const ThemeSwitcher = ({ ...props }) => {
-  const [theme, setTheme] = useLocalStorage<Theme>("theme", "dark");
+  // system theme for default value
+  const [theme, setTheme] = useLocalStorage<Theme>("theme", "default");
+
+  // detect system theme change
+  useEffect(() => {
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "dark"
+      : "light";
+
+    if (theme === "default") setTheme(systemTheme);
+
+    const changeEvent = (event: MediaQueryListEvent) => {
+      const newColorScheme = event.matches ? "dark" : "light";
+      setTheme(newColorScheme);
+    };
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", changeEvent);
+
+    return () => {
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .removeEventListener("change", changeEvent);
+    };
+  });
 
   // change theme
   useEffect(() => {
