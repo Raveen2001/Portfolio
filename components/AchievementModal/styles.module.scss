@@ -8,14 +8,14 @@
   justify-content: center;
   width: 100dvw;
   height: 100dvh;
-  overflow: hidden;
+  overflow-y: auto;
   display: none;
   z-index: 1000;
   isolation: isolate;
 
   .container {
     width: 50%;
-    height: 80dvh;
+    height: 90dvh;
     background-color: #1c1d25fb;
     position: relative;
 
@@ -32,6 +32,7 @@
 
       .container {
         width: 100%;
+        height: 100%;
       }
     }
 
@@ -92,7 +93,6 @@
   }
 
   @include sm {
-    overflow-y: scroll;
 
     .container {
       width: 100dvw;

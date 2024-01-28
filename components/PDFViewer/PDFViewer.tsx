@@ -52,6 +52,7 @@ export const PDFViewer: React.FC<PDFViewerProps> = ({ file }) => {
             key={`page_${index + 1}`}
             pageNumber={index + 1}
             width={containerWidth}
+            height={500}
           />
         ))}
       </Document>
