@@ -26,6 +26,9 @@ dependencies:
   '@types/react-dom':
     specifier: 18.0.10
     version: 18.0.10
+  '@vercel/analytics':
+    specifier: ^1.1.2
+    version: 1.1.2
   '@wojtekmaj/react-hooks':
     specifier: ^1.18.1
     version: 1.18.1(@types/react@18.0.26)(react@18.2.0)
@@ -1912,6 +1915,12 @@ packages:
       '@typescript-eslint/types': 6.19.1
       eslint-visitor-keys: 3.4.1
     dev: true
+
+  /@vercel/analytics@1.1.2:
+    resolution: {integrity: sha512-CodhkLCQ/EHzjX8k+Qg+OzTBY0UadykrcfolfSOJVZZY/ZJM5nbhztm9KdbYvMfqKlasAr1+OYy0ThZnDA/MYA==}
+    dependencies:
+      server-only: 0.0.1
+    dev: false
 
   /@wojtekmaj/react-hooks@1.18.1(@types/react@18.0.26)(react@18.2.0):
     resolution: {integrity: sha512-hvaKC4+xBt+jrccMZsV3oHveaAjcO/Lw833vH78Y/auIwya14H4WH9E1i7EEnm/RcGJmUzCYNA9Ulx9aY1TMhQ==}
@@ -4469,6 +4478,10 @@ packages:
     requiresBuild: true
     dependencies:
       lru-cache: 6.0.0
+
+  /server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
+    dev: false
 
   /set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
