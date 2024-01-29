@@ -29,6 +29,9 @@ dependencies:
   '@vercel/analytics':
     specifier: ^1.1.2
     version: 1.1.2
+  '@vercel/speed-insights':
+    specifier: ^1.0.8
+    version: 1.0.8(next@13.1.6)(react@18.2.0)
   '@wojtekmaj/react-hooks':
     specifier: ^1.18.1
     version: 1.18.1(@types/react@18.0.26)(react@18.2.0)
@@ -1920,6 +1923,34 @@ packages:
     resolution: {integrity: sha512-CodhkLCQ/EHzjX8k+Qg+OzTBY0UadykrcfolfSOJVZZY/ZJM5nbhztm9KdbYvMfqKlasAr1+OYy0ThZnDA/MYA==}
     dependencies:
       server-only: 0.0.1
+    dev: false
+
+  /@vercel/speed-insights@1.0.8(next@13.1.6)(react@18.2.0):
+    resolution: {integrity: sha512-x1V9MHUMGkaNafmgY0qRbmbr+jfeU+Cvo5KgreeEGo63SFuBYRg9RS52GUJ9p82nEL6NBzc9HNru6fkcvufYcQ==}
+    requiresBuild: true
+    peerDependencies:
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19
+      svelte: ^4
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
+    dependencies:
+      next: 13.1.6(@babel/core@7.21.8)(react-dom@18.2.0)(react@18.2.0)(sass@1.57.0)
+      react: 18.2.0
     dev: false
 
   /@wojtekmaj/react-hooks@1.18.1(@types/react@18.0.26)(react@18.2.0):
