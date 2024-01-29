@@ -7,7 +7,7 @@ import "react-pdf/dist/esm/Page/TextLayer.css";
 import { DocumentCallback } from "react-pdf/dist/cjs/shared/types";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  "pdfjs-dist/build/pdf.worker.min.js",
+  "../../node_modules/pdfjs-dist/build/pdf.worker.min.js",
   import.meta.url
 ).toString();
 
